@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFile } from "node:fs/promises";
 
 async function render(path = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -20,4 +21,11 @@ test("server renders the faculty wiki landing page", async () => {
   assert.match(html, /Neurocritical Care Faculty Wiki/i);
   assert.match(html, /NEUROCRITICAL/i);
   assert.match(html, /Open the faculty wiki/i);
+  assert.match(html, /Source figures/i);
+});
+
+test("the client includes the handbook figure library", async () => {
+  const source = await readFile(new URL("../src/App.jsx", import.meta.url), "utf8");
+  assert.match(source, /Figures from both faculty handbooks/i);
+  assert.match(source, /figure-library-grid/i);
 });

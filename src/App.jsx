@@ -16,6 +16,50 @@ const entryPointPatterns = [
   { label: "SmartPhrases", hint: "Assessment, transfer, and attestation templates", pattern: /smartphrase library/i },
 ];
 
+const landingLinks = [
+  { label: "Faculty wiki", hint: "Search both campuses", href: "#/wiki", position: "north" },
+  { label: "First shift", hint: "Start ready", href: "#/wiki/akron/start-here-first-shift-navigation", position: "west" },
+  { label: "Urgent pathways", hint: "Escalation and transfer", href: "#/wiki/akron/part-5-emergency-transfers-and-ecmo", position: "east" },
+  { label: "Source figures", hint: "Browse handbook images", href: "#/wiki/figures", position: "south" },
+];
+
+function pointEyeAt(event) {
+  const bounds = event.currentTarget.getBoundingClientRect();
+  window.dispatchEvent(new CustomEvent("faculty-eye-gaze", {
+    detail: {
+      clientX: bounds.left + bounds.width / 2,
+      clientY: bounds.top + bounds.height / 2,
+      locked: true,
+    },
+  }));
+}
+
+function releaseEye() {
+  window.dispatchEvent(new CustomEvent("faculty-eye-gaze", { detail: { locked: false } }));
+}
+
+function EyeOrbitNavigation() {
+  return (
+    <nav className="eye-orbit-nav" aria-label="Explore the faculty resource">
+      {landingLinks.map((link, index) => (
+        <a
+          className={`eye-orbit-link orbit-${link.position}`}
+          href={link.href}
+          key={link.label}
+          onPointerEnter={pointEyeAt}
+          onPointerLeave={releaseEye}
+          onFocus={pointEyeAt}
+          onBlur={releaseEye}
+        >
+          <span className="orbit-index">0{index + 1}</span>
+          <span><strong>{link.label}</strong><small>{link.hint}</small></span>
+          <span className="orbit-arrow" aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </nav>
+  );
+}
+
 function useRoute() {
   const read = () => window.location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
   const [parts, setParts] = useState([]);
@@ -43,12 +87,7 @@ function Brand({ compact = false }) {
 }
 
 function LandingPage() {
-  const links = [
-    ["Faculty wiki", "#/wiki"],
-    ["First shift", "#/wiki/akron/start-here-first-shift-navigation"],
-    ["Urgent pathways", "#/wiki/akron/part-5-emergency-transfers-and-ecmo"],
-    ["Sources", "#/wiki/sources"],
-  ];
+  const links = landingLinks.map(({ label, href }) => [label, href]);
 
   return (
     <>
@@ -75,6 +114,7 @@ function LandingPage() {
 
         <section className="hero" aria-labelledby="campaign-title">
           <EyeField />
+          <EyeOrbitNavigation />
           <div className="hero-copy" id="overview">
             <p className="hero-kicker">2026 Faculty Orientation Resource</p>
             <h1 id="campaign-title">
@@ -147,7 +187,7 @@ function groupBlocks(blocks) {
   return grouped;
 }
 
-function ContentBlocks({ blocks }) {
+function ContentBlocks({ blocks, figureContext }) {
   return groupBlocks(blocks).map((block, index) => {
     const key = `${block.type}-${index}`;
     if (block.type === "paragraph") return <p key={key}>{block.text}</p>;
@@ -155,8 +195,8 @@ function ContentBlocks({ blocks }) {
     if (block.type === "image") {
       return (
         <figure key={key} className="source-figure">
-          <img src={block.src} alt={block.alt} loading="lazy" />
-          <figcaption>Figure from the source handbook</figcaption>
+          <img src={block.src} alt={`${figureContext} — source handbook figure`} loading="lazy" />
+          <figcaption>{figureContext} · Figure from the source handbook</figcaption>
         </figure>
       );
     }
@@ -262,7 +302,7 @@ function WikiHeader({ handbooks, activeCampus, onCampusChange, onNavigate }) {
   );
 }
 
-function WikiSidebar({ handbook, selectedSlug, onNavigate }) {
+function WikiSidebar({ handbook, selectedSlug, utilityPage, onNavigate }) {
   const topSections = handbook.sections.filter((section) => section.level === 1);
   return (
     <aside className="wiki-sidebar">
@@ -273,6 +313,9 @@ function WikiSidebar({ handbook, selectedSlug, onNavigate }) {
       <nav aria-label={`${handbook.name} handbook sections`}>
         <a className={!selectedSlug ? "active" : ""} href={campusUrl(handbook.id)}>
           <span aria-hidden="true">⌂</span> Campus overview
+        </a>
+        <a className={utilityPage === "figures" ? "active" : ""} href="#/wiki/figures">
+          <span aria-hidden="true">▧</span> Source figures
         </a>
         {topSections.map((section, index) => (
           <a
@@ -303,6 +346,54 @@ function EntryCard({ item, handbook }) {
       <strong>{item.label}</strong>
       <p>{item.hint}</p>
     </a>
+  );
+}
+
+function getFigures(handbooks) {
+  return handbooks.flatMap((handbook) => {
+    let figureIndex = 0;
+    return handbook.sections.flatMap((section) =>
+      section.blocks
+        .filter((block) => block.type === "image")
+        .map((block) => ({ handbook, section, block, index: figureIndex++ })),
+    );
+  });
+}
+
+function FigureCard({ figure, eager = false }) {
+  const title = titleWithoutPart(figure.section.title);
+  return (
+    <a className="figure-card" href={campusUrl(figure.handbook.id, figure.section.slug)}>
+      <figure>
+        <div className="figure-image-wrap">
+          <img
+            src={figure.block.src}
+            alt={`${figure.handbook.name}: ${title} — source handbook figure`}
+            loading={eager ? "eager" : "lazy"}
+          />
+        </div>
+        <figcaption>
+          <span>{figure.handbook.shortName} · Figure {figure.index + 1}</span>
+          <strong>{title}</strong>
+          <small>Open the source section <span aria-hidden="true">↗</span></small>
+        </figcaption>
+      </figure>
+    </a>
+  );
+}
+
+function FigurePreview({ handbook }) {
+  const figures = getFigures([handbook]);
+  return (
+    <section className="figures-preview" aria-labelledby="figures-preview-heading">
+      <div className="section-heading">
+        <div><p className="eyebrow">Visual reference</p><h2 id="figures-preview-heading">Figures from the handbook</h2></div>
+        <a href="#/wiki/figures">View all {figures.length} figures ↗</a>
+      </div>
+      <div className="figure-preview-grid">
+        {figures.slice(0, 4).map((figure, index) => <FigureCard key={`${figure.handbook.id}-${figure.section.slug}-${index}`} figure={figure} />)}
+      </div>
+    </section>
   );
 }
 
@@ -353,6 +444,8 @@ function WikiHome({ handbook, handbooks }) {
         </div>
       </section>
 
+      <FigurePreview handbook={handbook} />
+
       <section className="source-section" id="sources" aria-labelledby="source-heading">
         <div className="section-heading"><div><p className="eyebrow">Source library</p><h2 id="source-heading">Two handbooks, one search</h2></div></div>
         <div className="source-grid">
@@ -394,7 +487,7 @@ function ArticlePage({ handbook, section }) {
             return (
               <section id={articleSection.slug} key={articleSection.slug} className={`article-section level-${articleSection.level}`}>
                 {index > 0 && <Heading>{titleWithoutPart(articleSection.title)}</Heading>}
-                <ContentBlocks blocks={articleSection.blocks} />
+                <ContentBlocks blocks={articleSection.blocks} figureContext={`${handbook.name}: ${titleWithoutPart(articleSection.title)}`} />
               </section>
             );
           })}
@@ -441,12 +534,44 @@ function SourcesPage({ handbooks }) {
           </a>
         ))}
       </div>
+      <a className="source-figures-link" href="#/wiki/figures">Browse every source figure <span aria-hidden="true">↗</span></a>
       <section className="editorial-policy">
         <h2>How to use it</h2>
         <div><strong>Search broadly</strong><p>The search bar checks headings, prose, lists, and reference tables across both campuses.</p></div>
         <div><strong>Check the campus</strong><p>Every article identifies its source campus. The Main Campus file contains some Akron General language, which is flagged rather than silently rewritten.</p></div>
         <div><strong>Verify live operations</strong><p>{SOURCE_WARNING}</p></div>
       </section>
+    </main>
+  );
+}
+
+function FiguresPage({ handbooks }) {
+  const [campus, setCampus] = useState("all");
+  const figures = getFigures(handbooks);
+  const visibleFigures = campus === "all" ? figures : figures.filter((figure) => figure.handbook.id === campus);
+
+  return (
+    <main className="wiki-main figures-page" id="wiki-content">
+      <div className="wiki-breadcrumbs"><a href="#/wiki">Faculty Wiki</a><span>/</span><span>Source figures</span></div>
+      <header className="figures-header">
+        <div>
+          <p className="eyebrow">Visual source library</p>
+          <h1>Figures from both faculty handbooks.</h1>
+          <p className="wiki-lede">Every embedded source image is presented here and linked back to the handbook section where it appears.</p>
+        </div>
+        <div className="figure-count"><strong>{visibleFigures.length}</strong><span>figures shown</span></div>
+      </header>
+      <div className="figure-filters" aria-label="Filter figures by campus">
+        <button className={campus === "all" ? "active" : ""} type="button" onClick={() => setCampus("all")}>All campuses <span>{figures.length}</span></button>
+        {handbooks.map((handbook) => (
+          <button className={campus === handbook.id ? "active" : ""} type="button" onClick={() => setCampus(handbook.id)} key={handbook.id}>
+            {handbook.name} <span>{getFigures([handbook]).length}</span>
+          </button>
+        ))}
+      </div>
+      <div className="figure-library-grid">
+        {visibleFigures.map((figure, index) => <FigureCard key={`${figure.handbook.id}-${figure.section.slug}-${index}`} figure={figure} eager={index < 3} />)}
+      </div>
     </main>
   );
 }
@@ -478,8 +603,8 @@ function WikiApp({ route }) {
         <span aria-hidden="true">☰</span> Browse handbook
       </button>
       <div className="wiki-body">
-        <div className={`sidebar-wrap ${sidebarOpen ? "open" : ""}`}><WikiSidebar handbook={handbook} selectedSlug={selected?.slug} onNavigate={() => setSidebarOpen(false)} /></div>
-        {route[1] === "sources" ? <SourcesPage handbooks={handbooks} /> : selected ? <ArticlePage handbook={handbook} section={selected} /> : <WikiHome handbook={handbook} handbooks={handbooks} />}
+        <div className={`sidebar-wrap ${sidebarOpen ? "open" : ""}`}><WikiSidebar handbook={handbook} selectedSlug={selected?.slug} utilityPage={route[1]} onNavigate={() => setSidebarOpen(false)} /></div>
+        {route[1] === "sources" ? <SourcesPage handbooks={handbooks} /> : route[1] === "figures" ? <FiguresPage handbooks={handbooks} /> : selected ? <ArticlePage handbook={handbook} section={selected} /> : <WikiHome handbook={handbook} handbooks={handbooks} />}
       </div>
       <footer className="wiki-footer"><span>Neurocritical Care Faculty Wiki</span><span>Built from supplied 2026 orientation sources</span><a href="#/">Return to landing page</a></footer>
     </div>

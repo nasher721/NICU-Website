@@ -74,6 +74,19 @@ def paragraph_images(paragraph: Paragraph, document: Document, media_dir: Path, 
     return images
 
 
+def table_images(table: Table, document: Document, media_dir: Path, campus: str):
+    images = []
+    seen = set()
+    for row in table.rows:
+        for cell in row.cells:
+            for paragraph in cell.paragraphs:
+                for image in paragraph_images(paragraph, document, media_dir, campus):
+                    if image["src"] not in seen:
+                        seen.add(image["src"])
+                        images.append(image)
+    return images
+
+
 def table_block(table: Table):
     rows = []
     for row in table.rows:
@@ -153,7 +166,10 @@ def extract_handbook(source: Path, campus: str, media_dir: Path):
             if image_blocks:
                 ensure_section()["blocks"].extend(image_blocks)
         else:
+            image_blocks = table_images(block, document, media_dir, campus)
             table = table_block(block)
+            if image_blocks:
+                ensure_section()["blocks"].extend(image_blocks)
             if table:
                 ensure_section()["blocks"].append(table)
 

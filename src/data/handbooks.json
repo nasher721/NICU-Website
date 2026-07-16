@@ -2541,7 +2541,7 @@
       "stats": {
         "sections": 82,
         "tables": 62,
-        "figures": 11
+        "figures": 12
       },
       "sections": [
         {
@@ -2549,6 +2549,11 @@
           "level": 1,
           "parent": null,
           "blocks": [
+            {
+              "type": "image",
+              "src": "/handbook-media/akron-35609a5516-image1.png",
+              "alt": "Reference figure from the source handbook"
+            },
             {
               "type": "table",
               "rows": [

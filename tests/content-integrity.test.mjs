@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const payload = JSON.parse(
@@ -20,7 +20,7 @@ test("the full source structure is retained", () => {
   assert.equal(mainCampus.stats.figures, 11);
   assert.equal(akron.stats.sections, 82);
   assert.equal(akron.stats.tables, 62);
-  assert.equal(akron.stats.figures, 11);
+  assert.equal(akron.stats.figures, 12);
 });
 
 test("high-value clinical sections remain searchable", () => {
@@ -32,14 +32,20 @@ test("high-value clinical sections remain searchable", () => {
   }
 });
 
-test("all source figures point to extracted media", () => {
+test("all source figures point to extracted media", async () => {
   for (const handbook of payload.handbooks) {
     for (const section of handbook.sections) {
       for (const block of section.blocks) {
         if (block.type === "image") {
           assert.match(block.src, /^\/handbook-media\/[a-z0-9.-]+$/i);
+          await access(new URL(`../public${block.src}`, import.meta.url));
         }
       }
     }
   }
+});
+
+test("every audited source image is represented in the wiki data", () => {
+  const figureCounts = Object.fromEntries(payload.handbooks.map((handbook) => [handbook.id, handbook.stats.figures]));
+  assert.deepEqual(figureCounts, { "main-campus": 11, akron: 12 });
 });

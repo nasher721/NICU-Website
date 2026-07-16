@@ -34,7 +34,8 @@ export default function EyeField() {
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const compactQuery = window.matchMedia("(max-width: 767px)");
     const random = seededRandom(24719);
-    const pointer = { x: 0.5, y: 0.5, targetX: 0.5, targetY: 0.5 };
+    const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
+    let gazeLocked = false;
     let particles = [];
     let frameId = 0;
     let width = 0;
@@ -101,14 +102,14 @@ export default function EyeField() {
       pointer.x += (pointer.targetX - pointer.x) * (reduceMotion ? 1 : 0.035);
       pointer.y += (pointer.targetY - pointer.y) * (reduceMotion ? 1 : 0.035);
 
-      const offsetX = (pointer.x - 0.5) * 20;
-      const offsetY = (pointer.y - 0.5) * 12;
-      field.style.setProperty("--pupil-x", `${offsetX * 0.42}px`);
-      field.style.setProperty("--pupil-y", `${offsetY * 0.42}px`);
-      field.style.setProperty("--iris-x", `${offsetX * 0.7}px`);
-      field.style.setProperty("--iris-y", `${offsetY * 0.7}px`);
-      field.style.setProperty("--field-x", `${offsetX}px`);
-      field.style.setProperty("--field-y", `${offsetY}px`);
+      const offsetX = pointer.x * (compactQuery.matches ? 18 : 38);
+      const offsetY = pointer.y * (compactQuery.matches ? 10 : 22);
+      field.style.setProperty("--pupil-x", `${offsetX * 0.72}px`);
+      field.style.setProperty("--pupil-y", `${offsetY * 0.72}px`);
+      field.style.setProperty("--iris-x", `${offsetX * 0.38}px`);
+      field.style.setProperty("--iris-y", `${offsetY * 0.38}px`);
+      field.style.setProperty("--field-x", `${offsetX * 0.12}px`);
+      field.style.setProperty("--field-y", `${offsetY * 0.12}px`);
 
       for (let index = 0; index < 18; index += 1) {
         drawFiber(reduceMotion ? 0 : time, index, offsetX, offsetY);
@@ -136,15 +137,40 @@ export default function EyeField() {
       if (!reduceMotion && visible) frameId = requestAnimationFrame(render);
     };
 
+    const setGazeTarget = (clientX, clientY) => {
+      const bounds = field.getBoundingClientRect();
+      const eyeX = bounds.left + bounds.width / 2;
+      const eyeY = bounds.top + bounds.height * 0.4935;
+      let x = (clientX - eyeX) / Math.max(1, bounds.width * 0.42);
+      let y = (clientY - eyeY) / Math.max(1, bounds.height * 0.38);
+      const distance = Math.hypot(x, y);
+      if (distance > 1) {
+        x /= distance;
+        y /= distance;
+      }
+      pointer.targetX = x;
+      pointer.targetY = y;
+    };
+
     const onPointerMove = (event) => {
-      if (motionQuery.matches || compactQuery.matches) return;
-      pointer.targetX = event.clientX / window.innerWidth;
-      pointer.targetY = event.clientY / window.innerHeight;
+      if (motionQuery.matches || compactQuery.matches || gazeLocked) return;
+      setGazeTarget(event.clientX, event.clientY);
+    };
+
+    const onDirectedGaze = (event) => {
+      gazeLocked = Boolean(event.detail?.locked);
+      if (gazeLocked && Number.isFinite(event.detail?.clientX) && Number.isFinite(event.detail?.clientY)) {
+        setGazeTarget(event.detail.clientX, event.detail.clientY);
+      } else {
+        pointer.targetX = 0;
+        pointer.targetY = 0;
+      }
     };
 
     const onPointerLeave = () => {
-      pointer.targetX = 0.5;
-      pointer.targetY = 0.5;
+      if (gazeLocked) return;
+      pointer.targetX = 0;
+      pointer.targetY = 0;
     };
 
     const onVisibilityChange = () => {
@@ -155,14 +181,15 @@ export default function EyeField() {
 
     const onMotionChange = () => {
       cancelAnimationFrame(frameId);
-      pointer.targetX = 0.5;
-      pointer.targetY = 0.5;
+      pointer.targetX = 0;
+      pointer.targetY = 0;
       render(performance.now());
     };
 
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(field);
     window.addEventListener("pointermove", onPointerMove, { passive: true });
+    window.addEventListener("faculty-eye-gaze", onDirectedGaze);
     document.documentElement.addEventListener("pointerleave", onPointerLeave);
     document.addEventListener("visibilitychange", onVisibilityChange);
     motionQuery.addEventListener("change", onMotionChange);
@@ -174,6 +201,7 @@ export default function EyeField() {
       cancelAnimationFrame(frameId);
       resizeObserver.disconnect();
       window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("faculty-eye-gaze", onDirectedGaze);
       document.documentElement.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", onVisibilityChange);
       motionQuery.removeEventListener("change", onMotionChange);
