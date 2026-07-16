@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import EyeField from "./components/EyeField";
 import handbookData from "./data/handbooks.json";
@@ -16,10 +18,11 @@ const entryPointPatterns = [
 
 function useRoute() {
   const read = () => window.location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
-  const [parts, setParts] = useState(read);
+  const [parts, setParts] = useState([]);
 
   useEffect(() => {
     const onChange = () => setParts(read());
+    onChange();
     window.addEventListener("hashchange", onChange);
     return () => window.removeEventListener("hashchange", onChange);
   }, []);
