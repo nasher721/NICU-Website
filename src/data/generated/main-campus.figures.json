@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "campus": "main-campus",
+  "figures": [
+    {
+      "id": "main-campus-section-4102452181a6-figure-2",
+      "path": "/main-campus/stroke-care-pathway-in-epic",
+      "sectionTitle": "Stroke Care Pathway in Epic",
+      "src": "/handbook-media/main-campus-b725bc9665-image1.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/stroke-care-pathway-in-epic"
+    },
+    {
+      "id": "main-campus-section-4102452181a6-figure-4",
+      "path": "/main-campus/stroke-care-pathway-in-epic",
+      "sectionTitle": "Stroke Care Pathway in Epic",
+      "src": "/handbook-media/main-campus-c1811a91d1-image2.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/stroke-care-pathway-in-epic"
+    },
+    {
+      "id": "main-campus-section-4102452181a6-figure-6",
+      "path": "/main-campus/stroke-care-pathway-in-epic",
+      "sectionTitle": "Stroke Care Pathway in Epic",
+      "src": "/handbook-media/main-campus-9fa198fea3-image3.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/stroke-care-pathway-in-epic"
+    },
+    {
+      "id": "main-campus-section-0e6630398a85-figure-2",
+      "path": "/main-campus/epic-order-set-favorites",
+      "sectionTitle": "Epic Order Set Favorites",
+      "src": "/handbook-media/main-campus-da737583ba-image4.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/epic-order-set-favorites"
+    },
+    {
+      "id": "main-campus-section-0e6630398a85-figure-4",
+      "path": "/main-campus/epic-order-set-favorites",
+      "sectionTitle": "Epic Order Set Favorites",
+      "src": "/handbook-media/main-campus-341e6d0e6a-image5.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/epic-order-set-favorites"
+    },
+    {
+      "id": "main-campus-section-0e6630398a85-figure-6",
+      "path": "/main-campus/epic-order-set-favorites",
+      "sectionTitle": "Epic Order Set Favorites",
+      "src": "/handbook-media/main-campus-9122ab775d-image6.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/epic-order-set-favorites"
+    },
+    {
+      "id": "main-campus-section-178d157a1884-figure-1",
+      "path": "/main-campus/dnc-documentation-workflow-epic",
+      "sectionTitle": "DNC Documentation Workflow (Epic)",
+      "src": "/handbook-media/main-campus-8a13b23464-image7.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc/dnc-documentation-workflow-epic"
+    },
+    {
+      "id": "main-campus-section-9d69288ac486-figure-1",
+      "path": "/main-campus/donation-after-circulatory-death-dcd",
+      "sectionTitle": "Donation after Circulatory Death (DCD)",
+      "src": "/handbook-media/main-campus-0af0448a0c-image8.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-8-end-of-life-care-organ-donation-and-dnc/donation-after-circulatory-death-dcd"
+    },
+    {
+      "id": "main-campus-section-902471b5a660-figure-1",
+      "path": "/main-campus/on-call-directory-qgenda",
+      "sectionTitle": "On-Call Directory: QGenda",
+      "src": "/handbook-media/main-campus-421ed41201-image9.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda"
+    },
+    {
+      "id": "main-campus-section-902471b5a660-figure-3",
+      "path": "/main-campus/on-call-directory-qgenda",
+      "sectionTitle": "On-Call Directory: QGenda",
+      "src": "/handbook-media/main-campus-aa612274d0-image10.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda"
+    },
+    {
+      "id": "main-campus-section-902471b5a660-figure-5",
+      "path": "/main-campus/on-call-directory-qgenda",
+      "sectionTitle": "On-Call Directory: QGenda",
+      "src": "/handbook-media/main-campus-e88c43885a-image11.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceLocation": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda"
+    }
+  ]
+}

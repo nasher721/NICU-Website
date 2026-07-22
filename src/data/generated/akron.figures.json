@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "campus": "akron",
+  "figures": [
+    {
+      "id": "akron-section-1b3738166fbc-figure-0",
+      "path": "/akron/welcome-and-source-overview",
+      "sectionTitle": "Welcome & source overview",
+      "src": "/handbook-media/akron-35609a5516-image1.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "welcome-and-source-overview"
+    },
+    {
+      "id": "akron-section-48c6eb8f25a9-figure-2",
+      "path": "/akron/stroke-care-pathway-in-epic",
+      "sectionTitle": "Stroke Care Pathway in Epic",
+      "src": "/handbook-media/akron-b725bc9665-image2.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/stroke-care-pathway-in-epic"
+    },
+    {
+      "id": "akron-section-48c6eb8f25a9-figure-4",
+      "path": "/akron/stroke-care-pathway-in-epic",
+      "sectionTitle": "Stroke Care Pathway in Epic",
+      "src": "/handbook-media/akron-c1811a91d1-image3.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/stroke-care-pathway-in-epic"
+    },
+    {
+      "id": "akron-section-48c6eb8f25a9-figure-6",
+      "path": "/akron/stroke-care-pathway-in-epic",
+      "sectionTitle": "Stroke Care Pathway in Epic",
+      "src": "/handbook-media/akron-9fa198fea3-image4.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/stroke-care-pathway-in-epic"
+    },
+    {
+      "id": "akron-section-2b4369c52ee7-figure-2",
+      "path": "/akron/epic-order-set-favorites",
+      "sectionTitle": "Epic Order Set Favorites",
+      "src": "/handbook-media/akron-da737583ba-image5.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/epic-order-set-favorites"
+    },
+    {
+      "id": "akron-section-2b4369c52ee7-figure-4",
+      "path": "/akron/epic-order-set-favorites",
+      "sectionTitle": "Epic Order Set Favorites",
+      "src": "/handbook-media/akron-341e6d0e6a-image6.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/epic-order-set-favorites"
+    },
+    {
+      "id": "akron-section-2b4369c52ee7-figure-6",
+      "path": "/akron/epic-order-set-favorites",
+      "sectionTitle": "Epic Order Set Favorites",
+      "src": "/handbook-media/akron-9122ab775d-image7.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-6-documentation-and-quality/epic-order-set-favorites"
+    },
+    {
+      "id": "akron-section-7a646100674a-figure-1",
+      "path": "/akron/dnc-documentation-workflow-epic",
+      "sectionTitle": "DNC Documentation Workflow (Epic)",
+      "src": "/handbook-media/akron-8a13b23464-image8.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc/dnc-documentation-workflow-epic"
+    },
+    {
+      "id": "akron-section-7dd83d9664e9-figure-1",
+      "path": "/akron/donation-after-circulatory-death-dcd",
+      "sectionTitle": "Donation after Circulatory Death (DCD)",
+      "src": "/handbook-media/akron-0af0448a0c-image9.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-8-end-of-life-care-organ-donation-and-dnc/donation-after-circulatory-death-dcd"
+    },
+    {
+      "id": "akron-section-46c47e9e9479-figure-1",
+      "path": "/akron/on-call-directory-qgenda",
+      "sectionTitle": "On-Call Directory: QGenda",
+      "src": "/handbook-media/akron-421ed41201-image10.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda"
+    },
+    {
+      "id": "akron-section-46c47e9e9479-figure-3",
+      "path": "/akron/on-call-directory-qgenda",
+      "sectionTitle": "On-Call Directory: QGenda",
+      "src": "/handbook-media/akron-aa612274d0-image11.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda"
+    },
+    {
+      "id": "akron-section-46c47e9e9479-figure-5",
+      "path": "/akron/on-call-directory-qgenda",
+      "sectionTitle": "On-Call Directory: QGenda",
+      "src": "/handbook-media/akron-e88c43885a-image12.png",
+      "alt": "Reference figure from the source handbook",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceLocation": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "totals": {
+    "sections": 6,
+    "tables": 2,
+    "figures": 0
+  },
+  "campuses": {
+    "main-campus": {
+      "counts": {
+        "sections": 3,
+        "tables": 1,
+        "figures": 0
+      },
+      "sectionIds": [
+        "main-campus-section-3e702efd76b2",
+        "main-campus-section-43a409f0f8a2",
+        "main-campus-section-8d98660a5ccf"
+      ],
+      "tableDigests": [
+        "e6b2d40937c94a50"
+      ],
+      "figureSources": []
+    },
+    "akron": {
+      "counts": {
+        "sections": 3,
+        "tables": 1,
+        "figures": 0
+      },
+      "sectionIds": [
+        "akron-section-1b3738166fbc",
+        "akron-section-a3dc32f98bb4",
+        "akron-section-a7a4b6afab99"
+      ],
+      "tableDigests": [
+        "99f5ada717737270"
+      ],
+      "figureSources": []
+    }
+  },
+  "reviewedOn": "2026-07-16",
+  "reviewNote": "Checked clean-source fixture baseline."
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "aliases": [],
+  "shortcuts": [],
+  "rankingPriorities": [],
+  "verification": {
+    "main-campus": {
+      "handbookYear": 2026,
+      "verifiedOn": "2026-07-16",
+      "reviewStatus": "Test fixture"
+    },
+    "akron": {
+      "handbookYear": 2026,
+      "verifiedOn": "2026-07-16",
+      "reviewStatus": "Test fixture"
+    }
+  },
+  "sourceWarnings": {
+    "main-campus": "Main Campus fixture warning",
+    "akron": "Akron fixture warning"
+  },
+  "renamedSections": [],
+  "redirects": []
+}

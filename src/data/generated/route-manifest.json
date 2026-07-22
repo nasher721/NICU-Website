@@ -1,0 +1,1268 @@
+{
+  "schemaVersion": 1,
+  "campuses": {
+    "main-campus": {
+      "homePath": "/main-campus",
+      "contentAsset": "main-campus.content.json",
+      "navigationAsset": "main-campus.navigation.json",
+      "searchAsset": "main-campus.search-index.json",
+      "figuresAsset": "main-campus.figures.json",
+      "name": "Main Campus",
+      "shortName": "MC",
+      "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
+      "sourceFile": "MC NICU Faculty Orientation Document (2026).docx",
+      "stats": {
+        "sections": 79,
+        "tables": 49,
+        "figures": 11
+      },
+      "sourceStatus": {
+        "handbookYear": 2026,
+        "verifiedOn": "2026-07-16",
+        "reviewStatus": "Source imported; campus-specific operational language requires named human review",
+        "warning": "The supplied Main Campus document contains Akron General labels and pathways. They are preserved as written and must be verified before campus-specific use."
+      },
+      "routes": [
+        {
+          "id": "main-campus-section-3e702efd76b2",
+          "path": "/main-campus/welcome-and-source-overview",
+          "slug": "welcome-and-source-overview",
+          "title": "Welcome & source overview",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-40b1f22de582",
+          "path": "/main-campus/keep-this-page-handy-quick-reference-card",
+          "slug": "keep-this-page-handy-quick-reference-card",
+          "title": "KEEP THIS PAGE HANDY · Quick Reference Card",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-4049e04e4be9",
+          "path": "/main-campus/critical-contacts",
+          "slug": "critical-contacts",
+          "title": "Critical Contacts",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-a857c63af7d3",
+          "path": "/main-campus/day-one-essentials",
+          "slug": "day-one-essentials",
+          "title": "Day-One Essentials",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-24182235b831",
+          "path": "/main-campus/start-here-first-shift-navigation",
+          "slug": "start-here-first-shift-navigation",
+          "title": "START HERE: First Shift Navigation",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-c19e56ff7224",
+          "path": "/main-campus/scenario-finder",
+          "slug": "scenario-finder",
+          "title": "Scenario Finder",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-b61d8b62beff",
+          "path": "/main-campus/action-card-index",
+          "slug": "action-card-index",
+          "title": "Action Card Index",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-d89152d352ea",
+          "path": "/main-campus/before-first-shift-checklist",
+          "slug": "before-first-shift-checklist",
+          "title": "Before First Shift Checklist",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-8a7ce21cdd38",
+          "path": "/main-campus/common-first-week-pitfalls",
+          "slug": "common-first-week-pitfalls",
+          "title": "Common First-Week Pitfalls",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-cdb2d49d50d1",
+          "path": "/main-campus/maintenance-notes",
+          "slug": "maintenance-notes",
+          "title": "Maintenance Notes",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-b1f0de6bc922",
+          "path": "/main-campus/part-1-getting-started",
+          "slug": "part-1-getting-started",
+          "title": "PART 1 · Getting Started",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-8a4a059b3107",
+          "path": "/main-campus/location-and-logistics",
+          "slug": "location-and-logistics",
+          "title": "Location & Logistics",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-593320a53089",
+          "path": "/main-campus/pre-rotation-checklist",
+          "slug": "pre-rotation-checklist",
+          "title": "Pre-Rotation Checklist",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-ba59064eac45",
+          "path": "/main-campus/epic-login-environment",
+          "slug": "epic-login-environment",
+          "title": "Epic Login Environment",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-8a5a1473b521",
+          "path": "/main-campus/unit-overview",
+          "slug": "unit-overview",
+          "title": "Unit Overview",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-b3d6728763b0",
+          "path": "/main-campus/part-2-scope-of-practice-and-admissions",
+          "slug": "part-2-scope-of-practice-and-admissions",
+          "title": "PART 2 · Scope of Practice & Admissions",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-71f7056f832a",
+          "path": "/main-campus/primary-admission-responsibilities",
+          "slug": "primary-admission-responsibilities",
+          "title": "Primary Admission Responsibilities",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-e270f1698c19",
+          "path": "/main-campus/trauma-patient-workflow",
+          "slug": "trauma-patient-workflow",
+          "title": "Trauma Patient Workflow",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-205932865041",
+          "path": "/main-campus/isolated-traumatic-brain-injury-tbi",
+          "slug": "isolated-traumatic-brain-injury-tbi",
+          "title": "Isolated Traumatic Brain Injury (TBI)",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-1360d736f665",
+          "path": "/main-campus/polytrauma-patients",
+          "slug": "polytrauma-patients",
+          "title": "Polytrauma Patients",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-714fb6b303e4",
+          "path": "/main-campus/tracheostomy-and-peg-placement",
+          "slug": "tracheostomy-and-peg-placement",
+          "title": "Tracheostomy & PEG Placement",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-23f321ba9d31",
+          "path": "/main-campus/critical-care-consultation-for-trauma-patients",
+          "slug": "critical-care-consultation-for-trauma-patients",
+          "title": "Critical Care Consultation for Trauma Patients",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-745490e98fa1",
+          "path": "/main-campus/part-3-daily-workflow-and-expectations",
+          "slug": "part-3-daily-workflow-and-expectations",
+          "title": "PART 3 · Daily Workflow & Expectations",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-f8f153f7b709",
+          "path": "/main-campus/the-daily-rhythm",
+          "slug": "the-daily-rhythm",
+          "title": "The Daily Rhythm",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-3af9ffc20573",
+          "path": "/main-campus/airway-and-emergency-response",
+          "slug": "airway-and-emergency-response",
+          "title": "Airway & Emergency Response",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-7af9b907dfc1",
+          "path": "/main-campus/8-45-am-multidisciplinary-discharge-planning-rounds",
+          "slug": "8-45-am-multidisciplinary-discharge-planning-rounds",
+          "title": "8:45 AM - Multidisciplinary Discharge Planning Rounds",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-73685a7d84c9",
+          "path": "/main-campus/9-00-am-nsicu-interdisciplinary-bedside-rounds",
+          "slug": "9-00-am-nsicu-interdisciplinary-bedside-rounds",
+          "title": "9:00 AM - NSICU Interdisciplinary Bedside Rounds",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-b97e6e2d5e3a",
+          "path": "/main-campus/part-4-consultation-and-stroke-alerts",
+          "slug": "part-4-consultation-and-stroke-alerts",
+          "title": "PART 4 · Consultation & Stroke Alerts",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-12c9bb52dc45",
+          "path": "/main-campus/inpatient-neurology-support",
+          "slug": "inpatient-neurology-support",
+          "title": "Inpatient Neurology Support",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-d92ea04a56c6",
+          "path": "/main-campus/neurocritical-care-consultation",
+          "slug": "neurocritical-care-consultation",
+          "title": "Neurocritical Care Consultation",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-0b8e9378ef83",
+          "path": "/main-campus/stroke-alert-process",
+          "slug": "stroke-alert-process",
+          "title": "Stroke Alert Process",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-2705fe6dd219",
+          "path": "/main-campus/part-5-emergency-transfers-and-ecmo",
+          "slug": "part-5-emergency-transfers-and-ecmo",
+          "title": "PART 5 · Emergency Transfers & ECMO",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-ff8c7cb7844b",
+          "path": "/main-campus/auto-launch-and-the-cct-process",
+          "slug": "auto-launch-and-the-cct-process",
+          "title": "Auto Launch & the CCT Process",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-56778a8c933d",
+          "path": "/main-campus/acute-stroke-ich-transfer-workflow",
+          "slug": "acute-stroke-ich-transfer-workflow",
+          "title": "Acute Stroke / ICH Transfer Workflow",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-993bbd879c4f",
+          "path": "/main-campus/diagnoses-eligible-for-emergency-transfer-incl-auto-launch",
+          "slug": "diagnoses-eligible-for-emergency-transfer-incl-auto-launch",
+          "title": "Diagnoses Eligible for Emergency Transfer (Incl. Auto Launch)",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-bfdaca7a47d7",
+          "path": "/main-campus/ecmo-activation-pathway-akron-general",
+          "slug": "ecmo-activation-pathway-akron-general",
+          "title": "ECMO Activation Pathway - Akron General",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-b2d7f4f061bb",
+          "path": "/main-campus/1-trigger-suspected-need-for-ecmo",
+          "slug": "1-trigger-suspected-need-for-ecmo",
+          "title": "1. Trigger: Suspected Need for ECMO",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-f30735a08bb9",
+          "path": "/main-campus/2-immediate-actions",
+          "slug": "2-immediate-actions",
+          "title": "2. Immediate Actions",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-65e7ccd09b57",
+          "path": "/main-campus/ecmo-candidacy-assessment",
+          "slug": "ecmo-candidacy-assessment",
+          "title": "ECMO Candidacy Assessment",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-f02d2221de0c",
+          "path": "/main-campus/pulmonary-embolism-pathway",
+          "slug": "pulmonary-embolism-pathway",
+          "title": "Pulmonary Embolism Pathway",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-be114a84cea8",
+          "path": "/main-campus/3-ecmo-team-activation",
+          "slug": "3-ecmo-team-activation",
+          "title": "3. ECMO Team Activation",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-194dee1ec166",
+          "path": "/main-campus/4-decision-point-on-site-ecmo-deployment",
+          "slug": "4-decision-point-on-site-ecmo-deployment",
+          "title": "4. Decision Point: On-Site ECMO Deployment",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-f2c88f94fd10",
+          "path": "/main-campus/5-escalation-contact",
+          "slug": "5-escalation-contact",
+          "title": "5. Escalation Contact",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-04e57bed5fbb",
+          "path": "/main-campus/part-6-documentation-and-quality",
+          "slug": "part-6-documentation-and-quality",
+          "title": "PART 6 · Documentation & Quality",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-bc08fcf4f487",
+          "path": "/main-campus/required-clinical-documentation-every-eligible-patient",
+          "slug": "required-clinical-documentation-every-eligible-patient",
+          "title": "Required Clinical Documentation (Every Eligible Patient)",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-6866ae1a6976",
+          "path": "/main-campus/hemorrhagic-stroke-severity-scores",
+          "slug": "hemorrhagic-stroke-severity-scores",
+          "title": "Hemorrhagic Stroke Severity Scores",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-4102452181a6",
+          "path": "/main-campus/stroke-care-pathway-in-epic",
+          "slug": "stroke-care-pathway-in-epic",
+          "title": "Stroke Care Pathway in Epic",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-0e6630398a85",
+          "path": "/main-campus/epic-order-set-favorites",
+          "slug": "epic-order-set-favorites",
+          "title": "Epic Order Set Favorites",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-d5d6b3cf26d5",
+          "path": "/main-campus/consent-and-code-status-icu-admission",
+          "slug": "consent-and-code-status-icu-admission",
+          "title": "Consent & Code Status (ICU Admission)",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-cd372b2d01b6",
+          "path": "/main-campus/procedure-specific-consent-requirements",
+          "slug": "procedure-specific-consent-requirements",
+          "title": "Procedure-Specific Consent Requirements",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-82b6847bf03b",
+          "path": "/main-campus/progress-notes-and-h-and-p",
+          "slug": "progress-notes-and-h-and-p",
+          "title": "Progress Notes & H&P",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-1aafe29d8138",
+          "path": "/main-campus/note-templates",
+          "slug": "note-templates",
+          "title": "Note Templates",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-be6ed8debc1a",
+          "path": "/main-campus/vizient-poa-variables",
+          "slug": "vizient-poa-variables",
+          "title": "Vizient POA Variables",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-b63aa87e5751",
+          "path": "/main-campus/billing",
+          "slug": "billing",
+          "title": "Billing",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-a0f13ea6f485",
+          "path": "/main-campus/cdi-queries",
+          "slug": "cdi-queries",
+          "title": "CDI Queries",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-412818998e7a",
+          "path": "/main-campus/part-7-transitions-of-care",
+          "slug": "part-7-transitions-of-care",
+          "title": "PART 7 · Transitions of Care",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-2dd0df4f81b3",
+          "path": "/main-campus/who-transfers-whom",
+          "slug": "who-transfers-whom",
+          "title": "Who Transfers Whom",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-1e05ccecf7b7",
+          "path": "/main-campus/level-of-care-criteria",
+          "slug": "level-of-care-criteria",
+          "title": "Level-of-Care Criteria",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-a3dabada2bf9",
+          "path": "/main-campus/step-down-pcu-vs-icu-admission-criteria-guide",
+          "slug": "step-down-pcu-vs-icu-admission-criteria-guide",
+          "title": "Step-Down/PCU vs ICU: Admission Criteria Guide",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-d6516ffcfa5e",
+          "path": "/main-campus/appropriate-for-step-down-pcu-when-clinically-stable",
+          "slug": "appropriate-for-step-down-pcu-when-clinically-stable",
+          "title": "Appropriate for Step-Down / PCU (when clinically stable)",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-c157adb21a3c",
+          "path": "/main-campus/icu-level-care-required",
+          "slug": "icu-level-care-required",
+          "title": "ICU-Level Care Required",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-1dab8a64d2df",
+          "path": "/main-campus/transfer-of-care-note",
+          "slug": "transfer-of-care-note",
+          "title": "Transfer of Care Note",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-8c74611e7b68",
+          "path": "/main-campus/part-8-end-of-life-care-organ-donation-and-dnc",
+          "slug": "part-8-end-of-life-care-organ-donation-and-dnc",
+          "title": "PART 8 · End-of-Life Care, Organ Donation & DNC",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-40cebc356ec7",
+          "path": "/main-campus/comfort-focused-care",
+          "slug": "comfort-focused-care",
+          "title": "Comfort-Focused Care",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-9fa60c711ed3",
+          "path": "/main-campus/organ-donation-lifebanc",
+          "slug": "organ-donation-lifebanc",
+          "title": "Organ Donation - LifeBanc",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-b3de6b561c54",
+          "path": "/main-campus/death-by-neurologic-criteria-dnc",
+          "slug": "death-by-neurologic-criteria-dnc",
+          "title": "Death by Neurologic Criteria (DNC)",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-178d157a1884",
+          "path": "/main-campus/dnc-documentation-workflow-epic",
+          "slug": "dnc-documentation-workflow-epic",
+          "title": "DNC Documentation Workflow (Epic)",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-9d69288ac486",
+          "path": "/main-campus/donation-after-circulatory-death-dcd",
+          "slug": "donation-after-circulatory-death-dcd",
+          "title": "Donation after Circulatory Death (DCD)",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-4cb62d36d283",
+          "path": "/main-campus/part-9-neurotrauma-admission-and-icu-management",
+          "slug": "part-9-neurotrauma-admission-and-icu-management",
+          "title": "PART 9 · Neurotrauma Admission & ICU Management",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-731d1b903180",
+          "path": "/main-campus/neuromonitoring",
+          "slug": "neuromonitoring",
+          "title": "Neuromonitoring",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-2cf959bff9c2",
+          "path": "/main-campus/communication-and-escalation",
+          "slug": "communication-and-escalation",
+          "title": "Communication & Escalation",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-902471b5a660",
+          "path": "/main-campus/on-call-directory-qgenda",
+          "slug": "on-call-directory-qgenda",
+          "title": "On-Call Directory: QGenda",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-176d1fa93f75",
+          "path": "/main-campus/appendix-a-smartphrase-library",
+          "slug": "appendix-a-smartphrase-library",
+          "title": "APPENDIX A · SmartPhrase Library",
+          "contentType": "smartphrase"
+        },
+        {
+          "id": "main-campus-section-9ef6bb0dc9cc",
+          "path": "/main-campus/stroke-assessment-and-plan-skeletons",
+          "slug": "stroke-assessment-and-plan-skeletons",
+          "title": "Stroke Assessment & Plan Skeletons",
+          "contentType": "article"
+        },
+        {
+          "id": "main-campus-section-950410b93155",
+          "path": "/main-campus/ischemic-stroke",
+          "slug": "ischemic-stroke",
+          "title": "Ischemic Stroke",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-d4139c6572a8",
+          "path": "/main-campus/hemorrhagic-strokes",
+          "slug": "hemorrhagic-strokes",
+          "title": "Hemorrhagic Strokes",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-c6051c85079d",
+          "path": "/main-campus/supportive-care-phrases",
+          "slug": "supportive-care-phrases",
+          "title": "Supportive Care Phrases",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-9692149053db",
+          "path": "/main-campus/transfer-note-template-aktransfernote",
+          "slug": "transfer-note-template-aktransfernote",
+          "title": "Transfer Note Template (.AKtransfernote)",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "main-campus-section-8c0259d556a9",
+          "path": "/main-campus/staff-attestation-nicuattest",
+          "slug": "staff-attestation-nicuattest",
+          "title": "Staff Attestation (.NICUATTEST)",
+          "contentType": "reference-table"
+        }
+      ]
+    },
+    "akron": {
+      "homePath": "/akron",
+      "contentAsset": "akron.content.json",
+      "navigationAsset": "akron.navigation.json",
+      "searchAsset": "akron.search-index.json",
+      "figuresAsset": "akron.figures.json",
+      "name": "Akron General",
+      "shortName": "AK",
+      "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
+      "sourceFile": "NSICU_Faculty_Orientation_Handbook_Akron (2026).docx",
+      "stats": {
+        "sections": 82,
+        "tables": 62,
+        "figures": 12
+      },
+      "sourceStatus": {
+        "handbookYear": 2026,
+        "verifiedOn": "2026-07-16",
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "warning": "Operational contacts, schedules, policies, and pathways can change. Confirm time-sensitive details in current Cleveland Clinic systems."
+      },
+      "routes": [
+        {
+          "id": "akron-section-1b3738166fbc",
+          "path": "/akron/welcome-and-source-overview",
+          "slug": "welcome-and-source-overview",
+          "title": "Welcome & source overview",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-a5a4d5b31160",
+          "path": "/akron/shift-command-center",
+          "slug": "shift-command-center",
+          "title": "Shift Command Center",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-a42de66ad799",
+          "path": "/akron/high-stakes-escalation-strip",
+          "slug": "high-stakes-escalation-strip",
+          "title": "High-Stakes Escalation Strip",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-05388275b449",
+          "path": "/akron/quick-reference-card",
+          "slug": "quick-reference-card",
+          "title": "Quick Reference Card",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-d3e34f974b49",
+          "path": "/akron/critical-contacts",
+          "slug": "critical-contacts",
+          "title": "Critical Contacts",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-10fd47f82fad",
+          "path": "/akron/day-one-essentials",
+          "slug": "day-one-essentials",
+          "title": "Day-One Essentials",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-0310943b110c",
+          "path": "/akron/start-here-first-shift-navigation",
+          "slug": "start-here-first-shift-navigation",
+          "title": "Start Here: First-Shift Navigation",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-b20f75239b10",
+          "path": "/akron/scenario-finder",
+          "slug": "scenario-finder",
+          "title": "Scenario Finder",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-f308ea2526c4",
+          "path": "/akron/before-first-shift-checklist",
+          "slug": "before-first-shift-checklist",
+          "title": "Before First Shift Checklist",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-2e200113fbeb",
+          "path": "/akron/common-first-week-pitfalls",
+          "slug": "common-first-week-pitfalls",
+          "title": "Common First-Week Pitfalls",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-a4d9f87ca8dc",
+          "path": "/akron/part-1-getting-started",
+          "slug": "part-1-getting-started",
+          "title": "PART 1 · Getting Started",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-4f00a244a3af",
+          "path": "/akron/location-and-logistics",
+          "slug": "location-and-logistics",
+          "title": "Location & Logistics",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-bbe5b9b10af7",
+          "path": "/akron/pre-rotation-checklist",
+          "slug": "pre-rotation-checklist",
+          "title": "Pre-Rotation Checklist",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-38b10f99faea",
+          "path": "/akron/epic-login-environment",
+          "slug": "epic-login-environment",
+          "title": "Epic Login Environment",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-0c068b987c7c",
+          "path": "/akron/unit-overview",
+          "slug": "unit-overview",
+          "title": "Unit Overview",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-a07b0374a86b",
+          "path": "/akron/part-2-scope-of-practice-and-admissions",
+          "slug": "part-2-scope-of-practice-and-admissions",
+          "title": "PART 2 · Scope of Practice & Admissions",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-62086ed4ebcb",
+          "path": "/akron/primary-admission-responsibilities",
+          "slug": "primary-admission-responsibilities",
+          "title": "Primary Admission Responsibilities",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-80034b85753f",
+          "path": "/akron/trauma-patient-workflow",
+          "slug": "trauma-patient-workflow",
+          "title": "Trauma Patient Workflow",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-1ec0c1f3f6ca",
+          "path": "/akron/isolated-traumatic-brain-injury-tbi",
+          "slug": "isolated-traumatic-brain-injury-tbi",
+          "title": "Isolated Traumatic Brain Injury (TBI)",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-4433c5bfa95e",
+          "path": "/akron/polytrauma-patients",
+          "slug": "polytrauma-patients",
+          "title": "Polytrauma Patients",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-4336b38f1ff5",
+          "path": "/akron/tracheostomy-and-peg-placement",
+          "slug": "tracheostomy-and-peg-placement",
+          "title": "Tracheostomy & PEG Placement",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-86277e543730",
+          "path": "/akron/critical-care-consultation-for-trauma-patients",
+          "slug": "critical-care-consultation-for-trauma-patients",
+          "title": "Critical Care Consultation for Trauma Patients",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-4055f3349f18",
+          "path": "/akron/part-3-daily-workflow-and-expectations",
+          "slug": "part-3-daily-workflow-and-expectations",
+          "title": "PART 3 · Daily Workflow & Expectations",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-7b7990679261",
+          "path": "/akron/the-daily-rhythm",
+          "slug": "the-daily-rhythm",
+          "title": "The Daily Rhythm",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-6890f9108e97",
+          "path": "/akron/airway-and-emergency-response",
+          "slug": "airway-and-emergency-response",
+          "title": "Airway & Emergency Response",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-d473c50f4070",
+          "path": "/akron/8-45-am-multidisciplinary-discharge-planning-rounds",
+          "slug": "8-45-am-multidisciplinary-discharge-planning-rounds",
+          "title": "8:45 AM — Multidisciplinary Discharge Planning Rounds",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-04df304a5ae9",
+          "path": "/akron/9-00-am-nsicu-interdisciplinary-bedside-rounds",
+          "slug": "9-00-am-nsicu-interdisciplinary-bedside-rounds",
+          "title": "9:00 AM — NSICU Interdisciplinary Bedside Rounds",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-91b63ac48a08",
+          "path": "/akron/part-4-consultation-and-stroke-alerts",
+          "slug": "part-4-consultation-and-stroke-alerts",
+          "title": "PART 4 · Consultation & Stroke Alerts",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-7f0fed5709c7",
+          "path": "/akron/inpatient-neurology-support",
+          "slug": "inpatient-neurology-support",
+          "title": "Inpatient Neurology Support",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-5c24e8c794b1",
+          "path": "/akron/neurocritical-care-consultation",
+          "slug": "neurocritical-care-consultation",
+          "title": "Neurocritical Care Consultation",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-e4ed1ab11c9c",
+          "path": "/akron/stroke-alert-process",
+          "slug": "stroke-alert-process",
+          "title": "Stroke Alert Process",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-20b6dd79be6f",
+          "path": "/akron/part-5-emergency-transfers-and-ecmo",
+          "slug": "part-5-emergency-transfers-and-ecmo",
+          "title": "PART 5 · Emergency Transfers & ECMO",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-8bd5f01a67fe",
+          "path": "/akron/auto-launch-and-the-cct-process",
+          "slug": "auto-launch-and-the-cct-process",
+          "title": "Auto Launch & the CCT Process",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-30d2c47686f6",
+          "path": "/akron/acute-stroke-ich-transfer-workflow",
+          "slug": "acute-stroke-ich-transfer-workflow",
+          "title": "Acute Stroke / ICH Transfer Workflow",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-a60d4459b72b",
+          "path": "/akron/diagnoses-eligible-for-emergency-transfer-incl-auto-launch",
+          "slug": "diagnoses-eligible-for-emergency-transfer-incl-auto-launch",
+          "title": "Diagnoses Eligible for Emergency Transfer (Incl. Auto Launch)",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-822237a8a523",
+          "path": "/akron/ecmo-activation-pathway-akron-general",
+          "slug": "ecmo-activation-pathway-akron-general",
+          "title": "ECMO Activation Pathway — Akron General",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-accbae6a3dfd",
+          "path": "/akron/1-trigger-suspected-need-for-ecmo",
+          "slug": "1-trigger-suspected-need-for-ecmo",
+          "title": "1. Trigger: Suspected Need for ECMO",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-ebb29674d0e5",
+          "path": "/akron/2-immediate-actions",
+          "slug": "2-immediate-actions",
+          "title": "2. Immediate Actions",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-97c34e04f7e0",
+          "path": "/akron/ecmo-candidacy-assessment",
+          "slug": "ecmo-candidacy-assessment",
+          "title": "ECMO Candidacy Assessment",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-3417f4f24451",
+          "path": "/akron/pulmonary-embolism-pathway",
+          "slug": "pulmonary-embolism-pathway",
+          "title": "Pulmonary Embolism Pathway",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-2dd4a711e9f1",
+          "path": "/akron/3-ecmo-team-activation",
+          "slug": "3-ecmo-team-activation",
+          "title": "3. ECMO Team Activation",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-906860e47c8a",
+          "path": "/akron/4-decision-point-on-site-ecmo-deployment",
+          "slug": "4-decision-point-on-site-ecmo-deployment",
+          "title": "4. Decision Point: On-Site ECMO Deployment",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-3580e1c2606e",
+          "path": "/akron/5-escalation-contact",
+          "slug": "5-escalation-contact",
+          "title": "5. Escalation Contact",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-4f2e068e398f",
+          "path": "/akron/part-6-documentation-and-quality",
+          "slug": "part-6-documentation-and-quality",
+          "title": "PART 6 · Documentation & Quality",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-700903b766a3",
+          "path": "/akron/required-clinical-documentation-every-eligible-patient",
+          "slug": "required-clinical-documentation-every-eligible-patient",
+          "title": "Required Clinical Documentation (Every Eligible Patient)",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-22f111efc931",
+          "path": "/akron/hemorrhagic-stroke-severity-scores",
+          "slug": "hemorrhagic-stroke-severity-scores",
+          "title": "Hemorrhagic Stroke Severity Scores",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-48c6eb8f25a9",
+          "path": "/akron/stroke-care-pathway-in-epic",
+          "slug": "stroke-care-pathway-in-epic",
+          "title": "Stroke Care Pathway in Epic",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-2b4369c52ee7",
+          "path": "/akron/epic-order-set-favorites",
+          "slug": "epic-order-set-favorites",
+          "title": "Epic Order Set Favorites",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-25b3247907b9",
+          "path": "/akron/consent-and-code-status-icu-admission",
+          "slug": "consent-and-code-status-icu-admission",
+          "title": "Consent & Code Status (ICU Admission)",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-49c0f3dd8821",
+          "path": "/akron/icu-consent-smartphrase-nicuconsent",
+          "slug": "icu-consent-smartphrase-nicuconsent",
+          "title": "ICU Consent (SmartPhrase: .nicuconsent)",
+          "contentType": "smartphrase"
+        },
+        {
+          "id": "akron-section-da30c2acfd8f",
+          "path": "/akron/procedure-specific-consent-requirements",
+          "slug": "procedure-specific-consent-requirements",
+          "title": "Procedure-Specific Consent Requirements",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-dc35b77db9dc",
+          "path": "/akron/progress-notes-and-h-and-p",
+          "slug": "progress-notes-and-h-and-p",
+          "title": "Progress Notes & H&P",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-f1633f9058e7",
+          "path": "/akron/note-templates",
+          "slug": "note-templates",
+          "title": "Note Templates",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-20135f29867f",
+          "path": "/akron/vizient-poa-variables",
+          "slug": "vizient-poa-variables",
+          "title": "Vizient POA Variables",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-ab11c4249403",
+          "path": "/akron/billing",
+          "slug": "billing",
+          "title": "Billing",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-104dad965f75",
+          "path": "/akron/cdi-queries",
+          "slug": "cdi-queries",
+          "title": "CDI Queries",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-baf9d6b7b52d",
+          "path": "/akron/part-7-transitions-of-care",
+          "slug": "part-7-transitions-of-care",
+          "title": "PART 7 · Transitions of Care",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-372def51f708",
+          "path": "/akron/who-transfers-whom",
+          "slug": "who-transfers-whom",
+          "title": "Who Transfers Whom",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-557ef5bee075",
+          "path": "/akron/level-of-care-criteria",
+          "slug": "level-of-care-criteria",
+          "title": "Level-of-Care Criteria",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-29b8fbf66843",
+          "path": "/akron/step-down-pcu-vs-icu-admission-criteria-guide",
+          "slug": "step-down-pcu-vs-icu-admission-criteria-guide",
+          "title": "Step-Down/PCU vs ICU: Admission Criteria Guide",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-d2ae3c739973",
+          "path": "/akron/appropriate-for-step-down-pcu-when-clinically-stable",
+          "slug": "appropriate-for-step-down-pcu-when-clinically-stable",
+          "title": "Appropriate for Step-Down / PCU (when clinically stable)",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-f140447f7202",
+          "path": "/akron/icu-level-care-required",
+          "slug": "icu-level-care-required",
+          "title": "ICU-Level Care Required",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-236029e3c18e",
+          "path": "/akron/transfer-of-care-note",
+          "slug": "transfer-of-care-note",
+          "title": "Transfer of Care Note",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-fd28152e44de",
+          "path": "/akron/part-8-end-of-life-care-organ-donation-and-dnc",
+          "slug": "part-8-end-of-life-care-organ-donation-and-dnc",
+          "title": "PART 8 · End-of-Life Care, Organ Donation & DNC",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-ce0464c4951e",
+          "path": "/akron/comfort-focused-care",
+          "slug": "comfort-focused-care",
+          "title": "Comfort-Focused Care",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-57bfd4a859a3",
+          "path": "/akron/organ-donation-lifebanc",
+          "slug": "organ-donation-lifebanc",
+          "title": "Organ Donation — LifeBanc",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-2c6092314ccb",
+          "path": "/akron/death-by-neurologic-criteria-dnc",
+          "slug": "death-by-neurologic-criteria-dnc",
+          "title": "Death by Neurologic Criteria (DNC)",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-7a646100674a",
+          "path": "/akron/dnc-documentation-workflow-epic",
+          "slug": "dnc-documentation-workflow-epic",
+          "title": "DNC Documentation Workflow (Epic)",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-7dd83d9664e9",
+          "path": "/akron/donation-after-circulatory-death-dcd",
+          "slug": "donation-after-circulatory-death-dcd",
+          "title": "Donation after Circulatory Death (DCD)",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-d4563dc19b44",
+          "path": "/akron/part-9-neurotrauma-admission-and-icu-management",
+          "slug": "part-9-neurotrauma-admission-and-icu-management",
+          "title": "PART 9 · Neurotrauma Admission & ICU Management",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-9e2e45634aec",
+          "path": "/akron/neuromonitoring",
+          "slug": "neuromonitoring",
+          "title": "Neuromonitoring",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-f88de9576bbf",
+          "path": "/akron/communication-and-escalation",
+          "slug": "communication-and-escalation",
+          "title": "Communication & Escalation",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-46c47e9e9479",
+          "path": "/akron/on-call-directory-qgenda",
+          "slug": "on-call-directory-qgenda",
+          "title": "On-Call Directory: QGenda",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-b76685af5d20",
+          "path": "/akron/appendix-a-smartphrase-library",
+          "slug": "appendix-a-smartphrase-library",
+          "title": "APPENDIX A · SmartPhrase Library",
+          "contentType": "smartphrase"
+        },
+        {
+          "id": "akron-section-59a6f4ea7301",
+          "path": "/akron/stroke-assessment-and-plan-skeletons",
+          "slug": "stroke-assessment-and-plan-skeletons",
+          "title": "Stroke Assessment & Plan Skeletons",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-b9d6b7d7594c",
+          "path": "/akron/ischemic-stroke",
+          "slug": "ischemic-stroke",
+          "title": "Ischemic Stroke",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-dfa33a340c1b",
+          "path": "/akron/hemorrhagic-stroke",
+          "slug": "hemorrhagic-stroke",
+          "title": "Hemorrhagic Stroke",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-e0962bbc516f",
+          "path": "/akron/supportive-care-phrases",
+          "slug": "supportive-care-phrases",
+          "title": "Supportive Care Phrases",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-d12caf1c0192",
+          "path": "/akron/transfer-note-template",
+          "slug": "transfer-note-template",
+          "title": "Transfer Note Template",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-34d7b1546c8d",
+          "path": "/akron/staff-attestation",
+          "slug": "staff-attestation",
+          "title": "Staff Attestation",
+          "contentType": "reference-table"
+        },
+        {
+          "id": "akron-section-6854fb60d689",
+          "path": "/akron/appendix-b-handbook-maintenance",
+          "slug": "appendix-b-handbook-maintenance",
+          "title": "APPENDIX B · Handbook Maintenance",
+          "contentType": "article"
+        },
+        {
+          "id": "akron-section-1ccfcdcf7cf1",
+          "path": "/akron/maintenance-notes",
+          "slug": "maintenance-notes",
+          "title": "Maintenance Notes",
+          "contentType": "reference-table"
+        }
+      ]
+    }
+  },
+  "redirects": [
+    {
+      "kind": "renamed-section",
+      "campus": "main-campus",
+      "from": "/main-campus/part-6-documentation-quality",
+      "to": "/main-campus/part-6-documentation-and-quality",
+      "stableId": "main-campus-section-04e57bed5fbb",
+      "reviewedOn": "2026-07-16"
+    },
+    {
+      "kind": "convenience",
+      "campus": "main-campus",
+      "from": "/main-campus/first-shift",
+      "to": "/main-campus/start-here-first-shift-navigation",
+      "stableId": "main-campus-section-24182235b831"
+    },
+    {
+      "kind": "convenience",
+      "campus": "main-campus",
+      "from": "/main-campus/daily-workflow",
+      "to": "/main-campus/part-3-daily-workflow-and-expectations",
+      "stableId": "main-campus-section-745490e98fa1"
+    },
+    {
+      "kind": "convenience",
+      "campus": "main-campus",
+      "from": "/main-campus/documentation-and-quality",
+      "to": "/main-campus/part-6-documentation-and-quality",
+      "stableId": "main-campus-section-04e57bed5fbb"
+    },
+    {
+      "kind": "convenience",
+      "campus": "main-campus",
+      "from": "/main-campus/transitions-of-care",
+      "to": "/main-campus/part-7-transitions-of-care",
+      "stableId": "main-campus-section-412818998e7a"
+    },
+    {
+      "kind": "convenience",
+      "campus": "main-campus",
+      "from": "/main-campus/smartphrase-library",
+      "to": "/main-campus/appendix-a-smartphrase-library",
+      "stableId": "main-campus-section-176d1fa93f75"
+    },
+    {
+      "kind": "renamed-section",
+      "campus": "akron",
+      "from": "/akron/part-7-care-transitions",
+      "to": "/akron/part-7-transitions-of-care",
+      "stableId": "akron-section-baf9d6b7b52d",
+      "reviewedOn": "2026-07-16"
+    },
+    {
+      "kind": "convenience",
+      "campus": "akron",
+      "from": "/akron/first-shift",
+      "to": "/akron/start-here-first-shift-navigation",
+      "stableId": "akron-section-0310943b110c"
+    },
+    {
+      "kind": "convenience",
+      "campus": "akron",
+      "from": "/akron/daily-workflow",
+      "to": "/akron/part-3-daily-workflow-and-expectations",
+      "stableId": "akron-section-4055f3349f18"
+    },
+    {
+      "kind": "convenience",
+      "campus": "akron",
+      "from": "/akron/documentation-and-quality",
+      "to": "/akron/part-6-documentation-and-quality",
+      "stableId": "akron-section-4f2e068e398f"
+    },
+    {
+      "kind": "convenience",
+      "campus": "akron",
+      "from": "/akron/transitions-of-care",
+      "to": "/akron/part-7-transitions-of-care",
+      "stableId": "akron-section-baf9d6b7b52d"
+    },
+    {
+      "kind": "convenience",
+      "campus": "akron",
+      "from": "/akron/smartphrase-library",
+      "to": "/akron/appendix-a-smartphrase-library",
+      "stableId": "akron-section-b76685af5d20"
+    }
+  ]
+}

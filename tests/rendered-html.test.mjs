@@ -20,12 +20,22 @@ test("server renders the faculty wiki landing page", async () => {
   const html = await response.text();
   assert.match(html, /Neurocritical Care Faculty Wiki/i);
   assert.match(html, /NEUROCRITICAL/i);
-  assert.match(html, /Open the faculty wiki/i);
+  assert.match(html, /Open the right faculty wiki/i);
   assert.match(html, /Source figures/i);
 });
 
-test("the client includes the handbook figure library", async () => {
-  const source = await readFile(new URL("../src/App.jsx", import.meta.url), "utf8");
+test("unknown non-campus paths render stable global recovery UI", async () => {
+  const response = await render("/not-a-campus/topic");
+  assert.equal(response.status, 404);
+  const html = await response.text();
+  assert.match(html, /Main Campus/);
+  assert.match(html, /recovery/);
+  assert.match(html, /This article path is not in the current handbook/);
+  assert.match(html, /name="scope" value="main-campus"/);
+});
+
+test("the figures page renders the handbook figure library", async () => {
+  const source = await readFile(new URL("../src/components/wiki/FiguresPage.jsx", import.meta.url), "utf8");
   assert.match(source, /Figures from both faculty handbooks/i);
   assert.match(source, /figure-library-grid/i);
 });

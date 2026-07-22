@@ -31,34 +31,41 @@ export default function EyeField() {
     if (!field || !canvas) return undefined;
 
     const context = canvas.getContext("2d", { alpha: true });
+    if (!context) return undefined;
+
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const compactQuery = window.matchMedia("(max-width: 767px)");
-    const random = seededRandom(24719);
-    const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
+    
+    // Physics state using spring damping
+    const pointer = { x: 0, y: 0, targetX: 0, targetY: 0, vx: 0, vy: 0 };
     let gazeLocked = false;
     let particles = [];
     let frameId = 0;
     let width = 0;
     let height = 0;
     let visible = !document.hidden;
+    let lastMoveTime = performance.now();
+    let pupilScale = 1;
 
     const makeParticles = () => {
-      const count = compactQuery.matches ? 34 : 82;
+      const count = compactQuery.matches ? 36 : 84;
+      const random = seededRandom(24719 + count);
       particles = Array.from({ length: count }, () => ({
         x: random(),
-        y: 0.16 + random() * 0.68,
-        radius: 0.45 + random() * 1.75,
-        speed: 0.000035 + random() * 0.00012,
-        drift: 0.001 + random() * 0.006,
+        y: 0.14 + random() * 0.72,
+        z: 0.2 + random() * 0.8, // 3D depth layer
+        radius: 0.5 + random() * 1.8,
+        speed: 0.00004 + random() * 0.00014,
+        drift: 0.001 + random() * 0.005,
         phase: random() * Math.PI * 2,
-        alpha: 0.16 + random() * 0.62,
-        layer: 0.25 + random() * 0.75,
+        alpha: 0.18 + random() * 0.65,
+        blueGreen: random() > 0.45,
       }));
     };
 
     const resize = () => {
       const bounds = field.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       width = Math.max(1, bounds.width);
       height = Math.max(1, bounds.height);
       canvas.width = Math.round(width * dpr);
@@ -67,6 +74,101 @@ export default function EyeField() {
       canvas.style.height = `${height}px`;
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
       makeParticles();
+    };
+
+    // Draw 3D Spatial Hologram Orbital HUD Rings
+    const drawHolographicHUD = (time, cx, cy, radiusX, radiusY) => {
+      context.save();
+      context.translate(cx, cy);
+
+      // Outer Rotating HUD Ring (Clockwise)
+      const rot1 = time * 0.00018;
+      context.save();
+      context.rotate(rot1);
+      context.beginPath();
+      context.ellipse(0, 0, radiusX * 1.22, radiusY * 1.22, 0, 0, Math.PI * 2);
+      context.strokeStyle = "rgba(42, 145, 255, 0.16)";
+      context.lineWidth = 1;
+      context.setLineDash([4, 12]);
+      context.stroke();
+
+      // Tick marks on Outer HUD ring
+      const ticks = 16;
+      for (let i = 0; i < ticks; i += 1) {
+        const a = (i / ticks) * Math.PI * 2;
+        const tx1 = Math.cos(a) * (radiusX * 1.2);
+        const ty1 = Math.sin(a) * (radiusY * 1.2);
+        const tx2 = Math.cos(a) * (radiusX * 1.25);
+        const ty2 = Math.sin(a) * (radiusY * 1.25);
+        context.beginPath();
+        context.moveTo(tx1, ty1);
+        context.lineTo(tx2, ty2);
+        context.strokeStyle = i % 4 === 0 ? "rgba(80, 224, 210, 0.45)" : "rgba(64, 160, 255, 0.2)";
+        context.lineWidth = i % 4 === 0 ? 1.5 : 0.8;
+        context.stroke();
+      }
+      context.restore();
+
+      // Inner Counter-Rotating HUD Ring (Counter-Clockwise)
+      const rot2 = -time * 0.00024;
+      context.save();
+      context.rotate(rot2);
+      context.beginPath();
+      context.ellipse(0, 0, radiusX * 0.88, radiusY * 0.88, 0, 0, Math.PI * 2);
+      context.strokeStyle = "rgba(80, 224, 210, 0.18)";
+      context.lineWidth = 0.85;
+      context.setLineDash([8, 16]);
+      context.stroke();
+      context.restore();
+
+      context.restore();
+    };
+
+    // Draw 3D Specular Eye Lens & Normal-Mapped Lighting Glint
+    const draw3DSphericalSpecular = (cx, cy, radius, lightX, lightY) => {
+      context.save();
+      // Calculate specular highlight center based on light vector (N . L)
+      const specX = cx + lightX * radius * 0.45;
+      const specY = cy + lightY * radius * 0.42;
+      const specGrad = context.createRadialGradient(
+        specX,
+        specY,
+        2,
+        specX,
+        specY,
+        radius * 0.55
+      );
+      specGrad.addColorStop(0, "rgba(225, 248, 255, 0.72)");
+      specGrad.addColorStop(0.25, "rgba(110, 200, 255, 0.28)");
+      specGrad.addColorStop(0.65, "rgba(40, 130, 240, 0.08)");
+      specGrad.addColorStop(1, "rgba(40, 130, 240, 0)");
+
+      context.beginPath();
+      context.ellipse(cx, cy, radius * 1.05, radius * 0.85, 0, 0, Math.PI * 2);
+      context.fillStyle = specGrad;
+      context.fill();
+
+      // Secondary Rim Light
+      const rimX = cx - lightX * radius * 0.38;
+      const rimY = cy - lightY * radius * 0.35;
+      const rimGrad = context.createRadialGradient(
+        rimX,
+        rimY,
+        radius * 0.4,
+        rimX,
+        rimY,
+        radius * 0.95
+      );
+      rimGrad.addColorStop(0, "rgba(64, 230, 215, 0)");
+      rimGrad.addColorStop(0.7, "rgba(64, 230, 215, 0.06)");
+      rimGrad.addColorStop(1, "rgba(64, 230, 215, 0.18)");
+
+      context.beginPath();
+      context.ellipse(cx, cy, radius * 0.98, radius * 0.8, 0, 0, Math.PI * 2);
+      context.fillStyle = rimGrad;
+      context.fill();
+
+      context.restore();
     };
 
     const drawFiber = (time, index, parallaxX, parallaxY) => {
@@ -88,7 +190,7 @@ export default function EyeField() {
         width * 0.72,
         yCenter + direction * height * (0.34 - lane * 0.08) - pulse,
         endX,
-        endY,
+        endY
       );
       context.strokeStyle = `rgba(${index % 5 === 0 ? "84, 231, 223" : "40, 132, 255"}, ${0.055 + lane * 0.045})`;
       context.lineWidth = index % 4 === 0 ? 1.4 : 0.55;
@@ -98,46 +200,113 @@ export default function EyeField() {
     const render = (time = 0) => {
       context.clearRect(0, 0, width, height);
       const reduceMotion = motionQuery.matches;
+      field.dataset.motion = reduceMotion ? "reduced" : "full";
 
-      pointer.x += (pointer.targetX - pointer.x) * (reduceMotion ? 1 : 0.035);
-      pointer.y += (pointer.targetY - pointer.y) * (reduceMotion ? 1 : 0.035);
+      // Idle micro-saccadic movements when user is inactive
+      const idle = time - lastMoveTime > 1600;
+      if (!reduceMotion && idle && !gazeLocked) {
+        pointer.targetX = Math.sin(time * 0.0012) * 0.08 * Math.cos(time * 0.0007);
+        pointer.targetY = Math.cos(time * 0.0015) * 0.06;
+      }
+
+      // Spring-damper gaze interpolation: a = -k*(x - target) - c*v
+      if (reduceMotion) {
+        pointer.x = pointer.targetX;
+        pointer.y = pointer.targetY;
+        pointer.vx = 0;
+        pointer.vy = 0;
+      } else {
+        pointer.vx += (pointer.targetX - pointer.x) * 0.06 - pointer.vx * 0.24;
+        pointer.vy += (pointer.targetY - pointer.y) * 0.06 - pointer.vy * 0.24;
+        pointer.x += pointer.vx;
+        pointer.y += pointer.vy;
+      }
+
+      const targetScale = gazeLocked ? 1.25 : 1.0;
+      pupilScale += (targetScale - pupilScale) * (reduceMotion ? 1 : 0.06);
 
       const offsetX = pointer.x * (compactQuery.matches ? 18 : 38);
       const offsetY = pointer.y * (compactQuery.matches ? 10 : 22);
+
       field.style.setProperty("--pupil-x", `${offsetX * 0.72}px`);
       field.style.setProperty("--pupil-y", `${offsetY * 0.72}px`);
+      field.style.setProperty("--pupil-scale", `${pupilScale}`);
       field.style.setProperty("--iris-x", `${offsetX * 0.38}px`);
       field.style.setProperty("--iris-y", `${offsetY * 0.38}px`);
       field.style.setProperty("--field-x", `${offsetX * 0.12}px`);
       field.style.setProperty("--field-y", `${offsetY * 0.12}px`);
+      field.style.setProperty("--tilt-x", `${-pointer.y * 7}deg`);
+      field.style.setProperty("--tilt-y", `${pointer.x * 9}deg`);
 
+      const cx = width * 0.5 + offsetX * 0.38;
+      const cy = height * 0.4935 + offsetY * 0.38;
+      const radiusX = Math.min(width, height) * 0.28;
+      const radiusY = radiusX * 0.82;
+
+      // Draw Spatial Hologram HUD Rings & 3D Specular Lens
+      if (!reduceMotion) {
+        drawHolographicHUD(time, cx, cy, radiusX, radiusY);
+        draw3DSphericalSpecular(cx, cy, radiusX * 0.9, pointer.x, pointer.y);
+      }
+
+      // Draw Fiber Arcs
       for (let index = 0; index < 18; index += 1) {
         drawFiber(reduceMotion ? 0 : time, index, offsetX, offsetY);
       }
 
+      // Draw 3D Spatial Particle Field & Constellations
+      const activeParticles = [];
       particles.forEach((particle) => {
         if (!reduceMotion) particle.x += particle.speed * 16;
         if (particle.x > 1.04) particle.x = -0.04;
 
         const shimmer = reduceMotion ? 0.75 : 0.48 + Math.sin(time * particle.drift + particle.phase) * 0.38;
-        const x = particle.x * width + offsetX * particle.layer;
-        const y = particle.y * height + Math.sin(particle.x * Math.PI * 3 + particle.phase) * height * 0.045 + offsetY * particle.layer;
+        const parallaxMult = particle.z * 1.2;
+        const x = particle.x * width + offsetX * parallaxMult;
+        const y = particle.y * height + Math.sin(particle.x * Math.PI * 3 + particle.phase) * height * 0.045 + offsetY * parallaxMult;
         const alpha = Math.max(0.08, particle.alpha * shimmer);
-        const blueGreen = particle.layer > 0.84;
+        const blueGreen = particle.blueGreen;
+
+        activeParticles.push({ x, y, alpha, blueGreen, z: particle.z });
 
         context.beginPath();
-        context.arc(x, y, particle.radius, 0, Math.PI * 2);
+        context.arc(x, y, particle.radius * particle.z, 0, Math.PI * 2);
         context.fillStyle = blueGreen ? `rgba(80, 224, 210, ${alpha})` : `rgba(125, 188, 255, ${alpha})`;
-        context.shadowBlur = particle.radius * 5;
+        context.shadowBlur = particle.radius * 4 * particle.z;
         context.shadowColor = blueGreen ? "#38c8b8" : "#2a8dff";
         context.fill();
         context.shadowBlur = 0;
       });
 
+      // Spatial Constellation Lines
+      if (!reduceMotion && activeParticles.length > 0) {
+        const threshold = compactQuery.matches ? 45 : 72;
+        const len = activeParticles.length;
+        for (let i = 0; i < len; i += 1) {
+          for (let j = i + 1; j < len; j += 1) {
+            const dx = activeParticles[i].x - activeParticles[j].x;
+            const dy = activeParticles[i].y - activeParticles[j].y;
+            const dist = Math.hypot(dx, dy);
+            if (dist < threshold) {
+              const lineAlpha = (1 - dist / threshold) * 0.2 * activeParticles[i].alpha * activeParticles[i].z;
+              context.beginPath();
+              context.moveTo(activeParticles[i].x, activeParticles[i].y);
+              context.lineTo(activeParticles[j].x, activeParticles[j].y);
+              context.strokeStyle = activeParticles[i].blueGreen
+                ? `rgba(64, 230, 215, ${lineAlpha})`
+                : `rgba(90, 175, 255, ${lineAlpha})`;
+              context.lineWidth = 0.65;
+              context.stroke();
+            }
+          }
+        }
+      }
+
       if (!reduceMotion && visible) frameId = requestAnimationFrame(render);
     };
 
     const setGazeTarget = (clientX, clientY) => {
+      lastMoveTime = performance.now();
       const bounds = field.getBoundingClientRect();
       const eyeX = bounds.left + bounds.width / 2;
       const eyeY = bounds.top + bounds.height * 0.4935;
@@ -186,8 +355,9 @@ export default function EyeField() {
       render(performance.now());
     };
 
-    const resizeObserver = new ResizeObserver(resize);
-    resizeObserver.observe(field);
+    const resizeObserver = typeof ResizeObserver === "function" ? new ResizeObserver(resize) : null;
+    resizeObserver?.observe(field);
+    if (!resizeObserver) window.addEventListener("resize", resize);
     window.addEventListener("pointermove", onPointerMove, { passive: true });
     window.addEventListener("faculty-eye-gaze", onDirectedGaze);
     document.documentElement.addEventListener("pointerleave", onPointerLeave);
@@ -199,7 +369,8 @@ export default function EyeField() {
 
     return () => {
       cancelAnimationFrame(frameId);
-      resizeObserver.disconnect();
+      resizeObserver?.disconnect();
+      if (!resizeObserver) window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("faculty-eye-gaze", onDirectedGaze);
       document.documentElement.removeEventListener("pointerleave", onPointerLeave);
@@ -210,7 +381,7 @@ export default function EyeField() {
   }, []);
 
   return (
-    <div className="eye-field" ref={fieldRef} aria-hidden="true">
+    <div className="eye-field" ref={fieldRef} aria-hidden="true" data-seed="24719">
       <canvas className="particle-canvas" ref={canvasRef} />
 
       <svg className="eye-svg" viewBox="0 0 1200 620" role="presentation">
@@ -258,9 +429,9 @@ export default function EyeField() {
 
         <g className="iris-parallax">
           <ellipse className="iris-wash" cx="600" cy="306" rx="242" ry="198" />
-          <ellipse className="iris-orbit orbit-one" cx="600" cy="306" rx="196" ry="166" />
-          <ellipse className="iris-orbit orbit-two" cx="600" cy="306" rx="172" ry="147" />
-          <ellipse className="iris-orbit orbit-three" cx="600" cy="306" rx="146" ry="126" />
+          <ellipse className="iris-orbit orbit-one orbit-spin-cw" cx="600" cy="306" rx="196" ry="166" />
+          <ellipse className="iris-orbit orbit-two orbit-spin-ccw" cx="600" cy="306" rx="172" ry="147" />
+          <ellipse className="iris-orbit orbit-three orbit-spin-cw" cx="600" cy="306" rx="146" ry="126" />
           <g className="iris-fibers">
             {irisFibers.map((fiber, index) => (
               <line

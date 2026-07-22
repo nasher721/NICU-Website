@@ -1,5 +1,5 @@
-import FacultyWiki from "../src/App";
+import LandingPage from "../src/components/LandingPage.jsx";
 
 export default function Home() {
-  return <FacultyWiki />;
+  return <LandingPage />;
 }

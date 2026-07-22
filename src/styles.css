@@ -187,18 +187,23 @@ a {
 .eye-field {
   --pupil-x: 0px;
   --pupil-y: 0px;
+  --pupil-scale: 1;
   --iris-x: 0px;
   --iris-y: 0px;
   --field-x: 0px;
   --field-y: 0px;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
   position: absolute;
   z-index: 1;
   top: -1.5%;
   left: 50%;
   width: min(94vw, 1320px);
   height: min(73vh, 690px);
-  transform: translateX(-50%);
+  perspective: 1000px;
+  transform: translateX(-50%) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
   pointer-events: none;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .eye-orbit-nav {
@@ -434,6 +439,24 @@ a {
   transform-origin: 600px 306px;
 }
 
+@keyframes orbit-spin-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-spin-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.orbit-spin-cw {
+  animation: orbit-spin-cw 80s linear infinite;
+}
+
+.orbit-spin-ccw {
+  animation: orbit-spin-ccw 60s linear infinite;
+}
+
 .orbit-one {
   opacity: 0.42;
   stroke-width: 1.4;
@@ -472,7 +495,8 @@ a {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  transform: translate(calc(-50% + var(--pupil-x)), calc(-50% + var(--pupil-y)));
+  transform: translate(calc(-50% + var(--pupil-x)), calc(-50% + var(--pupil-y))) scale(var(--pupil-scale, 1));
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pupil-cluster img {
@@ -501,6 +525,13 @@ a {
   opacity: 0.6;
   background: radial-gradient(circle, rgba(36, 195, 160, 0.21) 0%, rgba(33, 130, 235, 0.16) 34%, transparent 67%);
   filter: blur(8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-spin-cw,
+  .orbit-spin-ccw {
+    animation: none;
+  }
 }
 
 .hero-copy {
@@ -546,6 +577,115 @@ a {
   padding-left: 0.72em;
   font-weight: 520;
   letter-spacing: -0.058em;
+}
+
+.hospital-chooser {
+  position: absolute;
+  z-index: 6;
+  right: var(--gutter);
+  bottom: clamp(2.6rem, 7vh, 5rem);
+  width: min(43vw, 640px);
+  padding: 1rem;
+  border: 1px solid rgba(114, 188, 235, 0.34);
+  border-radius: 8px;
+  background: rgba(3, 14, 29, 0.84);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(16px);
+}
+
+.hospital-chooser-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hospital-chooser-heading p {
+  margin: 0;
+  color: #67d9cf;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hospital-chooser-heading h2 {
+  margin: 0;
+  color: #eaf5fc;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 400;
+}
+
+.hospital-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.hospital-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.7rem;
+  min-height: 150px;
+  padding: 0.9rem;
+  border: 1px solid rgba(135, 196, 237, 0.3);
+  border-radius: 5px;
+  background: rgba(10, 39, 66, 0.72);
+  color: #f1f8fd;
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.hospital-card:hover,
+.hospital-card:focus-visible {
+  border-color: #67d9cf;
+  background: rgba(13, 58, 88, 0.95);
+  outline: 3px solid rgba(103, 217, 207, 0.28);
+  outline-offset: 2px;
+  transform: translateY(-2px);
+}
+
+.hospital-card-badge {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(103, 217, 207, 0.6);
+  border-radius: 50%;
+  color: #8ce7de;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hospital-card-copy {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+}
+
+.hospital-card-copy strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.02rem;
+  font-weight: 400;
+}
+
+.hospital-card-copy small {
+  color: rgba(202, 220, 233, 0.78);
+  font-size: 0.64rem;
+  line-height: 1.45;
+}
+
+.hospital-card-action {
+  grid-column: 2;
+  align-self: end;
+  color: #8ce7de;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .slide-marker {
@@ -787,6 +927,10 @@ a {
     width: min(30vw, 270px);
   }
 
+  .hospital-chooser {
+    width: min(48vw, 560px);
+  }
+
   .slide-marker {
     right: 28vw;
   }
@@ -799,7 +943,7 @@ a {
 
   .campaign,
   .hero {
-    min-height: max(100dvh, 760px);
+    min-height: max(100dvh, 1040px);
     overflow: hidden;
   }
 
@@ -884,7 +1028,6 @@ a {
     min-height: 290px;
     max-height: 360px;
   }
-
   .eye-orbit-link {
     min-width: 0;
     padding: 0.5rem 0.58rem;
@@ -950,6 +1093,28 @@ a {
     max-width: calc(100vw - var(--gutter) * 2);
   }
 
+  .hospital-chooser {
+    top: min(65vh, 590px);
+    right: var(--gutter);
+    bottom: auto;
+    left: var(--gutter);
+    width: auto;
+  }
+
+  .hospital-chooser-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .hospital-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hospital-card {
+    min-height: 118px;
+  }
+
   .hero-copy h1 {
     font-size: clamp(2.25rem, 11.2vw, 3.45rem);
     line-height: 0.91;
@@ -996,7 +1161,7 @@ a {
 @media (max-width: 390px) {
   .campaign,
   .hero {
-    min-height: max(100dvh, 730px);
+    min-height: max(100dvh, 1020px);
   }
 
   .hero-copy {
@@ -1009,6 +1174,15 @@ a {
 
   .slide-marker {
     top: min(44vh, 370px);
+  }
+
+  .hospital-chooser {
+    top: min(62vh, 550px);
+    padding: 0.75rem;
+  }
+
+  .hospital-card {
+    min-height: 112px;
   }
 }
 
@@ -1275,6 +1449,38 @@ a {
   box-shadow: 0 0 0 3px rgba(0, 106, 77, 0.11);
 }
 
+.search-combobox {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  height: auto;
+  min-height: 44px;
+  overflow: visible;
+}
+
+.search-input-row {
+  display: flex;
+  min-width: 0;
+  height: 42px;
+  align-items: center;
+}
+
+.search-scope-control {
+  display: flex;
+  align-items: stretch;
+  border-left: 1px solid #d5dde0;
+}
+
+.search-scope-control select {
+  min-width: 128px;
+  padding: 0 1.8rem 0 0.65rem;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  background: #edf3f1;
+  color: #24483d;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
 .search-mark {
   padding-left: 0.9rem;
   color: #52616c;
@@ -1321,7 +1527,6 @@ a {
   background: #ffffff;
   box-shadow: 0 18px 52px rgba(24, 43, 52, 0.2);
 }
-
 .search-summary {
   padding: 0.65rem 0.9rem;
   border-bottom: 1px solid #e6eaec;
@@ -1358,6 +1563,163 @@ a {
 .search-results button small {
   color: var(--wiki-muted);
   font-size: 0.7rem;
+}
+
+.search-popover {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  left: 0;
+  z-index: 50;
+  overflow: hidden;
+  border: 1px solid #ced7db;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 18px 52px rgba(24, 43, 52, 0.2);
+}
+
+.search-suggestions {
+  max-height: min(64vh, 520px);
+  overflow-y: auto;
+}
+
+.search-panel-message {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.85rem 1rem;
+  color: #53636b;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.search-panel-message strong {
+  color: #233943;
+}
+
+.search-panel-message button,
+.search-load-state button {
+  width: fit-content;
+  min-height: 34px;
+  padding: 0.42rem 0.7rem;
+  border: 1px solid #8fa99f;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #145c48;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-panel-error {
+  border-left: 4px solid #9e3c31;
+  background: #fff4f1;
+}
+
+.search-panel-warning {
+  border-left: 4px solid #aa741e;
+  background: #fff9ea;
+}
+
+.search-suggestion-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-suggestion-list li + li {
+  border-top: 1px solid #edf0f2;
+}
+
+.search-suggestion-list [role="option"] {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.78rem 0.9rem;
+  color: var(--wiki-ink);
+  text-decoration: none;
+}
+
+.search-suggestion-list [role="option"]:hover,
+.search-suggestion-list [role="option"].active,
+.search-suggestion-list [role="option"][aria-selected="true"] {
+  background: #eaf5f1;
+  box-shadow: inset 3px 0 0 var(--wiki-green);
+}
+
+.search-option-heading,
+.result-title-row {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.search-option-heading strong {
+  font-size: 0.84rem;
+  line-height: 1.3;
+}
+
+.search-option-context,
+.result-context {
+  color: #4d5e67;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.search-option-context mark,
+.result-context mark {
+  border-radius: 2px;
+  background: #ffe98e;
+  color: inherit;
+  box-shadow: 0 0 0 2px #ffe98e;
+}
+
+.search-option-meta,
+.result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  color: #6c7980;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.campus-badge {
+  flex: none;
+  padding: 0.18rem 0.42rem;
+  border: 1px solid #a8bab3;
+  border-radius: 999px;
+  background: #f4f8f6;
+  color: #285848;
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.campus-badge.campus-akron {
+  border-color: #9db7c5;
+  background: #f0f6f9;
+  color: #27566e;
+}
+
+.search-all-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0.9rem;
+  border-top: 1px solid #d9e2e5;
+  background: #f5f8f8;
+  color: #145c48 !important;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.search-all-link:hover {
+  text-decoration: underline;
 }
 
 .campus-picker {
@@ -1436,7 +1798,7 @@ a {
 }
 
 .sidebar-campus small {
-  color: var(--wiki-muted);
+  color: #4a565e;
   font-size: 0.66rem;
 }
 
@@ -1473,7 +1835,7 @@ a {
 }
 
 .section-number {
-  color: #89949b;
+  color: #505d64;
   font-size: 0.61rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1515,7 +1877,7 @@ a {
   align-items: center;
   gap: 0.45rem;
   margin-bottom: 2rem;
-  color: #78838b;
+  color: #455259;
   font-size: 0.69rem;
 }
 
@@ -1565,6 +1927,211 @@ a {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.55;
+}
+
+.search-page h1 {
+  max-width: 780px;
+  margin: 0;
+  color: #10232b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 5.6vw, 5.2rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.search-filter-form {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(140px, 0.7fr)) auto;
+  gap: 0.7rem;
+  align-items: end;
+  margin: 2.4rem 0 3.4rem;
+  padding: 1rem;
+  border: 1px solid #ccd7db;
+  border-top: 3px solid var(--wiki-green);
+  background: #ffffff;
+  box-shadow: 0 7px 24px rgba(23, 43, 50, 0.05);
+}
+
+.search-filter-form label {
+  display: grid;
+  min-width: 0;
+  gap: 0.35rem;
+}
+
+.search-filter-form label > span {
+  color: #5f6d74;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.search-filter-form input,
+.search-filter-form select {
+  width: 100%;
+  min-height: 42px;
+  padding: 0.58rem 0.65rem;
+  border: 1px solid #bbc8cd;
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--wiki-ink);
+}
+
+.search-filter-form button {
+  min-height: 42px;
+  padding: 0.65rem 1rem;
+  border: 1px solid #155c49;
+  border-radius: 4px;
+  background: #155c49;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.search-results-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #cdd7da;
+}
+
+.search-results-heading h2,
+.search-recovery h2,
+.search-empty-state h2 {
+  margin: 0;
+  color: #16303a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-weight: 400;
+}
+
+.search-results-heading .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.search-results-heading > strong {
+  color: #4f6269;
+  font-size: 0.78rem;
+}
+
+.search-both-action {
+  display: inline-flex;
+  margin: 0 0 1.2rem;
+  color: #145c48 !important;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.search-loading,
+.search-empty-state,
+.search-load-state {
+  margin: 1rem 0;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #cdd8dc;
+  background: #ffffff;
+}
+
+.search-load-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.search-load-state p,
+.search-empty-state p {
+  margin: 0.35rem 0 0;
+  color: #586970;
+  line-height: 1.5;
+}
+
+.search-load-state.partial {
+  border-left: 4px solid #aa741e;
+  background: #fff9ea;
+}
+
+.search-load-state.error {
+  border-left: 4px solid #9e3c31;
+  background: #fff4f1;
+}
+
+.full-search-results {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.full-search-results > li > a {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #d2dcdf;
+  border-left: 3px solid #4b8172;
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 5px 18px rgba(23, 43, 50, 0.035);
+}
+
+.full-search-results > li > a:hover,
+.full-search-results > li > a:focus-visible {
+  border-left-color: var(--wiki-green);
+  background: #f7fbf9;
+  box-shadow: 0 8px 26px rgba(23, 43, 50, 0.08);
+}
+
+.result-title-row strong {
+  color: #16303a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+  line-height: 1.3;
+}
+
+.search-recovery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+  padding: 1.2rem;
+  border: 1px solid #ced9dd;
+  background: #ffffff;
+}
+
+.search-recovery > .eyebrow,
+.search-recovery > h2 {
+  grid-column: 1 / -1;
+}
+
+.search-recovery h3 {
+  margin: 0 0 0.5rem;
+  color: #2b4a55;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.search-recovery ul {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.search-recovery a {
+  color: #285f73;
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.search-recovery a span {
+  display: block;
+  color: #6a777d;
+  font-size: 0.62rem;
 }
 
 .source-stamp {
@@ -1734,7 +2301,7 @@ a {
 }
 
 .chapter-index {
-  color: #89949b;
+  color: #546168;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.82rem;
 }
@@ -1799,7 +2366,7 @@ a {
 }
 
 .source-grid small {
-  color: #7a858c;
+  color: #505c63;
   font-size: 0.64rem;
 }
 
@@ -2290,12 +2857,322 @@ a {
   padding: 1.1rem clamp(1rem, 3vw, 3rem);
   border-top: 1px solid #d3dcdf;
   background: #e7ecee;
-  color: #68757c;
+  color: #455259;
   font-size: 0.63rem;
 }
 
 .wiki-footer a {
   color: #225d4c;
+}
+
+.wiki-shell :where(a, button, input, select, [tabindex]):focus-visible {
+  outline: 3px solid #147a5d;
+  outline-offset: 3px;
+}
+
+.wiki-contents-desktop {
+  border-right: 1px solid var(--wiki-line);
+  background: #eef2f3;
+}
+
+.wiki-contents-mobile {
+  display: none;
+}
+
+.wiki-sidebar nav {
+  display: block;
+}
+
+.wiki-sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wiki-sidebar .contents-utilities {
+  display: grid;
+  gap: 0.2rem;
+  margin: 1.15rem 0 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #d2dcdf;
+}
+
+.wiki-sidebar .contents-level {
+  display: grid;
+  gap: 0.08rem;
+}
+
+.wiki-sidebar .contents-level .contents-level {
+  margin-left: 1rem;
+  padding-left: 0.55rem;
+  border-left: 1px solid #d3dde0;
+}
+
+.wiki-sidebar nav a {
+  min-height: 32px;
+}
+
+.wiki-sidebar .contents-level-2 > li > a,
+.wiki-sidebar .contents-level-3 > li > a {
+  grid-template-columns: minmax(0, 1fr);
+  padding-block: 0.38rem;
+  font-size: 0.68rem;
+}
+
+.wiki-sidebar .contents-level-3 > li > a {
+  color: #455258;
+  font-size: 0.64rem;
+}
+
+.wiki-sidebar nav a[aria-current="page"] {
+  border-left-color: var(--wiki-green);
+  background: #ffffff;
+  color: #073d30;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(33, 47, 56, 0.045);
+}
+
+.wiki-drawer-backdrop[hidden] {
+  display: none !important;
+}
+
+.drawer-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.drawer-close {
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #bcc9cd;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #24483d;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.campus-identity-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.campus-identity-line .eyebrow {
+  margin: 0;
+}
+
+.home-search-link {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  color: #17644f !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.topic-index,
+.source-status {
+  margin-top: 4rem;
+}
+
+.topic-index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.topic-index-card {
+  position: relative;
+  min-width: 0;
+  padding: 1.2rem 1.25rem;
+  border-top: 3px solid #2b5d50;
+  background: #ffffff;
+  box-shadow: 0 7px 24px rgba(23, 43, 50, 0.05);
+}
+
+.topic-index-card > .chapter-index {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.2rem;
+}
+
+.topic-index-card h3 {
+  max-width: calc(100% - 2.4rem);
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.28;
+}
+
+.topic-index-card h3 a,
+.topic-index-card li a {
+  text-decoration: none;
+}
+
+.topic-index-card h3 a:hover,
+.topic-index-card li a:hover {
+  color: var(--wiki-green);
+  text-decoration: underline;
+}
+
+.topic-index-card ul {
+  display: grid;
+  gap: 0.38rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.topic-index-card ul ul {
+  gap: 0.3rem;
+  margin: 0.35rem 0 0 0.8rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid #dbe3e5;
+}
+
+.topic-index-card li a {
+  color: #54646c;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.source-status {
+  padding: 1.4rem;
+  border: 1px solid #cdd8dc;
+  border-top: 3px solid var(--wiki-green);
+  background: #ffffff;
+}
+
+.source-status h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  font-weight: 400;
+}
+
+.source-status dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 1.25rem 0 0;
+  background: #dce4e6;
+}
+
+.source-status dl > div {
+  padding: 0.85rem;
+  background: #f7f9f9;
+}
+
+.source-status dt {
+  color: #65747b;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.source-status dd {
+  margin: 0.35rem 0 0;
+  color: #263940;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.source-review-status {
+  margin: 0.9rem 0 0;
+  color: #66747b;
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.source-warning {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid #1f8065;
+  background: #eaf4f1;
+  color: #315b4f;
+}
+
+.source-warning-fidelity {
+  border-left-color: #a97313;
+  background: #fff8ea;
+  color: #604f2c;
+}
+
+.source-warning strong {
+  font-size: 0.7rem;
+}
+
+.source-warning p {
+  margin: 0.35rem 0 0;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.source-status-compact {
+  margin: 1.2rem 0.35rem 0;
+  padding: 0.75rem;
+  border-top-width: 2px;
+}
+
+.source-status-compact dl {
+  grid-template-columns: 1fr;
+  margin-top: 0;
+}
+
+.source-status-compact dl > div:first-child {
+  display: none;
+}
+
+.source-status-compact dd,
+.source-status-compact .source-review-status,
+.source-status-compact .source-warning p {
+  font-size: 0.61rem;
+}
+
+.source-status-compact .source-warning {
+  padding: 0.65rem;
+}
+
+.smartphrase-block {
+  overflow-x: auto;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #c4d1d5;
+  border-left: 4px solid #286f91;
+  background: #f4f7f8;
+  color: #173541;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.74rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.table-wrap .smartphrase-block {
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+.missing-figure-placeholder {
+  display: grid;
+  min-height: 220px;
+  place-items: center;
+  border: 1px dashed #9caeb5;
+  background: #f1f4f5;
+  color: #68777e;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-size: 0.75rem;
+}
+
+.clinical-disclaimer-fidelity {
+  border-left-color: #a97313;
+  background: #fff8ea;
+  color: #604f2c;
 }
 
 @media (max-width: 1120px) {
@@ -2317,6 +3194,10 @@ a {
 
   .article-toc {
     display: none;
+  }
+
+  .search-filter-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -2344,7 +3225,15 @@ a {
     display: block;
   }
 
-  .sidebar-toggle {
+  .wiki-contents-desktop {
+    display: none;
+  }
+
+  .wiki-contents-mobile {
+    display: block;
+  }
+
+  .wiki-contents-mobile .sidebar-toggle {
     position: sticky;
     top: 0;
     z-index: 22;
@@ -2359,19 +3248,27 @@ a {
     color: #274c40;
     font-size: 0.72rem;
     font-weight: 700;
+    cursor: pointer;
   }
 
-  .sidebar-wrap {
-    display: none;
+  .wiki-drawer-backdrop {
+    position: fixed;
+    z-index: 80;
+    inset: 0;
+    display: grid;
+    align-items: stretch;
+    justify-items: start;
+    background: rgba(13, 25, 31, 0.52);
   }
 
-  .sidebar-wrap.open {
-    display: block;
-  }
-
-  .wiki-sidebar {
-    position: static;
-    max-height: none;
+  .wiki-contents-drawer {
+    position: relative;
+    top: auto;
+    width: min(92vw, 420px);
+    max-height: 100dvh;
+    padding-top: 1rem;
+    background: #eef2f3;
+    box-shadow: 18px 0 50px rgba(13, 25, 31, 0.24);
   }
 
   .wiki-main {
@@ -2390,6 +3287,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .topic-index-grid {
+    grid-template-columns: 1fr;
+  }
+
   .source-grid,
   .editorial-policy {
     grid-template-columns: 1fr;
@@ -2405,6 +3306,29 @@ a {
 
   .editorial-policy h2 {
     grid-column: 1;
+  }
+
+  .search-recovery {
+    grid-template-columns: 1fr;
+  }
+
+  .search-recovery > .eyebrow,
+  .search-recovery > h2 {
+    grid-column: 1;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 768px) {
+  .wiki-main {
+    padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+  }
+
+  .topic-index-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .source-status dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -2464,16 +3388,66 @@ a {
   .wiki-footer {
     flex-direction: column;
   }
+
+  .source-status dl {
+    grid-template-columns: 1fr;
+  }
+
+  .search-combobox,
+  .search-filter-form {
+    grid-template-columns: 1fr;
+  }
+
+  .search-scope-control {
+    border-top: 1px solid #d5dde0;
+    border-left: 0;
+  }
+
+  .search-scope-control select {
+    width: 100%;
+    min-height: 38px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .search-results-heading,
+  .search-load-state {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .search-page h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .wiki-main {
+    padding-inline: 1rem;
+  }
+
+  .wiki-home h1,
+  .sources-page h1,
+  .search-page h1 {
+    font-size: 2.15rem;
+  }
+
+  .topic-index-card {
+    padding-inline: 1rem;
+  }
+
+  .table-wrap {
+    max-width: calc(100vw - 2rem);
+  }
 }
 
 @media print {
   .wiki-header,
-  .sidebar-wrap,
+  .wiki-contents-desktop,
+  .wiki-contents-mobile,
   .sidebar-toggle,
   .article-toc,
   .wiki-footer,
-  .article-meta button,
-  .clinical-disclaimer {
+  .article-meta button {
     display: none !important;
   }
 
@@ -2497,5 +3471,24 @@ a {
   .source-figure {
     break-inside: avoid;
     box-shadow: none;
+  }
+
+  .article-section table {
+    min-width: 0;
+    font-size: 9pt;
+  }
+
+  .clinical-disclaimer,
+  .source-status,
+  .source-warning {
+    break-inside: avoid;
+    color: #000000;
+    background: #ffffff;
+  }
+
+  .smartphrase-block {
+    overflow: visible;
+    border-color: #666666;
+    white-space: pre-wrap;
   }
 }

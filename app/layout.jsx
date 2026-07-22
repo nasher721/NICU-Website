@@ -1,4 +1,5 @@
 import "../src/styles.css";
+import LegacyHashRedirect from "../src/routing/LegacyHashRedirect";
 
 export const metadata = {
   metadataBase: new URL("https://neurocritical-care-faculty-wiki.nasher721.chatgpt.site"),
@@ -28,7 +29,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LegacyHashRedirect />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "aliases": [
+    {
+      "term": "ICH",
+      "expansion": "intracerebral hemorrhage",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "SAH",
+      "expansion": "subarachnoid hemorrhage",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "DNC",
+      "expansion": "death by neurologic criteria",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "EVD",
+      "expansion": "external ventricular drain",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "TCD",
+      "expansion": "transcranial doppler",
+      "campuses": ["main-campus", "akron"]
+    }
+  ],
+  "shortcuts": [
+    {
+      "id": "first-shift",
+      "label": "First shift",
+      "hint": "Set up, orient, and avoid common first-week misses",
+      "campus": "*",
+      "targets": {
+        "main-campus": "start-here-first-shift-navigation",
+        "akron": "start-here-first-shift-navigation"
+      }
+    },
+    {
+      "id": "workflow",
+      "label": "Daily workflow",
+      "hint": "Rounds, response expectations, and service rhythm",
+      "campus": "*",
+      "targets": {
+        "main-campus": "part-3-daily-workflow-and-expectations",
+        "akron": "part-3-daily-workflow-and-expectations"
+      }
+    },
+    {
+      "id": "documentation",
+      "label": "Documentation",
+      "hint": "Required notes, scores, billing, and quality",
+      "campus": "*",
+      "targets": {
+        "main-campus": "part-6-documentation-and-quality",
+        "akron": "part-6-documentation-and-quality"
+      }
+    },
+    {
+      "id": "transitions",
+      "label": "Transitions",
+      "hint": "Level of care and transfer responsibilities",
+      "campus": "*",
+      "targets": {
+        "main-campus": "part-7-transitions-of-care",
+        "akron": "part-7-transitions-of-care"
+      }
+    },
+    {
+      "id": "smartphrases",
+      "label": "SmartPhrases",
+      "hint": "Assessment, transfer, and attestation templates",
+      "campus": "*",
+      "targets": {
+        "main-campus": "appendix-a-smartphrase-library",
+        "akron": "appendix-a-smartphrase-library"
+      }
+    }
+  ],
+  "rankingPriorities": [
+    {
+      "campus": "*",
+      "slug": "start-here-first-shift-navigation",
+      "priority": 100
+    },
+    {
+      "campus": "*",
+      "slug": "part-3-daily-workflow-and-expectations",
+      "priority": 90
+    },
+    {
+      "campus": "*",
+      "slug": "part-6-documentation-and-quality",
+      "priority": 90
+    },
+    {
+      "campus": "*",
+      "slug": "part-7-transitions-of-care",
+      "priority": 90
+    },
+    {
+      "campus": "*",
+      "slug": "appendix-a-smartphrase-library",
+      "priority": 80
+    }
+  ],
+  "verification": {
+    "main-campus": {
+      "handbookYear": 2026,
+      "verifiedOn": "2026-07-16",
+      "reviewStatus": "Source imported; campus-specific operational language requires named human review"
+    },
+    "akron": {
+      "handbookYear": 2026,
+      "verifiedOn": "2026-07-16",
+      "reviewStatus": "Source imported; clinical and operational changes require named human review"
+    }
+  },
+  "sourceWarnings": {
+    "main-campus": "The supplied Main Campus document contains Akron General labels and pathways. They are preserved as written and must be verified before campus-specific use.",
+    "akron": "Operational contacts, schedules, policies, and pathways can change. Confirm time-sensitive details in current Cleveland Clinic systems."
+  },
+  "renamedSections": [
+    {
+      "campus": "main-campus",
+      "previousSlug": "part-6-documentation-quality",
+      "currentSlug": "part-6-documentation-and-quality",
+      "stableSourceKey": "part-6-documentation-quality",
+      "reviewedOn": "2026-07-16",
+      "reason": "Preserve the canonical identity after the source heading added the conjunction."
+    },
+    {
+      "campus": "akron",
+      "previousSlug": "part-7-care-transitions",
+      "currentSlug": "part-7-transitions-of-care",
+      "stableSourceKey": "part-7-care-transitions",
+      "reviewedOn": "2026-07-16",
+      "reason": "Preserve the canonical identity after the source heading was standardized."
+    }
+  ],
+  "redirects": [
+    {
+      "campus": "*",
+      "from": "first-shift",
+      "to": "start-here-first-shift-navigation"
+    },
+    {
+      "campus": "*",
+      "from": "daily-workflow",
+      "to": "part-3-daily-workflow-and-expectations"
+    },
+    {
+      "campus": "*",
+      "from": "documentation-and-quality",
+      "to": "part-6-documentation-and-quality"
+    },
+    {
+      "campus": "*",
+      "from": "transitions-of-care",
+      "to": "part-7-transitions-of-care"
+    },
+    {
+      "campus": "*",
+      "from": "smartphrase-library",
+      "to": "appendix-a-smartphrase-library"
+    }
+  ]
+}

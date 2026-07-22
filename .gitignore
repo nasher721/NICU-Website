@@ -1,9 +1,17 @@
 node_modules
+node_modules_backup2
 dist/
+build/
 .next/
 .wrangler/
+.tmp/
+.vite-cache/
+test-results/
+tsconfig.tsbuildinfo
 next-env.d.ts
 .DS_Store
 ._*
 .omx/
+.specs/
+.openai/
 *.tar.gz
