@@ -6,11 +6,11 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
+    "dev": "next dev",
     "generate:data": "python3 tools/extract_handbooks.py --input-json src/data/handbooks.json --output src/data/handbooks.json --metadata src/data/wiki-metadata.json --inventory src/data/handbook-inventory.json --generated-dir src/data/generated --public-dir public && node tools/remove-appledouble.mjs src/data public",
     "prebuild": "npm run generate:data",
-    "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log node --import ./tools/register-vite-native-loader.mjs node_modules/vinext/dist/cli.js build && node tools/remove-appledouble.mjs app src docs public tests tools dist",
-    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
+    "build": "next build && node tools/remove-appledouble.mjs app src docs public tests tools .next",
+    "start": "next start",
     "test": "node tools/run-release-tests.mjs",
     "test:e2e": "playwright test",
     "lint": "eslint .",
