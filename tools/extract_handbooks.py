@@ -11,12 +11,6 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from docx import Document
-from docx.oxml.ns import qn
-from docx.table import Table
-from docx.text.paragraph import Paragraph
-
-
 CAMPUSES = {
     "main-campus": {
         "name": "Main Campus",
@@ -29,6 +23,16 @@ CAMPUSES = {
         "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
     },
 }
+
+
+def load_docx_support():
+    """Load optional DOCX parsing dependencies for source-document imports only."""
+    global Document, Paragraph, Table, qn
+
+    from docx import Document
+    from docx.oxml.ns import qn
+    from docx.table import Table
+    from docx.text.paragraph import Paragraph
 
 
 def clean_text(value: str) -> str:
@@ -706,6 +710,7 @@ def main():
     if args.input_json:
         payload = json.loads(args.input_json.read_text())
     else:
+        load_docx_support()
         if args.media_dir.exists():
             shutil.rmtree(args.media_dir)
         args.media_dir.mkdir(parents=True, exist_ok=True)
