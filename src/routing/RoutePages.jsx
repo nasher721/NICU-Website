@@ -1,5 +1,11 @@
 import { notFound, permanentRedirect } from "next/navigation";
 import FacultyWiki, { GlobalNotFoundPage } from "../App.jsx";
+import mainCampusContent from "../data/generated/main-campus.content.json" with { type: "json" };
+import mainCampusFigures from "../data/generated/main-campus.figures.json" with { type: "json" };
+import mainCampusNavigation from "../data/generated/main-campus.navigation.json" with { type: "json" };
+import akronContent from "../data/generated/akron.content.json" with { type: "json" };
+import akronFigures from "../data/generated/akron.figures.json" with { type: "json" };
+import akronNavigation from "../data/generated/akron.navigation.json" with { type: "json" };
 import {
   appendSearchParams,
   DEFAULT_CAMPUS,
@@ -11,16 +17,23 @@ import {
   resolveHospitalPath,
 } from "./routes.js";
 
-const generatedReaders = import.meta.glob(
-  "../data/generated/{main-campus,akron}.{navigation,content,figures}.json",
-  { import: "default" },
-);
+const generatedAssets = {
+  "main-campus": {
+    navigation: mainCampusNavigation,
+    content: mainCampusContent,
+    figures: mainCampusFigures,
+  },
+  akron: {
+    navigation: akronNavigation,
+    content: akronContent,
+    figures: akronFigures,
+  },
+};
 
 function readGeneratedAsset(campus, kind) {
-  const path = `../data/generated/${campus}.${kind}.json`;
-  const reader = generatedReaders[path];
-  if (!reader) throw new Error(`Missing generated ${kind} asset for ${campus}`);
-  return reader();
+  const asset = generatedAssets[campus]?.[kind];
+  if (!asset) throw new Error(`Missing generated ${kind} asset for ${campus}`);
+  return asset;
 }
 
 async function loadCampusNavigation(campus) {
