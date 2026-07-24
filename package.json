@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "generate:data": "python3 tools/extract_handbooks.py --input-json src/data/handbooks.json --output src/data/handbooks.json --metadata src/data/wiki-metadata.json --inventory src/data/handbook-inventory.json --generated-dir src/data/generated --public-dir public && node tools/remove-appledouble.mjs src/data public",
+    "generate:data:update-inventory": "python3 tools/extract_handbooks.py --input-json src/data/handbooks.json --output src/data/handbooks.json --metadata src/data/wiki-metadata.json --inventory src/data/handbook-inventory.json --generated-dir src/data/generated --public-dir public --update-inventory && node tools/remove-appledouble.mjs src/data public",
     "prebuild": "npm run generate:data",
     "build": "next build && node tools/remove-appledouble.mjs app src docs public tests tools .next",
     "start": "next start",

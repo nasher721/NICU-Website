@@ -6,9 +6,134 @@
   "sourceStatus": {
     "handbookYear": 2026,
     "verifiedOn": "2026-07-16",
-    "reviewStatus": "Source imported; campus-specific operational language requires named human review",
+    "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+    "approvalState": "quarantined",
+    "quarantine": {
+      "active": true,
+      "reason": "Source document contains Akron General labels and pathways preserved as written.",
+      "setOn": "2026-07-24"
+    },
     "warning": "The supplied Main Campus document contains Akron General labels and pathways. They are preserved as written and must be verified before campus-specific use."
   },
+  "taxonomyHubs": [
+    {
+      "id": "orientation-first-shift",
+      "label": "Orientation & First Shift",
+      "order": 1,
+      "hubSlug": null,
+      "path": "/main-campus",
+      "memberCount": 3,
+      "available": true
+    },
+    {
+      "id": "admissions-scope",
+      "label": "Admissions & Scope",
+      "order": 2,
+      "hubSlug": "part-2-scope-of-practice-and-admissions",
+      "path": "/main-campus/part-2-scope-of-practice-and-admissions",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "daily-workflow-response",
+      "label": "Daily Workflow & Response",
+      "order": 3,
+      "hubSlug": "part-3-daily-workflow-and-expectations",
+      "path": "/main-campus/part-3-daily-workflow-and-expectations",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "stroke-consultation",
+      "label": "Stroke & Consultation",
+      "order": 4,
+      "hubSlug": "part-4-consultation-and-stroke-alerts",
+      "path": "/main-campus/part-4-consultation-and-stroke-alerts",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "transfers-rescue",
+      "label": "Transfers & Rescue Pathways",
+      "order": 5,
+      "hubSlug": "part-5-emergency-transfers-and-ecmo",
+      "path": "/main-campus/part-5-emergency-transfers-and-ecmo",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "documentation-quality",
+      "label": "Documentation & Quality",
+      "order": 6,
+      "hubSlug": "part-6-documentation-and-quality",
+      "path": "/main-campus/part-6-documentation-and-quality",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "transitions-of-care",
+      "label": "Transitions of Care",
+      "order": 7,
+      "hubSlug": "part-7-transitions-of-care",
+      "path": "/main-campus/part-7-transitions-of-care",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "eol-donation-dnc",
+      "label": "End of Life, Donation & DNC",
+      "order": 8,
+      "hubSlug": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "path": "/main-campus/part-8-end-of-life-care-organ-donation-and-dnc",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "neurotrauma-neuromonitoring",
+      "label": "Neurotrauma & Neuromonitoring",
+      "order": 9,
+      "hubSlug": "part-9-neurotrauma-admission-and-icu-management",
+      "path": "/main-campus/part-9-neurotrauma-admission-and-icu-management",
+      "memberCount": 3,
+      "available": true
+    },
+    {
+      "id": "clinical-domains",
+      "label": "Clinical Domains",
+      "order": 10,
+      "hubSlug": "clinical-domains",
+      "path": "/main-campus/clinical-domains",
+      "memberCount": 2,
+      "available": true
+    },
+    {
+      "id": "procedures-and-devices",
+      "label": "Procedures & Devices",
+      "order": 11,
+      "hubSlug": "procedures-and-devices",
+      "path": "/main-campus/procedures-and-devices",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "epic-smartphrases",
+      "label": "Epic & SmartPhrases",
+      "order": 12,
+      "hubSlug": "appendix-a-smartphrase-library",
+      "path": "/main-campus/appendix-a-smartphrase-library",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "campus-operations",
+      "label": "Campus Operations",
+      "order": 13,
+      "hubSlug": "campus-operations",
+      "path": "/main-campus/campus-operations",
+      "memberCount": 3,
+      "available": true
+    }
+  ],
   "shortcuts": [
     {
       "id": "first-shift",
@@ -25,6 +150,13 @@
       "path": "/main-campus/part-3-daily-workflow-and-expectations"
     },
     {
+      "id": "stroke-alert",
+      "label": "Stroke alert",
+      "hint": "Consultation and stroke alert pathways",
+      "targetId": "main-campus-section-b97e6e2d5e3a",
+      "path": "/main-campus/part-4-consultation-and-stroke-alerts"
+    },
+    {
       "id": "documentation",
       "label": "Documentation",
       "hint": "Required notes, scores, billing, and quality",
@@ -39,11 +171,25 @@
       "path": "/main-campus/part-7-transitions-of-care"
     },
     {
+      "id": "neuromonitoring",
+      "label": "Neuromonitoring",
+      "hint": "Neurotrauma admission and monitoring references",
+      "targetId": "main-campus-section-731d1b903180",
+      "path": "/main-campus/neuromonitoring"
+    },
+    {
       "id": "smartphrases",
       "label": "SmartPhrases",
       "hint": "Assessment, transfer, and attestation templates",
       "targetId": "main-campus-section-176d1fa93f75",
       "path": "/main-campus/appendix-a-smartphrase-library"
+    },
+    {
+      "id": "clinical-domains",
+      "label": "Clinical domains",
+      "hint": "Expansion home for disease and protocol topics",
+      "targetId": "main-campus-section-f5f7d2b99fa5",
+      "path": "/main-campus/clinical-domains"
     }
   ],
   "sections": [
@@ -56,7 +202,18 @@
       "parent": null,
       "parentId": null,
       "order": 0,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-40b1f22de582",
@@ -67,7 +224,16 @@
       "parent": null,
       "parentId": null,
       "order": 1,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-4049e04e4be9",
@@ -78,7 +244,18 @@
       "parent": "keep-this-page-handy-quick-reference-card",
       "parentId": "main-campus-section-40b1f22de582",
       "order": 2,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-a857c63af7d3",
@@ -89,7 +266,16 @@
       "parent": "keep-this-page-handy-quick-reference-card",
       "parentId": "main-campus-section-40b1f22de582",
       "order": 3,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-24182235b831",
@@ -100,7 +286,24 @@
       "parent": null,
       "parentId": null,
       "order": 4,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "start-here-first-shift-navigation",
+        "path": "/akron/start-here-first-shift-navigation",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-c19e56ff7224",
@@ -111,7 +314,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "main-campus-section-24182235b831",
       "order": 5,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-b61d8b62beff",
@@ -122,7 +334,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "main-campus-section-24182235b831",
       "order": 6,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-d89152d352ea",
@@ -133,7 +354,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "main-campus-section-24182235b831",
       "order": 7,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-8a7ce21cdd38",
@@ -144,7 +374,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "main-campus-section-24182235b831",
       "order": 8,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-cdb2d49d50d1",
@@ -155,7 +394,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "main-campus-section-24182235b831",
       "order": 9,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-b1f0de6bc922",
@@ -166,7 +414,18 @@
       "parent": null,
       "parentId": null,
       "order": 10,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-8a4a059b3107",
@@ -177,7 +436,16 @@
       "parent": "part-1-getting-started",
       "parentId": "main-campus-section-b1f0de6bc922",
       "order": 11,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-593320a53089",
@@ -188,7 +456,16 @@
       "parent": "part-1-getting-started",
       "parentId": "main-campus-section-b1f0de6bc922",
       "order": 12,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-ba59064eac45",
@@ -199,7 +476,16 @@
       "parent": "part-1-getting-started",
       "parentId": "main-campus-section-b1f0de6bc922",
       "order": 13,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-8a5a1473b521",
@@ -210,7 +496,16 @@
       "parent": "part-1-getting-started",
       "parentId": "main-campus-section-b1f0de6bc922",
       "order": 14,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-b3d6728763b0",
@@ -221,7 +516,18 @@
       "parent": null,
       "parentId": null,
       "order": 15,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "admissions-scope"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-71f7056f832a",
@@ -232,7 +538,16 @@
       "parent": "part-2-scope-of-practice-and-admissions",
       "parentId": "main-campus-section-b3d6728763b0",
       "order": 16,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-e270f1698c19",
@@ -243,7 +558,16 @@
       "parent": "part-2-scope-of-practice-and-admissions",
       "parentId": "main-campus-section-b3d6728763b0",
       "order": 17,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-205932865041",
@@ -254,7 +578,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "main-campus-section-e270f1698c19",
       "order": 18,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-1360d736f665",
@@ -265,7 +598,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "main-campus-section-e270f1698c19",
       "order": 19,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-714fb6b303e4",
@@ -276,7 +618,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "main-campus-section-e270f1698c19",
       "order": 20,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-23f321ba9d31",
@@ -287,7 +638,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "main-campus-section-e270f1698c19",
       "order": 21,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-745490e98fa1",
@@ -298,7 +658,18 @@
       "parent": null,
       "parentId": null,
       "order": 22,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "daily-workflow-response"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-f8f153f7b709",
@@ -309,7 +680,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "main-campus-section-745490e98fa1",
       "order": 23,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-3af9ffc20573",
@@ -320,7 +700,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "main-campus-section-745490e98fa1",
       "order": 24,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-7af9b907dfc1",
@@ -331,7 +720,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "main-campus-section-745490e98fa1",
       "order": 25,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-73685a7d84c9",
@@ -342,7 +740,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "main-campus-section-745490e98fa1",
       "order": 26,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-b97e6e2d5e3a",
@@ -353,7 +760,18 @@
       "parent": null,
       "parentId": null,
       "order": 27,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "stroke-consultation"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-12c9bb52dc45",
@@ -364,7 +782,16 @@
       "parent": "part-4-consultation-and-stroke-alerts",
       "parentId": "main-campus-section-b97e6e2d5e3a",
       "order": 28,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-d92ea04a56c6",
@@ -375,7 +802,16 @@
       "parent": "part-4-consultation-and-stroke-alerts",
       "parentId": "main-campus-section-b97e6e2d5e3a",
       "order": 29,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-0b8e9378ef83",
@@ -386,7 +822,16 @@
       "parent": "part-4-consultation-and-stroke-alerts",
       "parentId": "main-campus-section-b97e6e2d5e3a",
       "order": 30,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-2705fe6dd219",
@@ -397,7 +842,18 @@
       "parent": null,
       "parentId": null,
       "order": 31,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "transfers-rescue"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-ff8c7cb7844b",
@@ -408,7 +864,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "main-campus-section-2705fe6dd219",
       "order": 32,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-56778a8c933d",
@@ -419,7 +884,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "main-campus-section-2705fe6dd219",
       "order": 33,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-993bbd879c4f",
@@ -430,7 +904,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "main-campus-section-2705fe6dd219",
       "order": 34,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-bfdaca7a47d7",
@@ -441,7 +924,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "main-campus-section-2705fe6dd219",
       "order": 35,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-b2d7f4f061bb",
@@ -452,7 +944,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "main-campus-section-bfdaca7a47d7",
       "order": 36,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-f30735a08bb9",
@@ -463,7 +964,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "main-campus-section-bfdaca7a47d7",
       "order": 37,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-65e7ccd09b57",
@@ -474,7 +984,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "main-campus-section-bfdaca7a47d7",
       "order": 38,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-f02d2221de0c",
@@ -485,7 +1004,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "main-campus-section-bfdaca7a47d7",
       "order": 39,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-be114a84cea8",
@@ -496,7 +1024,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "main-campus-section-bfdaca7a47d7",
       "order": 40,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-194dee1ec166",
@@ -507,7 +1044,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "main-campus-section-bfdaca7a47d7",
       "order": 41,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-f2c88f94fd10",
@@ -518,7 +1064,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "main-campus-section-bfdaca7a47d7",
       "order": 42,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-04e57bed5fbb",
@@ -529,7 +1084,24 @@
       "parent": null,
       "parentId": null,
       "order": 43,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "documentation-quality"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "part-6-documentation-and-quality",
+        "path": "/akron/part-6-documentation-and-quality",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-bc08fcf4f487",
@@ -540,7 +1112,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 44,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-6866ae1a6976",
@@ -551,7 +1132,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 45,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-4102452181a6",
@@ -562,7 +1152,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 46,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-0e6630398a85",
@@ -573,7 +1172,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 47,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-d5d6b3cf26d5",
@@ -584,7 +1192,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 48,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-cd372b2d01b6",
@@ -595,7 +1212,16 @@
       "parent": "consent-and-code-status-icu-admission",
       "parentId": "main-campus-section-d5d6b3cf26d5",
       "order": 49,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-82b6847bf03b",
@@ -606,7 +1232,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 50,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-1aafe29d8138",
@@ -617,7 +1252,16 @@
       "parent": "progress-notes-and-h-and-p",
       "parentId": "main-campus-section-82b6847bf03b",
       "order": 51,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-be6ed8debc1a",
@@ -628,7 +1272,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 52,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-b63aa87e5751",
@@ -639,7 +1292,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 53,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-a0f13ea6f485",
@@ -650,7 +1312,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "main-campus-section-04e57bed5fbb",
       "order": 54,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-412818998e7a",
@@ -661,7 +1332,24 @@
       "parent": null,
       "parentId": null,
       "order": 55,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "transitions-of-care"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "part-7-transitions-of-care",
+        "path": "/akron/part-7-transitions-of-care",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-2dd0df4f81b3",
@@ -672,7 +1360,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "main-campus-section-412818998e7a",
       "order": 56,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-1e05ccecf7b7",
@@ -683,7 +1380,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "main-campus-section-412818998e7a",
       "order": 57,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-a3dabada2bf9",
@@ -694,7 +1400,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "main-campus-section-412818998e7a",
       "order": 58,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-d6516ffcfa5e",
@@ -705,7 +1420,16 @@
       "parent": "step-down-pcu-vs-icu-admission-criteria-guide",
       "parentId": "main-campus-section-a3dabada2bf9",
       "order": 59,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-c157adb21a3c",
@@ -716,7 +1440,16 @@
       "parent": "step-down-pcu-vs-icu-admission-criteria-guide",
       "parentId": "main-campus-section-a3dabada2bf9",
       "order": 60,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-1dab8a64d2df",
@@ -727,7 +1460,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "main-campus-section-412818998e7a",
       "order": 61,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-8c74611e7b68",
@@ -738,7 +1480,18 @@
       "parent": null,
       "parentId": null,
       "order": 62,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "eol-donation-dnc"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-40cebc356ec7",
@@ -749,7 +1502,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "main-campus-section-8c74611e7b68",
       "order": 63,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-9fa60c711ed3",
@@ -760,7 +1522,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "main-campus-section-8c74611e7b68",
       "order": 64,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-b3de6b561c54",
@@ -771,7 +1542,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "main-campus-section-8c74611e7b68",
       "order": 65,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-178d157a1884",
@@ -782,7 +1562,16 @@
       "parent": "death-by-neurologic-criteria-dnc",
       "parentId": "main-campus-section-b3de6b561c54",
       "order": 66,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-9d69288ac486",
@@ -793,7 +1582,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "main-campus-section-8c74611e7b68",
       "order": 67,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-4cb62d36d283",
@@ -804,7 +1602,18 @@
       "parent": null,
       "parentId": null,
       "order": 68,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-731d1b903180",
@@ -815,7 +1624,24 @@
       "parent": "part-9-neurotrauma-admission-and-icu-management",
       "parentId": "main-campus-section-4cb62d36d283",
       "order": 69,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "neuromonitoring",
+        "path": "/akron/neuromonitoring",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-2cf959bff9c2",
@@ -826,7 +1652,16 @@
       "parent": "part-9-neurotrauma-admission-and-icu-management",
       "parentId": "main-campus-section-4cb62d36d283",
       "order": 70,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-902471b5a660",
@@ -837,7 +1672,18 @@
       "parent": "part-9-neurotrauma-admission-and-icu-management",
       "parentId": "main-campus-section-4cb62d36d283",
       "order": 71,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-176d1fa93f75",
@@ -848,7 +1694,18 @@
       "parent": null,
       "parentId": null,
       "order": 72,
-      "contentType": "smartphrase"
+      "contentType": "smartphrase",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "epic-smartphrases"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-9ef6bb0dc9cc",
@@ -859,7 +1716,16 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "main-campus-section-176d1fa93f75",
       "order": 73,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-950410b93155",
@@ -870,7 +1736,16 @@
       "parent": "stroke-assessment-and-plan-skeletons",
       "parentId": "main-campus-section-9ef6bb0dc9cc",
       "order": 74,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-d4139c6572a8",
@@ -881,7 +1756,16 @@
       "parent": "stroke-assessment-and-plan-skeletons",
       "parentId": "main-campus-section-9ef6bb0dc9cc",
       "order": 75,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-c6051c85079d",
@@ -892,7 +1776,16 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "main-campus-section-176d1fa93f75",
       "order": 76,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-9692149053db",
@@ -903,7 +1796,16 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "main-campus-section-176d1fa93f75",
       "order": 77,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "id": "main-campus-section-8c0259d556a9",
@@ -914,7 +1816,129 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "main-campus-section-176d1fa93f75",
       "order": 78,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
+    },
+    {
+      "id": "main-campus-section-f5f7d2b99fa5",
+      "title": "Clinical Domains",
+      "slug": "clinical-domains",
+      "path": "/main-campus/clinical-domains",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 79,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "clinical-domains"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "clinical-domains",
+        "path": "/akron/clinical-domains",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-5ffa317079bb",
+      "title": "Neuromonitoring topic map",
+      "slug": "neuromonitoring-topic-map",
+      "path": "/main-campus/neuromonitoring-topic-map",
+      "level": 3,
+      "parent": "clinical-domains",
+      "parentId": "main-campus-section-f5f7d2b99fa5",
+      "order": 80,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "clinical-domains",
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "neuromonitoring-topic-map",
+        "path": "/akron/neuromonitoring-topic-map",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational index linking existing handbook sections",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-a6b6719c4714",
+      "title": "Procedures & Devices",
+      "slug": "procedures-and-devices",
+      "path": "/main-campus/procedures-and-devices",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 81,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "procedures-and-devices"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "procedures-and-devices",
+        "path": "/akron/procedures-and-devices",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-ab181b223d1d",
+      "title": "Campus Operations",
+      "slug": "campus-operations",
+      "path": "/main-campus/campus-operations",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 82,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "campus-operations",
+        "path": "/akron/campus-operations",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational hub; operational contacts still require live-system confirmation",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
     }
   ]
 }

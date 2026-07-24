@@ -24,6 +24,10 @@ CAMPUSES = {
     },
 }
 
+CONTENT_ORIGINS = {"handbook", "curated", "shared-overlay"}
+APPROVAL_STATES = {"imported", "draft", "quarantined", "approved"}
+MAIN_CAMPUS_CONTAMINATION_MARKER = "Akron General labels and pathways"
+
 
 def load_docx_support():
     """Load optional DOCX parsing dependencies for source-document imports only."""
@@ -205,6 +209,15 @@ def block_digest(blocks: list[dict[str, Any]]) -> str:
 
 
 def content_type(section: dict[str, Any]) -> str:
+    explicit = section.get("contentType")
+    if section.get("contentOrigin") in {"curated", "shared-overlay"} and explicit in {
+        "chapter",
+        "article",
+        "smartphrase",
+        "figure",
+        "reference-table",
+    }:
+        return explicit
     title = normalize_search_text(section["title"])
     block_types = {block["type"] for block in section["blocks"]}
     if "smartphrase" in title:
@@ -214,6 +227,133 @@ def content_type(section: dict[str, Any]) -> str:
     if block_types and block_types <= {"table", "image"}:
         return "reference-table"
     return "article"
+
+
+def other_campus(campus: str) -> str:
+    return "akron" if campus == "main-campus" else "main-campus"
+
+
+def strip_non_handbook_sections(payload: dict[str, Any]) -> dict[str, Any]:
+    for handbook in payload["handbooks"]:
+        handbook["sections"] = [
+            section
+            for section in handbook["sections"]
+            if section.get("contentOrigin", "handbook") == "handbook"
+        ]
+    return payload
+
+
+def load_curated_articles(metadata: dict[str, Any], metadata_path: Path) -> list[dict[str, Any]]:
+    reference = metadata.get("curatedArticles")
+    if not reference:
+        return []
+    curated_path = Path(reference)
+    if not curated_path.is_absolute():
+        curated_path = metadata_path.parent / curated_path
+    payload = json.loads(curated_path.read_text())
+    articles = payload.get("articles", payload if isinstance(payload, list) else [])
+    if not isinstance(articles, list):
+        raise ValueError("Curated articles payload must contain an articles list")
+    return articles
+
+
+def curated_section_from_article(article: dict[str, Any], campus: str) -> dict[str, Any]:
+    origin = article.get("contentOrigin", "curated")
+    if origin not in CONTENT_ORIGINS - {"handbook"}:
+        raise ValueError(f"Unsupported curated contentOrigin: {origin}")
+    campuses = article.get("campuses") or ([article["campus"]] if article.get("campus") else None)
+    if not campuses or campus not in campuses:
+        raise ValueError(f"Curated article missing campus {campus}: {article.get('slug')}")
+    review = article.get("review") or {}
+    approval = review.get("approvalState", "draft")
+    if approval not in APPROVAL_STATES:
+        raise ValueError(f"Curated article has invalid approvalState: {article.get('slug')}")
+    if approval == "approved":
+        for field in ("reviewedBy", "reviewedOn", "reviewStatus"):
+            if not review.get(field):
+                raise ValueError(
+                    f"Approved curated article requires {field}: {article.get('slug')}"
+                )
+    blocks = article.get("blocks") or []
+    if not blocks:
+        raise ValueError(f"Curated article requires content blocks: {article.get('slug')}")
+    return {
+        "title": article["title"],
+        "level": article.get("level", 2),
+        "parent": article.get("parent"),
+        "blocks": blocks,
+        "slug": article["slug"],
+        "campus": campus,
+        "contentOrigin": origin,
+        "contentType": article.get("contentType", "article"),
+        "taxonomyIds": list(article.get("taxonomyIds") or []),
+        "review": {
+            "reviewStatus": review.get("reviewStatus", "Draft curated article"),
+            "reviewedOn": review.get("reviewedOn"),
+            "reviewedBy": review.get("reviewedBy"),
+            "approvalState": approval,
+        },
+    }
+
+
+def merge_curated_articles(
+    payload: dict[str, Any],
+    metadata: dict[str, Any],
+    metadata_path: Path,
+) -> dict[str, Any]:
+    articles = load_curated_articles(metadata, metadata_path)
+    if not articles:
+        return payload
+
+    taxonomy_ids = {item["id"] for item in metadata.get("taxonomy", [])}
+    handbooks_by_id = {handbook["id"]: handbook for handbook in payload["handbooks"]}
+    for article in articles:
+        origin = article.get("contentOrigin", "curated")
+        if origin not in CONTENT_ORIGINS - {"handbook"}:
+            raise ValueError(f"Unknown contentOrigin for curated article: {origin}")
+        campuses = article.get("campuses") or ([article["campus"]] if article.get("campus") else [])
+        if not campuses:
+            raise ValueError(f"Curated article missing campus scope: {article.get('slug')}")
+        for taxonomy_id in article.get("taxonomyIds") or []:
+            if taxonomy_id not in taxonomy_ids:
+                raise ValueError(
+                    f"Curated article {article.get('slug')} references unknown taxonomy {taxonomy_id}"
+                )
+        for campus in campuses:
+            handbook = handbooks_by_id[campus]
+            existing_slugs = {section["slug"] for section in handbook["sections"]}
+            if article["slug"] in existing_slugs:
+                raise ValueError(f"Curated slug collides with handbook content: {campus}/{article['slug']}")
+            parent = article.get("parent")
+            if parent and parent not in existing_slugs and parent != article["slug"]:
+                # Parent may be another curated article merged earlier in this loop.
+                pending_parents = {
+                    item["slug"]
+                    for item in articles
+                    if campus in (item.get("campuses") or ([item.get("campus")] if item.get("campus") else []))
+                }
+                if parent not in pending_parents and parent not in existing_slugs:
+                    raise ValueError(f"Curated article parent missing: {campus}/{article['slug']} -> {parent}")
+            handbook["sections"].append(curated_section_from_article(article, campus))
+    return payload
+
+
+def validate_quarantine(metadata: dict[str, Any]):
+    verification = metadata["verification"]["main-campus"]
+    warning = metadata["sourceWarnings"]["main-campus"]
+    approval = verification.get("approvalState", "imported")
+    if approval not in APPROVAL_STATES:
+        raise ValueError(f"Invalid Main Campus approvalState: {approval}")
+    contaminated = MAIN_CAMPUS_CONTAMINATION_MARKER in warning
+    quarantine = verification.get("quarantine") or {}
+    if approval == "approved" and contaminated and not quarantine.get("active"):
+        raise ValueError(
+            "Main Campus cannot be approved while the contamination warning is active without an explicit quarantine flag"
+        )
+    if quarantine.get("active") and approval == "approved":
+        raise ValueError("Main Campus quarantine cannot remain active while approvalState is approved")
+    if contaminated and approval not in {"quarantined", "imported", "draft"}:
+        raise ValueError("Contaminated Main Campus source must stay quarantined until remediated")
 
 
 def section_aliases(section_text: str, aliases: list[dict[str, Any]], campus: str) -> list[str]:
@@ -256,10 +396,14 @@ def validate_metadata(metadata: dict[str, Any], handbooks: list[dict[str, Any]])
         "sourceWarnings",
         "renamedSections",
         "redirects",
+        "taxonomy",
+        "equivalents",
     }
     missing = required.difference(metadata)
     if missing:
         raise ValueError(f"Editorial metadata is missing: {', '.join(sorted(missing))}")
+
+    validate_quarantine(metadata)
 
     slugs_by_campus = {
         handbook["id"]: {section["slug"] for section in handbook["sections"]}
@@ -301,6 +445,39 @@ def validate_metadata(metadata: dict[str, Any], handbooks: list[dict[str, Any]])
                 raise ValueError(f"Convenience redirect target is missing: {campus}/{redirect['to']}")
             convenience_sources.add(source_key)
 
+    taxonomy_ids: set[str] = set()
+    for hub in metadata["taxonomy"]:
+        hub_id = hub.get("id")
+        if not hub_id or hub_id in taxonomy_ids:
+            raise ValueError(f"Taxonomy hubs require unique ids: {hub_id}")
+        taxonomy_ids.add(hub_id)
+        if not hub.get("label") or hub.get("order") is None:
+            raise ValueError(f"Taxonomy hub {hub_id} requires label and order")
+        member_slugs = hub.get("memberSlugs") or {}
+        for campus in CAMPUSES:
+            members = member_slugs.get(campus, member_slugs.get("*", []))
+            for slug in members:
+                if slug not in slugs_by_campus[campus]:
+                    raise ValueError(f"Taxonomy {hub_id} member missing: {campus}/{slug}")
+            hub_slug = hub.get("hubSlug")
+            if hub_slug and hub_slug not in slugs_by_campus[campus]:
+                raise ValueError(f"Taxonomy hubSlug missing: {campus}/{hub_slug}")
+
+    seen_equivalent_slugs: set[str] = set()
+    for item in metadata["equivalents"]:
+        key = item.get("slug")
+        campuses = item.get("campuses") or {}
+        if not key or key in seen_equivalent_slugs:
+            raise ValueError(f"Equivalents require unique slug keys: {key}")
+        seen_equivalent_slugs.add(key)
+        if set(campuses) != set(CAMPUSES):
+            raise ValueError(f"Equivalent {key} must map both campuses")
+        if not item.get("reviewedOn"):
+            raise ValueError(f"Equivalent {key} requires reviewedOn")
+        for campus, slug in campuses.items():
+            if slug not in slugs_by_campus[campus]:
+                raise ValueError(f"Equivalent target missing: {campus}/{slug}")
+
 
 def normalize_handbook(handbook: dict[str, Any], metadata: dict[str, Any]):
     campus = handbook["id"]
@@ -316,12 +493,29 @@ def normalize_handbook(handbook: dict[str, Any], metadata: dict[str, Any]):
         item["currentSlug"]: item["stableSourceKey"]
         for item in metadata_for_campus(metadata, "renamedSections", campus)
     }
+    equivalent_by_slug = {
+        item["campuses"][campus]: item
+        for item in metadata.get("equivalents", [])
+        if campus in item.get("campuses", {})
+    }
+    taxonomy_for_slug: dict[str, list[str]] = {}
+    for hub in metadata.get("taxonomy", []):
+        members = (hub.get("memberSlugs") or {}).get(campus, (hub.get("memberSlugs") or {}).get("*", []))
+        for slug in members:
+            taxonomy_for_slug.setdefault(slug, []).append(hub["id"])
 
     for index, section in enumerate(sections):
         section["order"] = index
-        section["sourceKey"] = rename_source_keys.get(section["slug"]) or heading_key(
-            section, slug_to_section
-        )
+        origin = section.get("contentOrigin", "handbook")
+        if origin not in CONTENT_ORIGINS:
+            raise ValueError(f"Unknown contentOrigin on {campus}/{section.get('slug')}: {origin}")
+        section["contentOrigin"] = origin
+        if origin == "handbook":
+            section["sourceKey"] = rename_source_keys.get(section["slug"]) or heading_key(
+                section, slug_to_section
+            )
+        else:
+            section["sourceKey"] = f"curated/{section['slug']}"
         section["id"] = canonical_section_id(campus, section["sourceKey"])
 
     slug_to_id = {section["slug"]: section["id"] for section in sections}
@@ -336,13 +530,39 @@ def normalize_handbook(handbook: dict[str, Any], metadata: dict[str, Any]):
         section["parentId"] = slug_to_id.get(parent_slug)
         section["contentType"] = content_type(section)
         section["path"] = f"/{campus}/{section['slug']}"
+        section["taxonomyIds"] = list(
+            dict.fromkeys(
+                list(section.get("taxonomyIds") or []) + taxonomy_for_slug.get(section["slug"], [])
+            )
+        )
+        equivalent = equivalent_by_slug.get(section["slug"])
+        if equivalent:
+            target_campus = other_campus(campus)
+            target_slug = equivalent["campuses"][target_campus]
+            section["equivalent"] = {
+                "campus": target_campus,
+                "slug": target_slug,
+                "path": f"/{target_campus}/{target_slug}",
+                "name": CAMPUSES[target_campus]["name"],
+                "reviewedOn": equivalent["reviewedOn"],
+            }
+        else:
+            section["equivalent"] = None
+        if "review" not in section:
+            section["review"] = {
+                "reviewStatus": verification.get("reviewStatus"),
+                "reviewedOn": verification.get("verifiedOn"),
+                "reviewedBy": None,
+                "approvalState": verification.get("approvalState", "imported"),
+            }
         section["source"] = {
             "handbook": source_label,
-            "file": source_file,
+            "file": source_file if section["contentOrigin"] == "handbook" else "curated/articles.json",
             "year": verification["handbookYear"],
             "sectionOrder": section["order"],
             "headingKey": section["sourceKey"],
             "blockDigest": block_digest(section["blocks"]),
+            "contentOrigin": section["contentOrigin"],
         }
         section["search"] = {
             "title": normalized_title,
@@ -378,6 +598,26 @@ def metadata_for_campus(metadata: dict[str, Any], key: str, campus: str):
     ]
 
 
+def build_taxonomy_hubs(metadata: dict[str, Any], campus: str, slug_to_section: dict[str, dict[str, Any]]):
+    hubs = []
+    for hub in sorted(metadata.get("taxonomy", []), key=lambda item: item["order"]):
+        hub_slug = hub.get("hubSlug")
+        target = slug_to_section.get(hub_slug) if hub_slug else None
+        members = (hub.get("memberSlugs") or {}).get(campus, (hub.get("memberSlugs") or {}).get("*", []))
+        hubs.append(
+            {
+                "id": hub["id"],
+                "label": hub["label"],
+                "order": hub["order"],
+                "hubSlug": hub_slug,
+                "path": target["path"] if target else f"/{campus}",
+                "memberCount": len(members),
+                "available": bool(target) or hub_slug is None,
+            }
+        )
+    return hubs
+
+
 def build_assets(payload: dict[str, Any], metadata: dict[str, Any]):
     validate_metadata(metadata, payload["handbooks"])
     handbooks = [normalize_handbook(handbook, metadata) for handbook in payload["handbooks"]]
@@ -400,6 +640,7 @@ def build_assets(payload: dict[str, Any], metadata: dict[str, Any]):
             "name": handbook["name"],
             "shortName": handbook["shortName"],
             "sourceStatus": handbook["sourceStatus"],
+            "taxonomyHubs": build_taxonomy_hubs(metadata, campus, slug_to_section),
             "shortcuts": [],
             "sections": [],
         }
@@ -431,7 +672,12 @@ def build_assets(payload: dict[str, Any], metadata: dict[str, Any]):
                         "parentId",
                         "order",
                         "contentType",
+                        "contentOrigin",
+                        "taxonomyIds",
+                        "equivalent",
+                        "review",
                     )
+                    if key in section
                 }
             )
 
@@ -448,6 +694,7 @@ def build_assets(payload: dict[str, Any], metadata: dict[str, Any]):
                     "parentId": section["parentId"],
                     "parentSlug": section["parent"],
                     "contentType": section["contentType"],
+                    "contentOrigin": section["contentOrigin"],
                     "priority": priorities.get(section["slug"], 0),
                     **section["search"],
                 }
@@ -511,6 +758,7 @@ def build_assets(payload: dict[str, Any], metadata: dict[str, Any]):
                     "slug": section["slug"],
                     "title": section["title"],
                     "contentType": section["contentType"],
+                    "contentOrigin": section["contentOrigin"],
                 }
                 for section in sections
             ],
@@ -689,6 +937,11 @@ def parse_args():
     parser.add_argument("--inventory", type=Path)
     parser.add_argument("--generated-dir", type=Path)
     parser.add_argument("--public-dir", type=Path)
+    parser.add_argument(
+        "--update-inventory",
+        action="store_true",
+        help="Rewrite the audited inventory baseline after a reviewed content expansion",
+    )
     args = parser.parse_args()
 
     source_mode = args.main_campus is not None or args.akron is not None
@@ -709,6 +962,7 @@ def main():
 
     if args.input_json:
         payload = json.loads(args.input_json.read_text())
+        payload = strip_non_handbook_sections(payload)
     else:
         load_docx_support()
         if args.media_dir.exists():
@@ -722,8 +976,11 @@ def main():
             ],
         }
 
+    payload = merge_curated_articles(payload, metadata, metadata_path)
     payload, assets = build_assets(payload, metadata)
     validate_assets(payload, assets, metadata, public_dir)
+    if args.update_inventory:
+        write_json(inventory_path, build_inventory(payload))
     inventory = json.loads(inventory_path.read_text())
     validate_inventory(payload, inventory)
     write_json(args.output, payload)

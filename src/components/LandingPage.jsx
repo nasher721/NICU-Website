@@ -1,16 +1,25 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Brand from "./Brand.jsx";
 import EyeField from "./EyeField.jsx";
 import HospitalChooser from "./wiki/HospitalChooser.jsx";
+import { CAMPUS_PREFERENCE_KEY, CAMPUS_SUMMARIES, DEFAULT_CAMPUS, isCampusId } from "../routing/routes.js";
 
-const landingLinks = [
-  { label: "Faculty wiki", hint: "Choose a hospital", href: "/main-campus", position: "north" },
-  { label: "First shift", hint: "Start ready", href: "/akron/start-here-first-shift-navigation", position: "west" },
-  { label: "Urgent pathways", hint: "Escalation and transfer", href: "/akron/part-5-emergency-transfers-and-ecmo", position: "east" },
-  { label: "Source figures", hint: "Browse handbook images", href: "/figures", position: "south" },
-];
+const secondaryTargets = {
+  "first-shift": "start-here-first-shift-navigation",
+  "urgent-pathways": "part-5-emergency-transfers-and-ecmo",
+};
+
+function buildLandingLinks(preferredCampus) {
+  const campus = isCampusId(preferredCampus) ? preferredCampus : DEFAULT_CAMPUS;
+  return [
+    { label: "Faculty wiki", hint: "Choose a hospital", href: `/${campus}`, position: "north" },
+    { label: "First shift", hint: "Start ready", href: `/${campus}/${secondaryTargets["first-shift"]}`, position: "west" },
+    { label: "Urgent pathways", hint: "Escalation and transfer", href: `/${campus}/${secondaryTargets["urgent-pathways"]}`, position: "east" },
+    { label: "Source figures", hint: "Browse handbook images", href: "/figures", position: "south" },
+  ];
+}
 
 function pointEyeAt(event) {
   const bounds = event.currentTarget.getBoundingClientRect();
@@ -27,10 +36,10 @@ function releaseEye() {
   window.dispatchEvent(new CustomEvent("faculty-eye-gaze", { detail: { locked: false } }));
 }
 
-function EyeOrbitNavigation() {
+function EyeOrbitNavigation({ links }) {
   return (
     <nav className="eye-orbit-nav" aria-label="Secondary navigation">
-      {landingLinks.map((link, index) => (
+      {links.map((link, index) => (
         <a
           className={`eye-orbit-link orbit-${link.position}`}
           href={link.href}
@@ -51,9 +60,21 @@ function EyeOrbitNavigation() {
 
 export default function LandingPage() {
   const [showEyeField, setShowEyeField] = useState(false);
-  const links = landingLinks.map(({ label, href }) => [label, href]);
+  const [preferredCampus, setPreferredCampus] = useState(DEFAULT_CAMPUS);
+  const landingLinks = useMemo(() => buildLandingLinks(preferredCampus), [preferredCampus]);
+  const navLinks = landingLinks.map(({ label, href }) => [label, href]);
+  const totalSections = CAMPUS_SUMMARIES.reduce((sum, campus) => sum + campus.stats.sections, 0);
+  const totalTables = CAMPUS_SUMMARIES.reduce((sum, campus) => sum + campus.stats.tables, 0);
 
-  useEffect(() => setShowEyeField(true), []);
+  useEffect(() => {
+    setShowEyeField(true);
+    try {
+      const saved = window.localStorage.getItem(CAMPUS_PREFERENCE_KEY);
+      if (isCampusId(saved)) setPreferredCampus(saved);
+    } catch {
+      // Ignore storage access failures and keep the default campus.
+    }
+  }, []);
 
   return (
     <>
@@ -63,7 +84,7 @@ export default function LandingPage() {
           <Brand />
           <nav className="desktop-nav" aria-label="Primary navigation">
             <ul>
-              {links.map(([label, href]) => (
+              {navLinks.map(([label, href]) => (
                 <li key={label}>
                   <a href={href}><span>{label}</span><span aria-hidden="true">↗</span></a>
                 </li>
@@ -73,7 +94,7 @@ export default function LandingPage() {
           <details className="mobile-menu">
             <summary>Menu</summary>
             <nav aria-label="Mobile navigation">
-              {links.map(([label, href]) => <a key={label} href={href}>{label} <span aria-hidden="true">↗</span></a>)}
+              {navLinks.map(([label, href]) => <a key={label} href={href}>{label} <span aria-hidden="true">↗</span></a>)}
             </nav>
           </details>
         </header>
@@ -93,11 +114,11 @@ export default function LandingPage() {
           ) : (
             <div className="eye-field" aria-hidden="true" data-seed="24719" data-motion="reduced" />
           )}
-          <EyeOrbitNavigation />
+          <EyeOrbitNavigation links={landingLinks} />
           <div className="slide-marker" aria-label="Two campuses, one knowledge resource">(MC + AK)</div>
           <div className="landing-proof" aria-label="Resource coverage">
-            <span><strong>161</strong> sections</span>
-            <span><strong>111</strong> reference tables</span>
+            <span><strong>{totalSections}</strong> sections</span>
+            <span><strong>{totalTables}</strong> reference tables</span>
             <span><strong>2</strong> campus sources</span>
           </div>
           <div className="scroll-indicator" aria-hidden="true"><span /></div>

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "aliases": [
     {
       "term": "ICH",
@@ -12,7 +12,17 @@
       "campuses": ["main-campus", "akron"]
     },
     {
+      "term": "aSAH",
+      "expansion": "aneurysmal subarachnoid hemorrhage",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
       "term": "DNC",
+      "expansion": "death by neurologic criteria",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "brain death",
       "expansion": "death by neurologic criteria",
       "campuses": ["main-campus", "akron"]
     },
@@ -24,6 +34,61 @@
     {
       "term": "TCD",
       "expansion": "transcranial doppler",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "SE",
+      "expansion": "status epilepticus",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "cEEG",
+      "expansion": "continuous EEG",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "ICP",
+      "expansion": "intracranial pressure",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "CPP",
+      "expansion": "cerebral perfusion pressure",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "LD",
+      "expansion": "lumbar drain",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "TTM",
+      "expansion": "targeted temperature management",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "DCI",
+      "expansion": "delayed cerebral ischemia",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "VSP",
+      "expansion": "vasospasm",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "EVT",
+      "expansion": "endovascular thrombectomy",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "LVO",
+      "expansion": "large vessel occlusion",
+      "campuses": ["main-campus", "akron"]
+    },
+    {
+      "term": "LifeBanc",
+      "expansion": "organ donation",
       "campuses": ["main-campus", "akron"]
     }
   ],
@@ -49,6 +114,16 @@
       }
     },
     {
+      "id": "stroke-alert",
+      "label": "Stroke alert",
+      "hint": "Consultation and stroke alert pathways",
+      "campus": "*",
+      "targets": {
+        "main-campus": "part-4-consultation-and-stroke-alerts",
+        "akron": "part-4-consultation-and-stroke-alerts"
+      }
+    },
+    {
       "id": "documentation",
       "label": "Documentation",
       "hint": "Required notes, scores, billing, and quality",
@@ -69,6 +144,16 @@
       }
     },
     {
+      "id": "neuromonitoring",
+      "label": "Neuromonitoring",
+      "hint": "Neurotrauma admission and monitoring references",
+      "campus": "*",
+      "targets": {
+        "main-campus": "neuromonitoring",
+        "akron": "neuromonitoring"
+      }
+    },
+    {
       "id": "smartphrases",
       "label": "SmartPhrases",
       "hint": "Assessment, transfer, and attestation templates",
@@ -76,6 +161,16 @@
       "targets": {
         "main-campus": "appendix-a-smartphrase-library",
         "akron": "appendix-a-smartphrase-library"
+      }
+    },
+    {
+      "id": "clinical-domains",
+      "label": "Clinical domains",
+      "hint": "Expansion home for disease and protocol topics",
+      "campus": "*",
+      "targets": {
+        "main-campus": "clinical-domains",
+        "akron": "clinical-domains"
       }
     }
   ],
@@ -92,6 +187,11 @@
     },
     {
       "campus": "*",
+      "slug": "part-4-consultation-and-stroke-alerts",
+      "priority": 88
+    },
+    {
+      "campus": "*",
       "slug": "part-6-documentation-and-quality",
       "priority": 90
     },
@@ -99,6 +199,16 @@
       "campus": "*",
       "slug": "part-7-transitions-of-care",
       "priority": 90
+    },
+    {
+      "campus": "*",
+      "slug": "neuromonitoring",
+      "priority": 85
+    },
+    {
+      "campus": "*",
+      "slug": "clinical-domains",
+      "priority": 84
     },
     {
       "campus": "*",
@@ -110,18 +220,215 @@
     "main-campus": {
       "handbookYear": 2026,
       "verifiedOn": "2026-07-16",
-      "reviewStatus": "Source imported; campus-specific operational language requires named human review"
+      "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+      "approvalState": "quarantined",
+      "quarantine": {
+        "active": true,
+        "reason": "Source document contains Akron General labels and pathways preserved as written.",
+        "setOn": "2026-07-24"
+      }
     },
     "akron": {
       "handbookYear": 2026,
       "verifiedOn": "2026-07-16",
-      "reviewStatus": "Source imported; clinical and operational changes require named human review"
+      "reviewStatus": "Source imported; clinical and operational changes require named human review",
+      "approvalState": "imported"
     }
   },
   "sourceWarnings": {
     "main-campus": "The supplied Main Campus document contains Akron General labels and pathways. They are preserved as written and must be verified before campus-specific use.",
     "akron": "Operational contacts, schedules, policies, and pathways can change. Confirm time-sensitive details in current Cleveland Clinic systems."
   },
+  "taxonomy": [
+    {
+      "id": "orientation-first-shift",
+      "label": "Orientation & First Shift",
+      "order": 1,
+      "hubSlug": null,
+      "memberSlugs": {
+        "*": [
+          "welcome-and-source-overview",
+          "start-here-first-shift-navigation",
+          "part-1-getting-started"
+        ]
+      }
+    },
+    {
+      "id": "admissions-scope",
+      "label": "Admissions & Scope",
+      "order": 2,
+      "hubSlug": "part-2-scope-of-practice-and-admissions",
+      "memberSlugs": {
+        "*": ["part-2-scope-of-practice-and-admissions"]
+      }
+    },
+    {
+      "id": "daily-workflow-response",
+      "label": "Daily Workflow & Response",
+      "order": 3,
+      "hubSlug": "part-3-daily-workflow-and-expectations",
+      "memberSlugs": {
+        "*": ["part-3-daily-workflow-and-expectations"]
+      }
+    },
+    {
+      "id": "stroke-consultation",
+      "label": "Stroke & Consultation",
+      "order": 4,
+      "hubSlug": "part-4-consultation-and-stroke-alerts",
+      "memberSlugs": {
+        "*": ["part-4-consultation-and-stroke-alerts"]
+      }
+    },
+    {
+      "id": "transfers-rescue",
+      "label": "Transfers & Rescue Pathways",
+      "order": 5,
+      "hubSlug": "part-5-emergency-transfers-and-ecmo",
+      "memberSlugs": {
+        "*": ["part-5-emergency-transfers-and-ecmo"]
+      }
+    },
+    {
+      "id": "documentation-quality",
+      "label": "Documentation & Quality",
+      "order": 6,
+      "hubSlug": "part-6-documentation-and-quality",
+      "memberSlugs": {
+        "*": ["part-6-documentation-and-quality"]
+      }
+    },
+    {
+      "id": "transitions-of-care",
+      "label": "Transitions of Care",
+      "order": 7,
+      "hubSlug": "part-7-transitions-of-care",
+      "memberSlugs": {
+        "*": ["part-7-transitions-of-care"]
+      }
+    },
+    {
+      "id": "eol-donation-dnc",
+      "label": "End of Life, Donation & DNC",
+      "order": 8,
+      "hubSlug": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "memberSlugs": {
+        "*": ["part-8-end-of-life-care-organ-donation-and-dnc"]
+      }
+    },
+    {
+      "id": "neurotrauma-neuromonitoring",
+      "label": "Neurotrauma & Neuromonitoring",
+      "order": 9,
+      "hubSlug": "part-9-neurotrauma-admission-and-icu-management",
+      "memberSlugs": {
+        "*": ["part-9-neurotrauma-admission-and-icu-management", "neuromonitoring", "neuromonitoring-topic-map"]
+      }
+    },
+    {
+      "id": "clinical-domains",
+      "label": "Clinical Domains",
+      "order": 10,
+      "hubSlug": "clinical-domains",
+      "memberSlugs": {
+        "*": ["clinical-domains", "neuromonitoring-topic-map"]
+      }
+    },
+    {
+      "id": "procedures-and-devices",
+      "label": "Procedures & Devices",
+      "order": 11,
+      "hubSlug": "procedures-and-devices",
+      "memberSlugs": {
+        "*": ["procedures-and-devices"]
+      }
+    },
+    {
+      "id": "epic-smartphrases",
+      "label": "Epic & SmartPhrases",
+      "order": 12,
+      "hubSlug": "appendix-a-smartphrase-library",
+      "memberSlugs": {
+        "*": ["appendix-a-smartphrase-library"]
+      }
+    },
+    {
+      "id": "campus-operations",
+      "label": "Campus Operations",
+      "order": 13,
+      "hubSlug": "campus-operations",
+      "memberSlugs": {
+        "*": ["campus-operations", "critical-contacts", "on-call-directory-qgenda"]
+      }
+    }
+  ],
+  "equivalents": [
+    {
+      "slug": "clinical-domains",
+      "campuses": {
+        "main-campus": "clinical-domains",
+        "akron": "clinical-domains"
+      },
+      "reviewedOn": "2026-07-24"
+    },
+    {
+      "slug": "neuromonitoring-topic-map",
+      "campuses": {
+        "main-campus": "neuromonitoring-topic-map",
+        "akron": "neuromonitoring-topic-map"
+      },
+      "reviewedOn": "2026-07-24"
+    },
+    {
+      "slug": "procedures-and-devices",
+      "campuses": {
+        "main-campus": "procedures-and-devices",
+        "akron": "procedures-and-devices"
+      },
+      "reviewedOn": "2026-07-24"
+    },
+    {
+      "slug": "campus-operations",
+      "campuses": {
+        "main-campus": "campus-operations",
+        "akron": "campus-operations"
+      },
+      "reviewedOn": "2026-07-24"
+    },
+    {
+      "slug": "neuromonitoring",
+      "campuses": {
+        "main-campus": "neuromonitoring",
+        "akron": "neuromonitoring"
+      },
+      "reviewedOn": "2026-07-24"
+    },
+    {
+      "slug": "start-here-first-shift-navigation",
+      "campuses": {
+        "main-campus": "start-here-first-shift-navigation",
+        "akron": "start-here-first-shift-navigation"
+      },
+      "reviewedOn": "2026-07-24"
+    },
+    {
+      "slug": "part-6-documentation-and-quality",
+      "campuses": {
+        "main-campus": "part-6-documentation-and-quality",
+        "akron": "part-6-documentation-and-quality"
+      },
+      "reviewedOn": "2026-07-24"
+    },
+    {
+      "slug": "part-7-transitions-of-care",
+      "campuses": {
+        "main-campus": "part-7-transitions-of-care",
+        "akron": "part-7-transitions-of-care"
+      },
+      "reviewedOn": "2026-07-24"
+    }
+  ],
+  "curatedArticles": "curated/articles.json",
   "renamedSections": [
     {
       "campus": "main-campus",

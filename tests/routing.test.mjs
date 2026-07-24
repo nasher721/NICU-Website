@@ -48,6 +48,17 @@ test("reviewed and convenience paths resolve only through manifest redirects", (
   assert.equal(resolveHospitalPath("/main-campus/not/a/current/article").campus, "main-campus");
 });
 
+test("curated expansion hubs resolve on both campuses", () => {
+  for (const campus of ["main-campus", "akron"]) {
+    for (const slug of ["clinical-domains", "procedures-and-devices", "campus-operations", "neuromonitoring-topic-map"]) {
+      const route = resolveHospitalPath(`/${campus}/${slug}`);
+      assert.equal(route.kind, "article");
+      assert.equal(route.campus, campus);
+      assert.equal(route.slug, slug);
+    }
+  }
+});
+
 test("legacy hash URLs migrate to safe real paths", () => {
   assert.equal(legacyHashToPath("#/wiki", "akron"), "/akron");
   assert.equal(

@@ -284,7 +284,7 @@ test("production browser preserves URL state, history, hash authority, and clean
   stopInitialRequestCapture();
   await session.send("Emulation.setEmulatedMedia", { features: [] });
 
-  for (const [campus, expectedRecords] of [["main-campus", 79], ["akron", 82]]) {
+  for (const [campus, expectedRecords] of [["main-campus", 83], ["akron", 86]]) {
     const response = await fetch(`${origin}/search-index/${campus}.json`);
     assert.equal(response.status, 200);
     const index = await response.json();

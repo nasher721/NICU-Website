@@ -9,6 +9,9 @@ export default function ArticlePage({ handbook, navigation, section }) {
   const ancestors = getAncestors(handbook, section);
   const smartPhraseContext = section.contentType === "smartphrase" || ancestors.some((item) => item.contentType === "smartphrase");
   const warningLabel = handbook.id === "main-campus" ? "Source fidelity note" : "Operational reminder";
+  const equivalent = section.equivalent;
+  const review = section.review ?? navigation.sourceStatus;
+  const isQuarantined = navigation.sourceStatus.approvalState === "quarantined" || navigation.sourceStatus.quarantine?.active;
 
   return (
     <main className="wiki-main article-layout" id="wiki-content" data-campus={handbook.id}>
@@ -24,19 +27,34 @@ export default function ArticlePage({ handbook, navigation, section }) {
         <header className="article-header">
           <div className="campus-identity-line">
             <span className="campus-monogram" aria-hidden="true">{handbook.shortName}</span>
-            <p className="eyebrow">{handbook.name} · {section.contentType.replace("-", " ")}</p>
+            <p className="eyebrow">{handbook.name} · {section.contentType.replace("-", " ")} · {section.contentOrigin || "handbook"}</p>
           </div>
           <h1>{titleWithoutPart(section.title)}</h1>
           <div className="article-meta">
             <span>{navigation.sourceStatus.handbookYear} orientation source</span>
             <span>{sections.length} section{sections.length === 1 ? "" : "s"}</span>
             <span>Source section {section.source.sectionOrder + 1}</span>
+            <span data-approval={review.approvalState || navigation.sourceStatus.approvalState || "imported"}>
+              {(review.approvalState || navigation.sourceStatus.approvalState || "imported").replace("-", " ")}
+            </span>
             <button type="button" onClick={() => window.print()}>Print article</button>
           </div>
+          {equivalent ? (
+            <p className="equivalent-campus-link">
+              Equivalent on <a href={equivalent.path}>{equivalent.name}</a>
+            </p>
+          ) : (
+            <p className="equivalent-campus-link equivalent-campus-missing">
+              No reviewed equivalent mapped on the other campus.
+            </p>
+          )}
         </header>
 
-        <div className={`clinical-disclaimer ${handbook.id === "main-campus" ? "clinical-disclaimer-fidelity" : ""}`} role="note">
-          <strong>{warningLabel}:</strong> {navigation.sourceStatus.warning}
+        <div className={`clinical-disclaimer ${handbook.id === "main-campus" ? "clinical-disclaimer-fidelity" : ""} ${isQuarantined ? "clinical-disclaimer-quarantine" : ""}`} role="note">
+          <strong>{isQuarantined ? "Campus quarantine:" : `${warningLabel}:`}</strong>{" "}
+          {isQuarantined && navigation.sourceStatus.quarantine?.reason
+            ? navigation.sourceStatus.quarantine.reason
+            : navigation.sourceStatus.warning}
         </div>
 
         <div className="article-content">
@@ -61,7 +79,7 @@ export default function ArticlePage({ handbook, navigation, section }) {
         <SourceStatus handbook={handbook} status={navigation.sourceStatus} showWarning={false} />
 
         <footer className="article-footer">
-          <p>Source: <strong>{handbook.sourceLabel}</strong> · {handbook.sourceFile}</p>
+          <p>Source: <strong>{handbook.sourceLabel}</strong> · {section.source?.file || handbook.sourceFile}</p>
           <a href={`/${handbook.id}`}>Back to {handbook.name} overview</a>
         </footer>
       </article>

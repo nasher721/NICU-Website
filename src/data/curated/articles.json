@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "slug": "clinical-domains",
+      "title": "Clinical Domains",
+      "level": 2,
+      "parent": null,
+      "campuses": ["main-campus", "akron"],
+      "taxonomyIds": ["clinical-domains"],
+      "contentOrigin": "curated",
+      "contentType": "chapter",
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Expansion home for disease- and protocol-oriented neuro ICU topics. Articles added here must keep campus scope explicit and require named clinical review before approval."
+        },
+        {
+          "type": "list-item",
+          "text": "Use this hub for shared primers and campus overlays that do not yet fit Parts 1 through 9."
+        },
+        {
+          "type": "list-item",
+          "text": "Existing handbook pathways remain authoritative until a reviewed topic replaces or extends them."
+        }
+      ]
+    },
+    {
+      "slug": "neuromonitoring-topic-map",
+      "title": "Neuromonitoring topic map",
+      "level": 3,
+      "parent": "clinical-domains",
+      "campuses": ["main-campus", "akron"],
+      "taxonomyIds": ["clinical-domains", "neurotrauma-neuromonitoring"],
+      "contentOrigin": "curated",
+      "contentType": "article",
+      "review": {
+        "reviewStatus": "Draft navigational index linking existing handbook sections",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Navigational index only. Open the handbook neuromonitoring section for source language; do not treat this page as a new protocol."
+        },
+        {
+          "type": "list-item",
+          "text": "Primary source: Part 9 Neurotrauma Admission and ICU Management → Neuromonitoring."
+        },
+        {
+          "type": "list-item",
+          "text": "Related campus operations: Communication and Escalation, On-Call Directory QGenda."
+        }
+      ]
+    },
+    {
+      "slug": "procedures-and-devices",
+      "title": "Procedures & Devices",
+      "level": 2,
+      "parent": null,
+      "campuses": ["main-campus", "akron"],
+      "taxonomyIds": ["procedures-and-devices"],
+      "contentOrigin": "curated",
+      "contentType": "chapter",
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Expansion home for procedure and device topics such as EVD care, ICP crisis response, and airway adjuncts. Keep campus-specific order sets and contacts in campus overlays."
+        },
+        {
+          "type": "list-item",
+          "text": "Seed future EVD, lumbar drain, and ICP articles here after named review."
+        },
+        {
+          "type": "list-item",
+          "text": "Until reviewed articles land, use existing handbook sections under Neurotrauma and Documentation."
+        }
+      ]
+    },
+    {
+      "slug": "campus-operations",
+      "title": "Campus Operations",
+      "level": 2,
+      "parent": null,
+      "campuses": ["main-campus", "akron"],
+      "taxonomyIds": ["campus-operations"],
+      "contentOrigin": "curated",
+      "contentType": "chapter",
+      "review": {
+        "reviewStatus": "Draft navigational hub; operational contacts still require live-system confirmation",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Campus-scoped operations index for contacts, directories, on-call tools, and handbook maintenance notes."
+        },
+        {
+          "type": "list-item",
+          "text": "Start with Critical Contacts, Day-One Essentials, and On-Call Directory QGenda in the handbook contents."
+        },
+        {
+          "type": "list-item",
+          "text": "Confirm time-sensitive numbers and schedules in current Cleveland Clinic systems before acting."
+        }
+      ]
+    }
+  ]
+}

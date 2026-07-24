@@ -27,6 +27,9 @@ function TopicLinks({ items }) {
 
 export default function HospitalWikiHome({ handbook, handbooks, navigation, children }) {
   const chapters = buildContentsTree(navigation.sections);
+  const taxonomyHubs = navigation.taxonomyHubs ?? [];
+  const isQuarantined = navigation.sourceStatus.approvalState === "quarantined" || navigation.sourceStatus.quarantine?.active;
+
   return (
     <main className="wiki-main wiki-home" id="wiki-content" data-campus={handbook.id}>
       <div className="wiki-breadcrumbs">
@@ -40,7 +43,7 @@ export default function HospitalWikiHome({ handbook, handbooks, navigation, chil
             <p className="eyebrow">{handbook.name} · {navigation.sourceStatus.handbookYear} faculty source</p>
           </div>
           <h1 id={`wiki-home-${handbook.id}`}>{handbook.name} faculty wiki</h1>
-          <p className="wiki-lede">Find shift setup, workflow, high-stakes pathways, documentation, transitions, and source references for this hospital.</p>
+          <p className="wiki-lede">Find shift setup, workflow, high-stakes pathways, documentation, transitions, clinical domains, and source references for this hospital.</p>
           <a className="home-search-link" href={`#global-search`}>Search {handbook.name} <span aria-hidden="true">↑</span></a>
         </div>
         <div className="source-stamp" aria-label={`${handbook.name} source coverage`}>
@@ -51,12 +54,19 @@ export default function HospitalWikiHome({ handbook, handbooks, navigation, chil
         </div>
       </section>
 
-      {handbook.id === "main-campus" && (
-        <div className="integrity-banner" role="note">
+      {(handbook.id === "main-campus" || isQuarantined) && (
+        <div className={`integrity-banner ${isQuarantined ? "integrity-banner-quarantine" : ""}`} role="status">
           <span aria-hidden="true">!</span>
-          <p><strong>Source fidelity note:</strong> {navigation.sourceStatus.warning}</p>
+          <p>
+            <strong>{isQuarantined ? "Campus quarantine:" : "Source fidelity note:"}</strong>{" "}
+            {isQuarantined && navigation.sourceStatus.quarantine?.reason
+              ? navigation.sourceStatus.quarantine.reason
+              : navigation.sourceStatus.warning}
+          </p>
         </div>
       )}
+
+      <SourceStatus handbook={handbook} status={navigation.sourceStatus} compact showWarning={false} />
 
       <section className="entry-section" aria-labelledby={`shortcuts-${handbook.id}`}>
         <div className="section-heading">
@@ -67,6 +77,24 @@ export default function HospitalWikiHome({ handbook, handbooks, navigation, chil
           {navigation.shortcuts.map((shortcut) => <ShortcutCard shortcut={shortcut} key={shortcut.id} />)}
         </div>
       </section>
+
+      {taxonomyHubs.length > 0 && (
+        <section className="taxonomy-hubs" aria-labelledby={`taxonomy-${handbook.id}`}>
+          <div className="section-heading">
+            <div><p className="eyebrow">Browse by domain</p><h2 id={`taxonomy-${handbook.id}`}>Topic hubs</h2></div>
+            <span>{taxonomyHubs.length} expansion-ready groups</span>
+          </div>
+          <div className="taxonomy-hub-grid">
+            {taxonomyHubs.map((hub) => (
+              <a className="taxonomy-hub-card" href={hub.path} key={hub.id}>
+                <span className="chapter-index">{String(hub.order).padStart(2, "0")}</span>
+                <strong>{hub.label}</strong>
+                <small>{hub.memberCount} linked topic{hub.memberCount === 1 ? "" : "s"}</small>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="topic-index" aria-labelledby={`topic-index-${handbook.id}`}>
         <div className="section-heading">
