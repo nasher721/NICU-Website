@@ -1,12 +1,12 @@
 import SourceStatus from "./SourceStatus.jsx";
 import { buildContentsTree, titleWithoutPart } from "./wiki-model.js";
 
-function ShortcutCard({ shortcut }) {
+function ShortcutRow({ shortcut }) {
   return (
     <a className="entry-card" href={shortcut.path}>
-      <span className="entry-arrow" aria-hidden="true">↗</span>
       <strong>{shortcut.label}</strong>
       <p>{shortcut.hint}</p>
+      <span className="entry-arrow" aria-hidden="true">→</span>
     </a>
   );
 }
@@ -46,7 +46,7 @@ export default function HospitalWikiHome({ handbook, handbooks, navigation, chil
           <p className="wiki-lede">Find shift setup, workflow, high-stakes pathways, documentation, transitions, clinical domains, and source references for this hospital.</p>
           <a className="home-search-link" href={`#global-search`}>Search {handbook.name} <span aria-hidden="true">↑</span></a>
         </div>
-        <div className="source-stamp" aria-label={`${handbook.name} source coverage`}>
+        <div className="source-coverage source-stamp" aria-label={`${handbook.name} source coverage`}>
           <span>Source coverage</span>
           <strong>{handbook.stats.sections}</strong>
           <small>handbook sections</small>
@@ -81,7 +81,7 @@ export default function HospitalWikiHome({ handbook, handbooks, navigation, chil
           <span>Reviewed links into this hospital handbook</span>
         </div>
         <div className="entry-grid">
-          {navigation.shortcuts.map((shortcut) => <ShortcutCard shortcut={shortcut} key={shortcut.id} />)}
+          {navigation.shortcuts.map((shortcut) => <ShortcutRow shortcut={shortcut} key={shortcut.id} />)}
         </div>
       </section>
 
@@ -132,7 +132,7 @@ export default function HospitalWikiHome({ handbook, handbooks, navigation, chil
             <a href={`/${source.id}`} className={source.id === handbook.id ? "active" : ""} aria-current={source.id === handbook.id ? "page" : undefined} key={source.id}>
               <span className="campus-monogram" aria-hidden="true">{source.shortName}</span>
               <div><strong>{source.name}</strong><p>{source.sourceLabel}</p><small>{source.stats.sections} sections · {source.stats.tables} tables · {source.stats.figures} figures</small></div>
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">→</span>
             </a>
           ))}
         </div>

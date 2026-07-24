@@ -1,5 +1,21 @@
+import { IBM_Plex_Sans, Source_Serif_4 } from "next/font/google";
 import "../src/styles.css";
 import LegacyHashRedirect from "../src/routing/LegacyHashRedirect";
+
+const uiFont = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ui",
+  display: "swap",
+});
+
+const displayFont = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL("https://neurocritical-care-faculty-wiki.nasher721.chatgpt.site"),
@@ -28,7 +44,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${uiFont.variable} ${displayFont.variable}`}>
       <body>
         <LegacyHashRedirect />
         {children}

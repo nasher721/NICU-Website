@@ -1,6 +1,12 @@
-export default function Brand({ compact = false }) {
+export default function Brand({ compact = false, hero = false }) {
+  const className = [
+    "brand",
+    compact ? "brand-compact" : "",
+    hero ? "brand-hero" : "",
+  ].filter(Boolean).join(" ");
+
   return (
-    <a className={`brand ${compact ? "brand-compact" : ""}`} href="/" aria-label="Cleveland Clinic, return to landing page">
+    <a className={className} href="/" aria-label="Cleveland Clinic, return to landing page">
       <img src="/cleveland-clinic-symbol.png" alt="" width="42" height="24" />
       <span>
         <strong>Cleveland Clinic</strong>
