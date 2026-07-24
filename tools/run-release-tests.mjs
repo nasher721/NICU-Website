@@ -1,9 +1,10 @@
-import { readdir } from "node:fs/promises";
+import { mkdir, readdir } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { resolve } from "node:path";
 
 const projectRoot = resolve(import.meta.dirname, "..");
 const artifactRoots = ["app", "src", "docs", "public", "tests", "tools", "dist"];
+const tempRoot = resolve(projectRoot, ".tmp");
 
 function run(command, args, environment = process.env) {
   return new Promise((resolveRun, rejectRun) => {
@@ -27,6 +28,7 @@ async function cleanArtifacts() {
 let failure;
 try {
   await cleanArtifacts();
+  await mkdir(tempRoot, { recursive: true });
   await run("npm", ["run", "lint"]); await run("npm", ["run", "typecheck"]); await run("npm", ["run", "build"]);
   const tests = (await readdir(resolve(projectRoot, "tests")))
     .filter((name) => !name.startsWith("._") && name.endsWith(".test.mjs"))
@@ -34,9 +36,13 @@ try {
     .map((name) => `tests/${name}`);
   await run(process.execPath, ["--test", "--test-concurrency=1", ...tests], {
     ...process.env,
-    TMPDIR: resolve(projectRoot, ".tmp"),
+    TMPDIR: tempRoot,
+    CHROME_BIN: process.env.CHROME_BIN || "/usr/local/bin/google-chrome",
   });
-  await run(process.platform === "win32" ? "cmd" : "sh", ["-c", "pkill -9 -f miniflare 2>/dev/null || true; lsof -ti:3000 | xargs kill -9 2>/dev/null || true"]);
+  await run(process.platform === "win32" ? "cmd" : "sh", [
+    "-c",
+    "pkill -9 -f '[m]iniflare' 2>/dev/null || true; ports=$(lsof -ti:3000 2>/dev/null || true); if [ -n \"$ports\" ]; then kill -9 $ports 2>/dev/null || true; fi; exit 0",
+  ]);
   await run("npm", ["run", "test:e2e"]);
 } catch (error) {
   failure = error;

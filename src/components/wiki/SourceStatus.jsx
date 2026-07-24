@@ -12,8 +12,9 @@ export default function SourceStatus({ handbook, status, compact = false, showWa
   const sourceStatus = status ?? handbook.sourceStatus ?? {};
   const quarantine = sourceStatus.quarantine;
   const warningLabel = handbook.id === "main-campus" ? "Source fidelity note" : "Operational reminder";
+  const Root = compact ? "div" : "section";
   return (
-    <section
+    <Root
       className={`source-status ${compact ? "source-status-compact" : ""}`}
       aria-labelledby={compact ? undefined : `source-status-${handbook.id}`}
       aria-label={compact ? `${handbook.name} source status` : undefined}
@@ -60,6 +61,6 @@ export default function SourceStatus({ handbook, status, compact = false, showWa
           <p>{sourceStatus.warning}</p>
         </div>
       )}
-    </section>
+    </Root>
   );
 }

@@ -5,7 +5,7 @@ import reactHooksPlugin from "eslint-plugin-react-hooks";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 
 export default tseslint.config(
-  { ignores: ["dist", "node_modules", "node_modules_bad", ".wrangler", "public", ".omx", ".specs", "app", "docs", "src/data/generated", "**/._*"] },
+  { ignores: ["dist", ".next", "node_modules", "node_modules_bad", ".wrangler", "public", ".omx", ".specs", "app", "docs", "src/data/generated", "**/._*"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx,js,jsx,mjs,cjs}"],

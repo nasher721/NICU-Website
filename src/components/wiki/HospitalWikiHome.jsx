@@ -66,7 +66,14 @@ export default function HospitalWikiHome({ handbook, handbooks, navigation, chil
         </div>
       )}
 
-      <SourceStatus handbook={handbook} status={navigation.sourceStatus} compact showWarning={false} />
+      <div className="provenance-strip" aria-label={`${handbook.name} provenance`}>
+        <span className="campus-monogram" aria-hidden="true">{handbook.shortName}</span>
+        <span>{handbook.name}</span>
+        <span>{navigation.sourceStatus.handbookYear ?? 2026} source</span>
+        <span data-approval={navigation.sourceStatus.approvalState || "imported"}>
+          {(navigation.sourceStatus.approvalState || "imported").replace("-", " ")}
+        </span>
+      </div>
 
       <section className="entry-section" aria-labelledby={`shortcuts-${handbook.id}`}>
         <div className="section-heading">
