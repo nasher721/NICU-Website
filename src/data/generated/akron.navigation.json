@@ -7,8 +7,128 @@
     "handbookYear": 2026,
     "verifiedOn": "2026-07-16",
     "reviewStatus": "Source imported; clinical and operational changes require named human review",
+    "approvalState": "imported",
     "warning": "Operational contacts, schedules, policies, and pathways can change. Confirm time-sensitive details in current Cleveland Clinic systems."
   },
+  "taxonomyHubs": [
+    {
+      "id": "orientation-first-shift",
+      "label": "Orientation & First Shift",
+      "order": 1,
+      "hubSlug": null,
+      "path": "/akron",
+      "memberCount": 3,
+      "available": true
+    },
+    {
+      "id": "admissions-scope",
+      "label": "Admissions & Scope",
+      "order": 2,
+      "hubSlug": "part-2-scope-of-practice-and-admissions",
+      "path": "/akron/part-2-scope-of-practice-and-admissions",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "daily-workflow-response",
+      "label": "Daily Workflow & Response",
+      "order": 3,
+      "hubSlug": "part-3-daily-workflow-and-expectations",
+      "path": "/akron/part-3-daily-workflow-and-expectations",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "stroke-consultation",
+      "label": "Stroke & Consultation",
+      "order": 4,
+      "hubSlug": "part-4-consultation-and-stroke-alerts",
+      "path": "/akron/part-4-consultation-and-stroke-alerts",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "transfers-rescue",
+      "label": "Transfers & Rescue Pathways",
+      "order": 5,
+      "hubSlug": "part-5-emergency-transfers-and-ecmo",
+      "path": "/akron/part-5-emergency-transfers-and-ecmo",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "documentation-quality",
+      "label": "Documentation & Quality",
+      "order": 6,
+      "hubSlug": "part-6-documentation-and-quality",
+      "path": "/akron/part-6-documentation-and-quality",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "transitions-of-care",
+      "label": "Transitions of Care",
+      "order": 7,
+      "hubSlug": "part-7-transitions-of-care",
+      "path": "/akron/part-7-transitions-of-care",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "eol-donation-dnc",
+      "label": "End of Life, Donation & DNC",
+      "order": 8,
+      "hubSlug": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "path": "/akron/part-8-end-of-life-care-organ-donation-and-dnc",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "neurotrauma-neuromonitoring",
+      "label": "Neurotrauma & Neuromonitoring",
+      "order": 9,
+      "hubSlug": "part-9-neurotrauma-admission-and-icu-management",
+      "path": "/akron/part-9-neurotrauma-admission-and-icu-management",
+      "memberCount": 3,
+      "available": true
+    },
+    {
+      "id": "clinical-domains",
+      "label": "Clinical Domains",
+      "order": 10,
+      "hubSlug": "clinical-domains",
+      "path": "/akron/clinical-domains",
+      "memberCount": 2,
+      "available": true
+    },
+    {
+      "id": "procedures-and-devices",
+      "label": "Procedures & Devices",
+      "order": 11,
+      "hubSlug": "procedures-and-devices",
+      "path": "/akron/procedures-and-devices",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "epic-smartphrases",
+      "label": "Epic & SmartPhrases",
+      "order": 12,
+      "hubSlug": "appendix-a-smartphrase-library",
+      "path": "/akron/appendix-a-smartphrase-library",
+      "memberCount": 1,
+      "available": true
+    },
+    {
+      "id": "campus-operations",
+      "label": "Campus Operations",
+      "order": 13,
+      "hubSlug": "campus-operations",
+      "path": "/akron/campus-operations",
+      "memberCount": 3,
+      "available": true
+    }
+  ],
   "shortcuts": [
     {
       "id": "first-shift",
@@ -25,6 +145,13 @@
       "path": "/akron/part-3-daily-workflow-and-expectations"
     },
     {
+      "id": "stroke-alert",
+      "label": "Stroke alert",
+      "hint": "Consultation and stroke alert pathways",
+      "targetId": "akron-section-91b63ac48a08",
+      "path": "/akron/part-4-consultation-and-stroke-alerts"
+    },
+    {
       "id": "documentation",
       "label": "Documentation",
       "hint": "Required notes, scores, billing, and quality",
@@ -39,11 +166,25 @@
       "path": "/akron/part-7-transitions-of-care"
     },
     {
+      "id": "neuromonitoring",
+      "label": "Neuromonitoring",
+      "hint": "Neurotrauma admission and monitoring references",
+      "targetId": "akron-section-9e2e45634aec",
+      "path": "/akron/neuromonitoring"
+    },
+    {
       "id": "smartphrases",
       "label": "SmartPhrases",
       "hint": "Assessment, transfer, and attestation templates",
       "targetId": "akron-section-b76685af5d20",
       "path": "/akron/appendix-a-smartphrase-library"
+    },
+    {
+      "id": "clinical-domains",
+      "label": "Clinical domains",
+      "hint": "Expansion home for disease and protocol topics",
+      "targetId": "akron-section-82e960c98302",
+      "path": "/akron/clinical-domains"
     }
   ],
   "sections": [
@@ -56,7 +197,18 @@
       "parent": null,
       "parentId": null,
       "order": 0,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-a5a4d5b31160",
@@ -67,7 +219,16 @@
       "parent": null,
       "parentId": null,
       "order": 1,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-a42de66ad799",
@@ -78,7 +239,16 @@
       "parent": "shift-command-center",
       "parentId": "akron-section-a5a4d5b31160",
       "order": 2,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-05388275b449",
@@ -89,7 +259,16 @@
       "parent": null,
       "parentId": null,
       "order": 3,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-d3e34f974b49",
@@ -100,7 +279,18 @@
       "parent": "quick-reference-card",
       "parentId": "akron-section-05388275b449",
       "order": 4,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-10fd47f82fad",
@@ -111,7 +301,16 @@
       "parent": "quick-reference-card",
       "parentId": "akron-section-05388275b449",
       "order": 5,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-0310943b110c",
@@ -122,7 +321,24 @@
       "parent": null,
       "parentId": null,
       "order": 6,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "start-here-first-shift-navigation",
+        "path": "/main-campus/start-here-first-shift-navigation",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-b20f75239b10",
@@ -133,7 +349,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "akron-section-0310943b110c",
       "order": 7,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-f308ea2526c4",
@@ -144,7 +369,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "akron-section-0310943b110c",
       "order": 8,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-2e200113fbeb",
@@ -155,7 +389,16 @@
       "parent": "start-here-first-shift-navigation",
       "parentId": "akron-section-0310943b110c",
       "order": 9,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-a4d9f87ca8dc",
@@ -166,7 +409,18 @@
       "parent": null,
       "parentId": null,
       "order": 10,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-4f00a244a3af",
@@ -177,7 +431,16 @@
       "parent": "part-1-getting-started",
       "parentId": "akron-section-a4d9f87ca8dc",
       "order": 11,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-bbe5b9b10af7",
@@ -188,7 +451,16 @@
       "parent": "part-1-getting-started",
       "parentId": "akron-section-a4d9f87ca8dc",
       "order": 12,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-38b10f99faea",
@@ -199,7 +471,16 @@
       "parent": "part-1-getting-started",
       "parentId": "akron-section-a4d9f87ca8dc",
       "order": 13,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-0c068b987c7c",
@@ -210,7 +491,16 @@
       "parent": "part-1-getting-started",
       "parentId": "akron-section-a4d9f87ca8dc",
       "order": 14,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-a07b0374a86b",
@@ -221,7 +511,18 @@
       "parent": null,
       "parentId": null,
       "order": 15,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "admissions-scope"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-62086ed4ebcb",
@@ -232,7 +533,16 @@
       "parent": "part-2-scope-of-practice-and-admissions",
       "parentId": "akron-section-a07b0374a86b",
       "order": 16,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-80034b85753f",
@@ -243,7 +553,16 @@
       "parent": "part-2-scope-of-practice-and-admissions",
       "parentId": "akron-section-a07b0374a86b",
       "order": 17,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-1ec0c1f3f6ca",
@@ -254,7 +573,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "akron-section-80034b85753f",
       "order": 18,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-4433c5bfa95e",
@@ -265,7 +593,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "akron-section-80034b85753f",
       "order": 19,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-4336b38f1ff5",
@@ -276,7 +613,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "akron-section-80034b85753f",
       "order": 20,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-86277e543730",
@@ -287,7 +633,16 @@
       "parent": "trauma-patient-workflow",
       "parentId": "akron-section-80034b85753f",
       "order": 21,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-4055f3349f18",
@@ -298,7 +653,18 @@
       "parent": null,
       "parentId": null,
       "order": 22,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "daily-workflow-response"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-7b7990679261",
@@ -309,7 +675,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "akron-section-4055f3349f18",
       "order": 23,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-6890f9108e97",
@@ -320,7 +695,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "akron-section-4055f3349f18",
       "order": 24,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-d473c50f4070",
@@ -331,7 +715,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "akron-section-4055f3349f18",
       "order": 25,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-04df304a5ae9",
@@ -342,7 +735,16 @@
       "parent": "part-3-daily-workflow-and-expectations",
       "parentId": "akron-section-4055f3349f18",
       "order": 26,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-91b63ac48a08",
@@ -353,7 +755,18 @@
       "parent": null,
       "parentId": null,
       "order": 27,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "stroke-consultation"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-7f0fed5709c7",
@@ -364,7 +777,16 @@
       "parent": "part-4-consultation-and-stroke-alerts",
       "parentId": "akron-section-91b63ac48a08",
       "order": 28,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-5c24e8c794b1",
@@ -375,7 +797,16 @@
       "parent": "part-4-consultation-and-stroke-alerts",
       "parentId": "akron-section-91b63ac48a08",
       "order": 29,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-e4ed1ab11c9c",
@@ -386,7 +817,16 @@
       "parent": "part-4-consultation-and-stroke-alerts",
       "parentId": "akron-section-91b63ac48a08",
       "order": 30,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-20b6dd79be6f",
@@ -397,7 +837,18 @@
       "parent": null,
       "parentId": null,
       "order": 31,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "transfers-rescue"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-8bd5f01a67fe",
@@ -408,7 +859,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "akron-section-20b6dd79be6f",
       "order": 32,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-30d2c47686f6",
@@ -419,7 +879,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "akron-section-20b6dd79be6f",
       "order": 33,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-a60d4459b72b",
@@ -430,7 +899,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "akron-section-20b6dd79be6f",
       "order": 34,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-822237a8a523",
@@ -441,7 +919,16 @@
       "parent": "part-5-emergency-transfers-and-ecmo",
       "parentId": "akron-section-20b6dd79be6f",
       "order": 35,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-accbae6a3dfd",
@@ -452,7 +939,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "akron-section-822237a8a523",
       "order": 36,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-ebb29674d0e5",
@@ -463,7 +959,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "akron-section-822237a8a523",
       "order": 37,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-97c34e04f7e0",
@@ -474,7 +979,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "akron-section-822237a8a523",
       "order": 38,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-3417f4f24451",
@@ -485,7 +999,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "akron-section-822237a8a523",
       "order": 39,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-2dd4a711e9f1",
@@ -496,7 +1019,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "akron-section-822237a8a523",
       "order": 40,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-906860e47c8a",
@@ -507,7 +1039,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "akron-section-822237a8a523",
       "order": 41,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-3580e1c2606e",
@@ -518,7 +1059,16 @@
       "parent": "ecmo-activation-pathway-akron-general",
       "parentId": "akron-section-822237a8a523",
       "order": 42,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-4f2e068e398f",
@@ -529,7 +1079,24 @@
       "parent": null,
       "parentId": null,
       "order": 43,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "documentation-quality"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "part-6-documentation-and-quality",
+        "path": "/main-campus/part-6-documentation-and-quality",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-700903b766a3",
@@ -540,7 +1107,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 44,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-22f111efc931",
@@ -551,7 +1127,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 45,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-48c6eb8f25a9",
@@ -562,7 +1147,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 46,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-2b4369c52ee7",
@@ -573,7 +1167,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 47,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-25b3247907b9",
@@ -584,7 +1187,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 48,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-49c0f3dd8821",
@@ -595,7 +1207,16 @@
       "parent": "consent-and-code-status-icu-admission",
       "parentId": "akron-section-25b3247907b9",
       "order": 49,
-      "contentType": "smartphrase"
+      "contentType": "smartphrase",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-da30c2acfd8f",
@@ -606,7 +1227,16 @@
       "parent": "consent-and-code-status-icu-admission",
       "parentId": "akron-section-25b3247907b9",
       "order": 50,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-dc35b77db9dc",
@@ -617,7 +1247,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 51,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-f1633f9058e7",
@@ -628,7 +1267,16 @@
       "parent": "progress-notes-and-h-and-p",
       "parentId": "akron-section-dc35b77db9dc",
       "order": 52,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-20135f29867f",
@@ -639,7 +1287,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 53,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-ab11c4249403",
@@ -650,7 +1307,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 54,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-104dad965f75",
@@ -661,7 +1327,16 @@
       "parent": "part-6-documentation-and-quality",
       "parentId": "akron-section-4f2e068e398f",
       "order": 55,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-baf9d6b7b52d",
@@ -672,7 +1347,24 @@
       "parent": null,
       "parentId": null,
       "order": 56,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "transitions-of-care"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "part-7-transitions-of-care",
+        "path": "/main-campus/part-7-transitions-of-care",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-372def51f708",
@@ -683,7 +1375,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "akron-section-baf9d6b7b52d",
       "order": 57,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-557ef5bee075",
@@ -694,7 +1395,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "akron-section-baf9d6b7b52d",
       "order": 58,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-29b8fbf66843",
@@ -705,7 +1415,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "akron-section-baf9d6b7b52d",
       "order": 59,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-d2ae3c739973",
@@ -716,7 +1435,16 @@
       "parent": "step-down-pcu-vs-icu-admission-criteria-guide",
       "parentId": "akron-section-29b8fbf66843",
       "order": 60,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-f140447f7202",
@@ -727,7 +1455,16 @@
       "parent": "step-down-pcu-vs-icu-admission-criteria-guide",
       "parentId": "akron-section-29b8fbf66843",
       "order": 61,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-236029e3c18e",
@@ -738,7 +1475,16 @@
       "parent": "part-7-transitions-of-care",
       "parentId": "akron-section-baf9d6b7b52d",
       "order": 62,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-fd28152e44de",
@@ -749,7 +1495,18 @@
       "parent": null,
       "parentId": null,
       "order": 63,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "eol-donation-dnc"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-ce0464c4951e",
@@ -760,7 +1517,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "akron-section-fd28152e44de",
       "order": 64,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-57bfd4a859a3",
@@ -771,7 +1537,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "akron-section-fd28152e44de",
       "order": 65,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-2c6092314ccb",
@@ -782,7 +1557,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "akron-section-fd28152e44de",
       "order": 66,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-7a646100674a",
@@ -793,7 +1577,16 @@
       "parent": "death-by-neurologic-criteria-dnc",
       "parentId": "akron-section-2c6092314ccb",
       "order": 67,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-7dd83d9664e9",
@@ -804,7 +1597,16 @@
       "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
       "parentId": "akron-section-fd28152e44de",
       "order": 68,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-d4563dc19b44",
@@ -815,7 +1617,18 @@
       "parent": null,
       "parentId": null,
       "order": 69,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-9e2e45634aec",
@@ -826,7 +1639,24 @@
       "parent": "part-9-neurotrauma-admission-and-icu-management",
       "parentId": "akron-section-d4563dc19b44",
       "order": 70,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "neuromonitoring",
+        "path": "/main-campus/neuromonitoring",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-f88de9576bbf",
@@ -837,7 +1667,16 @@
       "parent": "part-9-neurotrauma-admission-and-icu-management",
       "parentId": "akron-section-d4563dc19b44",
       "order": 71,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-46c47e9e9479",
@@ -848,7 +1687,18 @@
       "parent": "part-9-neurotrauma-admission-and-icu-management",
       "parentId": "akron-section-d4563dc19b44",
       "order": 72,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-b76685af5d20",
@@ -859,7 +1709,18 @@
       "parent": null,
       "parentId": null,
       "order": 73,
-      "contentType": "smartphrase"
+      "contentType": "smartphrase",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "epic-smartphrases"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-59a6f4ea7301",
@@ -870,7 +1731,16 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "akron-section-b76685af5d20",
       "order": 74,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-b9d6b7d7594c",
@@ -881,7 +1751,16 @@
       "parent": "stroke-assessment-and-plan-skeletons",
       "parentId": "akron-section-59a6f4ea7301",
       "order": 75,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-dfa33a340c1b",
@@ -892,7 +1771,16 @@
       "parent": "stroke-assessment-and-plan-skeletons",
       "parentId": "akron-section-59a6f4ea7301",
       "order": 76,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-e0962bbc516f",
@@ -903,7 +1791,16 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "akron-section-b76685af5d20",
       "order": 77,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-d12caf1c0192",
@@ -914,7 +1811,16 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "akron-section-b76685af5d20",
       "order": 78,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-34d7b1546c8d",
@@ -925,7 +1831,16 @@
       "parent": "appendix-a-smartphrase-library",
       "parentId": "akron-section-b76685af5d20",
       "order": 79,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-6854fb60d689",
@@ -936,7 +1851,16 @@
       "parent": null,
       "parentId": null,
       "order": 80,
-      "contentType": "article"
+      "contentType": "article",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
     },
     {
       "id": "akron-section-1ccfcdcf7cf1",
@@ -947,7 +1871,129 @@
       "parent": "appendix-b-handbook-maintenance",
       "parentId": "akron-section-6854fb60d689",
       "order": 81,
-      "contentType": "reference-table"
+      "contentType": "reference-table",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Source imported; clinical and operational changes require named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "imported"
+      }
+    },
+    {
+      "id": "akron-section-82e960c98302",
+      "title": "Clinical Domains",
+      "slug": "clinical-domains",
+      "path": "/akron/clinical-domains",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 82,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "clinical-domains"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "clinical-domains",
+        "path": "/main-campus/clinical-domains",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "akron-section-1c22e888db7a",
+      "title": "Neuromonitoring topic map",
+      "slug": "neuromonitoring-topic-map",
+      "path": "/akron/neuromonitoring-topic-map",
+      "level": 3,
+      "parent": "clinical-domains",
+      "parentId": "akron-section-82e960c98302",
+      "order": 83,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "clinical-domains",
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "neuromonitoring-topic-map",
+        "path": "/main-campus/neuromonitoring-topic-map",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational index linking existing handbook sections",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "akron-section-0c399c9e5c9d",
+      "title": "Procedures & Devices",
+      "slug": "procedures-and-devices",
+      "path": "/akron/procedures-and-devices",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 84,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "procedures-and-devices"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "procedures-and-devices",
+        "path": "/main-campus/procedures-and-devices",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "akron-section-344822a44b13",
+      "title": "Campus Operations",
+      "slug": "campus-operations",
+      "path": "/akron/campus-operations",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 85,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": {
+        "campus": "main-campus",
+        "slug": "campus-operations",
+        "path": "/main-campus/campus-operations",
+        "name": "Main Campus",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational hub; operational contacts still require live-system confirmation",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
     }
   ]
 }

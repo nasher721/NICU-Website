@@ -66,7 +66,7 @@ function SourcesPage({ handbooks }) {
       <div className="wiki-breadcrumbs"><a href="/main-campus">Faculty Wiki</a><span>/</span><span>Sources</span></div>
       <p className="eyebrow">Source library</p>
       <h1>About this faculty wiki</h1>
-      <p className="wiki-lede">This site converts the supplied 2026 Word handbooks into a searchable, cross-campus reference while preserving the source language, tables, and figures.</p>
+      <p className="wiki-lede">This site converts the supplied 2026 Word handbooks into a searchable, cross-campus neuro ICU reference while preserving source language, tables, and figures. Curated expansion hubs can grow the catalog without inventing clinical answers.</p>
       <div className="source-grid expanded">
         {handbooks.map((source) => (
           <a href={campusUrl(source.id)} key={source.id}>
@@ -80,7 +80,7 @@ function SourcesPage({ handbooks }) {
       <section className="editorial-policy">
         <h2>How to use it</h2>
         <div><strong>Search broadly</strong><p>The search bar checks headings, prose, lists, and reference tables across both campuses.</p></div>
-        <div><strong>Check the campus</strong><p>Every article identifies its source campus. The Main Campus file contains some Akron General language, which is flagged rather than silently rewritten.</p></div>
+        <div><strong>Check the campus</strong><p>Every article identifies its source campus. Main Campus remains quarantined while Akron General language is still present in that source file.</p></div>
         <div><strong>Verify live operations</strong><p>{SOURCE_WARNING}</p></div>
       </section>
     </main>

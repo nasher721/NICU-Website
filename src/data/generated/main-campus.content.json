@@ -6,11 +6,17 @@
     "file": "MC NICU Faculty Orientation Document (2026).docx",
     "handbookYear": 2026,
     "verifiedOn": "2026-07-16",
-    "reviewStatus": "Source imported; campus-specific operational language requires named human review",
+    "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+    "approvalState": "quarantined",
+    "quarantine": {
+      "active": true,
+      "reason": "Source document contains Akron General labels and pathways preserved as written.",
+      "setOn": "2026-07-24"
+    },
     "warning": "The supplied Main Campus document contains Akron General labels and pathways. They are preserved as written and must be verified before campus-specific use."
   },
   "stats": {
-    "sections": 79,
+    "sections": 83,
     "tables": 49,
     "figures": 11
   },
@@ -69,7 +75,8 @@
         "year": 2026,
         "sectionOrder": 0,
         "headingKey": "welcome-and-source-overview",
-        "blockDigest": "ba8503ec10482e69"
+        "blockDigest": "ba8503ec10482e69",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "welcome & source overview",
@@ -78,7 +85,18 @@
         "body": "cleveland clinic | akron general neuroscience icu faculty orientation handbook a practical guide to clinical workflow, documentation, emergency pathways, and transitions of care in the nsicu. 10-bed nsicu · comprehensive neurocritical care unit comprehensive stroke center · certified stroke systems of care level i trauma center · full neurotrauma capability 3rd floor, akron general hospital · one akron general avenue, akron, oh",
         "aliases": []
       },
-      "sourceKey": "welcome-and-source-overview"
+      "sourceKey": "welcome-and-source-overview",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "KEEP THIS PAGE HANDY · Quick Reference Card",
@@ -104,7 +122,8 @@
         "year": 2026,
         "sectionOrder": 1,
         "headingKey": "keep-this-page-handy-quick-reference-card",
-        "blockDigest": "4f09428e9323af47"
+        "blockDigest": "4f09428e9323af47",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "keep this page handy · quick reference card",
@@ -113,7 +132,16 @@
         "body": "everything you will dial, page, or need to remember in your first week - on one page.",
         "aliases": []
       },
-      "sourceKey": "keep-this-page-handy-quick-reference-card"
+      "sourceKey": "keep-this-page-handy-quick-reference-card",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Critical Contacts",
@@ -210,16 +238,31 @@
         "year": 2026,
         "sectionOrder": 2,
         "headingKey": "keep-this-page-handy-quick-reference-card/critical-contacts",
-        "blockDigest": "a574c4b494b944c1"
+        "blockDigest": "a574c4b494b944c1",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "critical contacts",
         "heading": "critical contacts",
         "parentHeading": "keep this page handy · quick reference card",
         "body": "service contact notes ak nsicu pager 330-250-1005 neurocritical care team micu attending pager 330-250-1634 airway/emergencies after 5 pm; pe response; ecmo first contact micu senior resident pager 22806 rapid response team 330-250-1069 cardiac icu (cvicu) 330-250-1222 surgical icu / trauma 330-250-2176 covers trauma, vascular, and ct surgery neurosurgery app pager 330-250-1197 hospital medicine (im) 330-250-1526 sound hospital medicine pager 330-250-1576 floor transfers transfer center / cct 216-448-7000 emergency transfers, auto launch, 2shock, ecmo fellow ecmo lead 216-212-6977 dr. lokesh venkat - escalation difficult airway overhead page via hospital operator on-call directory qgenda primary resource for all services",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "keep-this-page-handy-quick-reference-card/critical-contacts"
+      "sourceKey": "keep-this-page-handy-quick-reference-card/critical-contacts",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Day-One Essentials",
@@ -298,16 +341,29 @@
         "year": 2026,
         "sectionOrder": 3,
         "headingKey": "keep-this-page-handy-quick-reference-card/day-one-essentials",
-        "blockDigest": "03d865049aeab022"
+        "blockDigest": "03d865049aeab022",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "day-one essentials",
         "heading": "day-one essentials",
         "parentHeading": "keep this page handy · quick reference card",
         "body": "item detail arrive by 7:00 am for handoff and rounds prep epic environment ak provider adult critical care · never select neuro hosp main campus - akron charts will not display. faculty office 8th floor, adjacent to blue elevators - room cpx 8003 8:45 am (m-f) multidisciplinary discharge planning rounds 9:00 am daily nsicu interdisciplinary bedside rounds (nurse-led, systems-based) airway coverage nsicu attending 7 am - 5 pm; micu covers after 5 pm badge hr office - stephanie hahn (hahns2@ccf.org) parking free open lot across from hospital; main campus permit valid once akron access is active contents how to use this handbook · ctrl+click any entry above to jump to that section. in word, refresh the table with references > update table after edits. the quick reference card (previous page) is designed to be printed and kept at the workstation. ·",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "keep-this-page-handy-quick-reference-card/day-one-essentials"
+      "sourceKey": "keep-this-page-handy-quick-reference-card/day-one-essentials",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "START HERE: First Shift Navigation",
@@ -366,7 +422,8 @@
         "year": 2026,
         "sectionOrder": 4,
         "headingKey": "start-here-first-shift-navigation",
-        "blockDigest": "98fd4356f197a3b9"
+        "blockDigest": "98fd4356f197a3b9",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "start here: first shift navigation",
@@ -375,10 +432,29 @@
         "body": "use this section as the front door to the handbook. it is designed for the first week on service: what to verify, where to go, who to call, and which deeper section answers the immediate question. need fast answer first place to look quick reference card for contacts and day-one essentials epic login select ak provider adult critical care before clinical work morning rhythm 7:00 handoff, 8:45 discharge planning rounds, 9:00 bedside rounds airway coverage nsicu attending 7 am-5 pm; micu after 5 pm most important documentation habit complete stroke care pathway and match nihss time to key metrics transfer habit use .aktransfernote and address code status before transfer",
         "aliases": [
           "ICH",
-          "intracerebral hemorrhage"
+          "intracerebral hemorrhage",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "start-here-first-shift-navigation"
+      "sourceKey": "start-here-first-shift-navigation",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "start-here-first-shift-navigation",
+        "path": "/akron/start-here-first-shift-navigation",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Scenario Finder",
@@ -460,7 +536,8 @@
         "year": 2026,
         "sectionOrder": 5,
         "headingKey": "start-here-first-shift-navigation/scenario-finder",
-        "blockDigest": "410c9ebe4b1551ea"
+        "blockDigest": "410c9ebe4b1551ea",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "scenario finder",
@@ -473,10 +550,24 @@
           "SAH",
           "subarachnoid hemorrhage",
           "DNC",
-          "death by neurologic criteria"
+          "death by neurologic criteria",
+          "brain death",
+          "SE",
+          "status epilepticus",
+          "LifeBanc",
+          "organ donation"
         ]
       },
-      "sourceKey": "start-here-first-shift-navigation/scenario-finder"
+      "sourceKey": "start-here-first-shift-navigation/scenario-finder",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Action Card Index",
@@ -543,7 +634,8 @@
         "year": 2026,
         "sectionOrder": 6,
         "headingKey": "start-here-first-shift-navigation/action-card-index",
-        "blockDigest": "2a23588eba74bc48"
+        "blockDigest": "2a23588eba74bc48",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "action card index",
@@ -556,10 +648,24 @@
           "SAH",
           "subarachnoid hemorrhage",
           "DNC",
-          "death by neurologic criteria"
+          "death by neurologic criteria",
+          "brain death",
+          "SE",
+          "status epilepticus",
+          "LifeBanc",
+          "organ donation"
         ]
       },
-      "sourceKey": "start-here-first-shift-navigation/action-card-index"
+      "sourceKey": "start-here-first-shift-navigation/action-card-index",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Before First Shift Checklist",
@@ -618,7 +724,8 @@
         "year": 2026,
         "sectionOrder": 7,
         "headingKey": "start-here-first-shift-navigation/before-first-shift-checklist",
-        "blockDigest": "0efbc2e9c07bfe9d"
+        "blockDigest": "0efbc2e9c07bfe9d",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "before first shift checklist",
@@ -627,10 +734,21 @@
         "body": "item verify badge and akron access hr badge activation completed parking open lot available; main campus permit valid once akron access active epic ak provider adult critical care environment selected order sets neuro icu and critical care order sets favorited before shift qgenda on-call directory access confirmed office 8th floor by blue elevators, room cpx 8003 dnc readiness privileges and mylearning status checked if performing dnc evaluations",
         "aliases": [
           "DNC",
-          "death by neurologic criteria"
+          "death by neurologic criteria",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "start-here-first-shift-navigation/before-first-shift-checklist"
+      "sourceKey": "start-here-first-shift-navigation/before-first-shift-checklist",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Common First-Week Pitfalls",
@@ -685,16 +803,29 @@
         "year": 2026,
         "sectionOrder": 8,
         "headingKey": "start-here-first-shift-navigation/common-first-week-pitfalls",
-        "blockDigest": "9b3a95ee54d26421"
+        "blockDigest": "9b3a95ee54d26421",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "common first-week pitfalls",
         "heading": "common first-week pitfalls",
         "parentHeading": "start here: first shift navigation",
         "body": "pitfall prevention wrong epic environment verify ak provider adult critical care before opening worklists or charts. missed nihss time alignment match nihss time with the key metrics section. code status not documented at admission address code status immediately on icu admission. wrong first consult for trauma icu help discuss with trauma/sicu before primary micu consultation. unclear transfer handoff use .aktransfernote and complete physician-to-physician communication. outdated contact or policy detail verify pager/contact/policy items against qgenda, institutional policy, or current owner.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "start-here-first-shift-navigation/common-first-week-pitfalls"
+      "sourceKey": "start-here-first-shift-navigation/common-first-week-pitfalls",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Maintenance Notes",
@@ -757,7 +888,8 @@
         "year": 2026,
         "sectionOrder": 9,
         "headingKey": "start-here-first-shift-navigation/maintenance-notes",
-        "blockDigest": "6e6c6cf4fd9747c8"
+        "blockDigest": "6e6c6cf4fd9747c8",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "maintenance notes",
@@ -766,10 +898,23 @@
         "body": "volatile item source to recheck pager numbers and on-call roles qgenda and current unit contact list dnc / dcd requirements cchs policy, mylearning, local privileging status ecmo escalation contacts transfer center, micu, ct surgery, current ecmo leadership epic order set and smartphrase names live epic build before each major revision level-of-care criteria under review unit medical director / service leadership screenshots refresh when epic or qgenda workflows change maintenance principle maintenance principle clinical pathways, pager numbers, policy versions, and epic build details drift. treat this handbook as an operational guide and verify volatile items against the current institutional source before each formal revision. clinical pathways, pager numbers, policy versions, and epic build details drift. treat this handbook as an operational guide and verify volatile items against the current institutional source before each formal revision.",
         "aliases": [
           "DNC",
-          "death by neurologic criteria"
+          "death by neurologic criteria",
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
         ]
       },
-      "sourceKey": "start-here-first-shift-navigation/maintenance-notes"
+      "sourceKey": "start-here-first-shift-navigation/maintenance-notes",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 1 · Getting Started",
@@ -795,7 +940,8 @@
         "year": 2026,
         "sectionOrder": 10,
         "headingKey": "part-1-getting-started",
-        "blockDigest": "8f94234a064df93c"
+        "blockDigest": "8f94234a064df93c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 1 · getting started",
@@ -804,7 +950,18 @@
         "body": "navigation cue: start with logistics, epic environment, and what must be ready before the first shift. return to start here.",
         "aliases": []
       },
-      "sourceKey": "part-1-getting-started"
+      "sourceKey": "part-1-getting-started",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "orientation-first-shift"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Location & Logistics",
@@ -847,16 +1004,29 @@
         "year": 2026,
         "sectionOrder": 11,
         "headingKey": "part-1-getting-started/location-and-logistics",
-        "blockDigest": "d5636af11c697fca"
+        "blockDigest": "d5636af11c697fca",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "location & logistics",
         "heading": "location & logistics",
         "parentHeading": "part 1 · getting started",
         "body": "location 3rd floor, akron general hospital - one akron general avenue, akron, oh parking free parking is available in the open lot across from the hospital. once your akron access is activated, the same cleveland clinic parking permit/sticker used at main campus is valid at akron general. badge access obtain your hospital badge through the human resources office. contact: stephanie hahn (hahns2@ccf.org). faculty office 8th floor, adjacent to the blue elevators (room cpx 8003). equipped with computers and audiovisual equipment for virtual meetings and clinical work.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-1-getting-started/location-and-logistics"
+      "sourceKey": "part-1-getting-started/location-and-logistics",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Pre-Rotation Checklist",
@@ -894,16 +1064,31 @@
         "year": 2026,
         "sectionOrder": 12,
         "headingKey": "part-1-getting-started/pre-rotation-checklist",
-        "blockDigest": "b4c7fa09c5f5cdc7"
+        "blockDigest": "b4c7fa09c5f5cdc7",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "pre-rotation checklist",
         "heading": "pre-rotation checklist",
         "parentHeading": "part 1 · getting started",
         "body": "complete the following before your first day: hospital badge activation parking access physician service center (located on the main floor of the building across from panera bread)",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-1-getting-started/pre-rotation-checklist"
+      "sourceKey": "part-1-getting-started/pre-rotation-checklist",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Epic Login Environment",
@@ -933,16 +1118,29 @@
         "year": 2026,
         "sectionOrder": 13,
         "headingKey": "part-1-getting-started/epic-login-environment",
-        "blockDigest": "66286985e9610ae6"
+        "blockDigest": "66286985e9610ae6",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "epic login environment",
         "heading": "epic login environment",
         "parentHeading": "part 1 · getting started",
         "body": "critical - verify before every shift · when logging into epic, select the ak provider adult critical care environment after entering your username and password. · do not select neuro hosp main campus - this will prevent akron general patient charts, orders, and clinical worklists from displaying correctly. · always verify you are in the correct environment before beginning clinical work to ensure proper access to patient records, order entry, and documentation.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-1-getting-started/epic-login-environment"
+      "sourceKey": "part-1-getting-started/epic-login-environment",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Unit Overview",
@@ -968,16 +1166,29 @@
         "year": 2026,
         "sectionOrder": 14,
         "headingKey": "part-1-getting-started/unit-overview",
-        "blockDigest": "0abdf433b8f09a17"
+        "blockDigest": "0abdf433b8f09a17",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "unit overview",
         "heading": "unit overview",
         "parentHeading": "part 1 · getting started",
         "body": "the akron general neuroscience icu is a fully operational 10-bed neuro icu within a comprehensive stroke center and a level i trauma center. the unit provides multidisciplinary, evidence-based care for patients with complex neurological and neurosurgical conditions, including acute stroke, traumatic brain injury, intracranial hemorrhage, status epilepticus, spinal cord injury, and other critical neurologic illnesses.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-1-getting-started/unit-overview"
+      "sourceKey": "part-1-getting-started/unit-overview",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 2 · Scope of Practice & Admissions",
@@ -1007,16 +1218,31 @@
         "year": 2026,
         "sectionOrder": 15,
         "headingKey": "part-2-scope-of-practice-and-admissions",
-        "blockDigest": "96e7ebc498ef1da7"
+        "blockDigest": "96e7ebc498ef1da7",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 2 · scope of practice & admissions",
         "heading": "part 2 · scope of practice & admissions",
         "parentHeading": "",
         "body": "navigation cue: use this section for admission ownership, trauma boundaries, and who is primary versus consulting. return to start here. the neuroscience icu (nsicu) team provides comprehensive critical care management for patients with neurological and neurosurgical conditions admitted to the nsicu.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-2-scope-of-practice-and-admissions"
+      "sourceKey": "part-2-scope-of-practice-and-admissions",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "admissions-scope"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Primary Admission Responsibilities",
@@ -1066,7 +1292,8 @@
         "year": 2026,
         "sectionOrder": 16,
         "headingKey": "part-2-scope-of-practice-and-admissions/primary-admission-responsibilities",
-        "blockDigest": "59d0a52e4efa4ac5"
+        "blockDigest": "59d0a52e4efa4ac5",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "primary admission responsibilities",
@@ -1077,10 +1304,21 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "part-2-scope-of-practice-and-admissions/primary-admission-responsibilities"
+      "sourceKey": "part-2-scope-of-practice-and-admissions/primary-admission-responsibilities",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Trauma Patient Workflow",
@@ -1101,7 +1339,8 @@
         "year": 2026,
         "sectionOrder": 17,
         "headingKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow",
-        "blockDigest": "4f53cda18c2baa0c"
+        "blockDigest": "4f53cda18c2baa0c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "trauma patient workflow",
@@ -1110,7 +1349,16 @@
         "body": "",
         "aliases": []
       },
-      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow"
+      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Isolated Traumatic Brain Injury (TBI)",
@@ -1144,16 +1392,29 @@
         "year": 2026,
         "sectionOrder": 18,
         "headingKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/isolated-traumatic-brain-injury-tbi",
-        "blockDigest": "9ac873af089f57dd"
+        "blockDigest": "9ac873af089f57dd",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "isolated traumatic brain injury (tbi)",
         "heading": "isolated traumatic brain injury (tbi)",
         "parentHeading": "trauma patient workflow",
         "body": "patients with isolated moderate-to-severe tbi are admitted under the trauma surgery service. the nsicu team provides all neurocritical care management in collaboration with the trauma surgery and neurosurgery teams. following completion of the tertiary trauma survey and clearance by the trauma service, primary responsibility for patient management is transferred to the nsicu team.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/isolated-traumatic-brain-injury-tbi"
+      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/isolated-traumatic-brain-injury-tbi",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Polytrauma Patients",
@@ -1183,16 +1444,29 @@
         "year": 2026,
         "sectionOrder": 19,
         "headingKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/polytrauma-patients",
-        "blockDigest": "de0c5e535dbbedfb"
+        "blockDigest": "de0c5e535dbbedfb",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "polytrauma patients",
         "heading": "polytrauma patients",
         "parentHeading": "trauma patient workflow",
         "body": "patients with multiple traumatic injuries remain under the trauma surgery/surgical icu (sicu) service. the nsicu team functions as a consulting service, providing specialized neurocritical care recommendations while the trauma/sicu team maintains primary responsibility.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/polytrauma-patients"
+      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/polytrauma-patients",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Tracheostomy & PEG Placement",
@@ -1218,16 +1492,29 @@
         "year": 2026,
         "sectionOrder": 20,
         "headingKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/tracheostomy-and-peg-placement",
-        "blockDigest": "739129fb182955df"
+        "blockDigest": "739129fb182955df",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "tracheostomy & peg placement",
         "heading": "tracheostomy & peg placement",
         "parentHeading": "trauma patient workflow",
         "body": "for patients admitted to the nsicu who require tracheostomy and/or percutaneous endoscopic gastrostomy (peg) placement, these procedures are performed by the trauma/sicu team.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/tracheostomy-and-peg-placement"
+      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/tracheostomy-and-peg-placement",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Critical Care Consultation for Trauma Patients",
@@ -1269,16 +1556,31 @@
         "year": 2026,
         "sectionOrder": 21,
         "headingKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/critical-care-consultation-for-trauma-patients",
-        "blockDigest": "d4f0623e7784bb76"
+        "blockDigest": "d4f0623e7784bb76",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "critical care consultation for trauma patients",
         "heading": "critical care consultation for trauma patients",
         "parentHeading": "trauma patient workflow",
         "body": "the trauma surgery/sicu team should be contacted first for icu consultation. if both teams determine that additional expertise is required, a medical icu (micu) consultation may then be requested. avoid requesting a primary micu consultation before discussing the case with the trauma/sicu team. interdisciplinary communication · management decisions involving multiple services should be based on direct attending-to-attending communication. early collaboration between the nsicu, trauma surgery, neurosurgery, and other consulting services is strongly encouraged to ensure coordinated patient care and timely resolution of management issues.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/critical-care-consultation-for-trauma-patients"
+      "sourceKey": "part-2-scope-of-practice-and-admissions/trauma-patient-workflow/critical-care-consultation-for-trauma-patients",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 3 · Daily Workflow & Expectations",
@@ -1304,16 +1606,31 @@
         "year": 2026,
         "sectionOrder": 22,
         "headingKey": "part-3-daily-workflow-and-expectations",
-        "blockDigest": "5bdc71084b2e60fb"
+        "blockDigest": "5bdc71084b2e60fb",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 3 · daily workflow & expectations",
         "heading": "part 3 · daily workflow & expectations",
         "parentHeading": "",
         "body": "navigation cue: use this section during the day to confirm rounds, airway coverage, and required icu checklist habits. return to start here.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-3-daily-workflow-and-expectations"
+      "sourceKey": "part-3-daily-workflow-and-expectations",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "daily-workflow-response"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "The Daily Rhythm",
@@ -1370,16 +1687,29 @@
         "year": 2026,
         "sectionOrder": 23,
         "headingKey": "part-3-daily-workflow-and-expectations/the-daily-rhythm",
-        "blockDigest": "55e81aff5574abf6"
+        "blockDigest": "55e81aff5574abf6",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "the daily rhythm",
         "heading": "the daily rhythm",
         "parentHeading": "part 3 · daily workflow & expectations",
         "body": "time activity details 7:00 am arrival & handoff faculty are expected to arrive by 7:00 am to receive handoff and prepare for morning rounds. 8:45 am (m-f) multidisciplinary discharge planning rounds all nsicu providers attend whenever clinical responsibilities permit. 9:00 am daily nsicu interdisciplinary bedside rounds led by the bedside nurse using a system-based approach. 7 am - 5 pm nsicu attending covers airway & emergencies includes code blue events for nsicu patients. after 5 pm micu covers airway & emergency response micu remains available for emergency consultation and critical care assistance.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-3-daily-workflow-and-expectations/the-daily-rhythm"
+      "sourceKey": "part-3-daily-workflow-and-expectations/the-daily-rhythm",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Airway & Emergency Response",
@@ -1417,16 +1747,29 @@
         "year": 2026,
         "sectionOrder": 24,
         "headingKey": "part-3-daily-workflow-and-expectations/airway-and-emergency-response",
-        "blockDigest": "fcced117358dc00c"
+        "blockDigest": "fcced117358dc00c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "airway & emergency response",
         "heading": "airway & emergency response",
         "parentHeading": "part 3 · daily workflow & expectations",
         "body": "the nsicu attending is responsible for airway management for patients admitted under the nsicu service between 7:00 am and 5:00 pm. the nsicu team responds to medical emergencies and code blue events involving nsicu patients. nsicu advanced practice providers (apps) do not perform endotracheal intubation; airway management is the responsibility of the attending physician. after 5:00 pm, the micu team provides airway management and emergency response support for nsicu patients.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-3-daily-workflow-and-expectations/airway-and-emergency-response"
+      "sourceKey": "part-3-daily-workflow-and-expectations/airway-and-emergency-response",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "8:45 AM - Multidisciplinary Discharge Planning Rounds",
@@ -1472,16 +1815,29 @@
         "year": 2026,
         "sectionOrder": 25,
         "headingKey": "part-3-daily-workflow-and-expectations/8-45-am-multidisciplinary-discharge-planning-rounds",
-        "blockDigest": "07a8135539d39fcb"
+        "blockDigest": "07a8135539d39fcb",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "8:45 am - multidisciplinary discharge planning rounds",
         "heading": "8:45 am - multidisciplinary discharge planning rounds",
         "parentHeading": "part 3 · daily workflow & expectations",
         "body": "primary objectives: review each patient's overall clinical status and anticipated discharge needs. discuss barriers to discharge and care transitions. review the ongoing need for invasive lines and devices (e.g., central venous catheters, arterial lines, foley catheters) and place removal orders when appropriate. coordinate rehabilitation and post-acute care planning. the multidisciplinary team includes care management, bedside nursing, physical therapy (pt), occupational therapy (ot), speech-language pathology (slp), and additional disciplines as needed. these collaborative rounds facilitate early discharge planning and ensure coordinated, patient-centered stroke and neurocritical care.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-3-daily-workflow-and-expectations/8-45-am-multidisciplinary-discharge-planning-rounds"
+      "sourceKey": "part-3-daily-workflow-and-expectations/8-45-am-multidisciplinary-discharge-planning-rounds",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "9:00 AM - NSICU Interdisciplinary Bedside Rounds",
@@ -1523,16 +1879,29 @@
         "year": 2026,
         "sectionOrder": 26,
         "headingKey": "part-3-daily-workflow-and-expectations/9-00-am-nsicu-interdisciplinary-bedside-rounds",
-        "blockDigest": "1ddde3fa09c6ad57"
+        "blockDigest": "1ddde3fa09c6ad57",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "9:00 am - nsicu interdisciplinary bedside rounds",
         "heading": "9:00 am - nsicu interdisciplinary bedside rounds",
         "parentHeading": "part 3 · daily workflow & expectations",
         "body": "the bedside nurse presents the patient's current clinical status using a structured systems assessment. the multidisciplinary team develops and reviews the daily plan of care. patients and family members are encouraged to participate in bedside rounds whenever appropriate. icu checklist - required every patient, every day · a standardized icu checklist must be completed for every patient during rounds. the checklist incorporates sccm best practices, including the abcdef bundle, and is available within epic. routine review ensures consistent implementation of evidence-based practices: pain management, sedation optimization, delirium prevention, early mobility, spontaneous awakening and breathing trials, family engagement, and line/device stewardship. · the checklist is part of the progress note. staff can add it to their attestation with the smartphrase .icuchecklistreport",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-3-daily-workflow-and-expectations/9-00-am-nsicu-interdisciplinary-bedside-rounds"
+      "sourceKey": "part-3-daily-workflow-and-expectations/9-00-am-nsicu-interdisciplinary-bedside-rounds",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 4 · Consultation & Stroke Alerts",
@@ -1558,16 +1927,31 @@
         "year": 2026,
         "sectionOrder": 27,
         "headingKey": "part-4-consultation-and-stroke-alerts",
-        "blockDigest": "94d53a9b0b6d7e8f"
+        "blockDigest": "94d53a9b0b6d7e8f",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 4 · consultation & stroke alerts",
         "heading": "part 4 · consultation & stroke alerts",
         "parentHeading": "",
         "body": "navigation cue: use this section when a neurologic consult or stroke alert question comes up. return to start here.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-4-consultation-and-stroke-alerts"
+      "sourceKey": "part-4-consultation-and-stroke-alerts",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "stroke-consultation"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Inpatient Neurology Support",
@@ -1601,7 +1985,8 @@
         "year": 2026,
         "sectionOrder": 28,
         "headingKey": "part-4-consultation-and-stroke-alerts/inpatient-neurology-support",
-        "blockDigest": "5158d694199ad7cb"
+        "blockDigest": "5158d694199ad7cb",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "inpatient neurology support",
@@ -1610,10 +1995,23 @@
         "body": "all patients admitted to the nsicu with acute ischemic stroke, intracerebral hemorrhage, or other complex neurological disorders should receive a neurology consultation. inpatient neurology provides consultation for cerebrovascular patients and collaborates closely with the nsicu team regarding diagnosis, medical management, secondary prevention, and disposition. at akron general, neurology functions as a consulting service only and does not serve as the admitting team.",
         "aliases": [
           "ICH",
-          "intracerebral hemorrhage"
+          "intracerebral hemorrhage",
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
         ]
       },
-      "sourceKey": "part-4-consultation-and-stroke-alerts/inpatient-neurology-support"
+      "sourceKey": "part-4-consultation-and-stroke-alerts/inpatient-neurology-support",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Neurocritical Care Consultation",
@@ -1655,16 +2053,31 @@
         "year": 2026,
         "sectionOrder": 29,
         "headingKey": "part-4-consultation-and-stroke-alerts/neurocritical-care-consultation",
-        "blockDigest": "2f7e2b79ab8312c7"
+        "blockDigest": "2f7e2b79ab8312c7",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "neurocritical care consultation",
         "heading": "neurocritical care consultation",
         "parentHeading": "part 4 · consultation & stroke alerts",
         "body": "the nsicu service provides neurocritical care consultations for non-stroke patients admitted to other icus when appropriate. if the nsicu attending is not a neurologist, non-stroke neurological consultations are provided by the general neurology service. the icu team can ask neurology to evaluate further if needs are complex. hospital-wide stroke consultations, including icu patients, are managed by the stroke neurology team. always the nsicu team's responsibility · regardless of attending background, the nsicu team is responsible for: · cardiac arrest prognostication · liver failure with cerebral edema · brain death evaluation",
-        "aliases": []
+        "aliases": [
+          "brain death",
+          "death by neurologic criteria",
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-4-consultation-and-stroke-alerts/neurocritical-care-consultation"
+      "sourceKey": "part-4-consultation-and-stroke-alerts/neurocritical-care-consultation",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Stroke Alert Process",
@@ -1722,16 +2135,31 @@
         "year": 2026,
         "sectionOrder": 30,
         "headingKey": "part-4-consultation-and-stroke-alerts/stroke-alert-process",
-        "blockDigest": "c30b68496ee1eeaf"
+        "blockDigest": "c30b68496ee1eeaf",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "stroke alert process",
         "heading": "stroke alert process",
         "parentHeading": "part 4 · consultation & stroke alerts",
         "body": "suspected acute stroke · any patient with suspected acute stroke: activate a stroke alert immediately. the stroke neurology team is responsible for responding to all stroke alerts. their responsibilities include: rapid neurological evaluation eligibility assessment for thrombolytic therapy (tnk) coordination of endovascular thrombectomy evaluation with the neuroendovascular team ongoing acute stroke management recommendations note · the nsicu team does not respond to hospital stroke alerts unless specifically requested for consultation or patient transfer.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "EVT",
+          "endovascular thrombectomy"
+        ]
       },
-      "sourceKey": "part-4-consultation-and-stroke-alerts/stroke-alert-process"
+      "sourceKey": "part-4-consultation-and-stroke-alerts/stroke-alert-process",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 5 · Emergency Transfers & ECMO",
@@ -1757,16 +2185,31 @@
         "year": 2026,
         "sectionOrder": 31,
         "headingKey": "part-5-emergency-transfers-and-ecmo",
-        "blockDigest": "af0b4216229aeaa8"
+        "blockDigest": "af0b4216229aeaa8",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 5 · emergency transfers & ecmo",
         "heading": "part 5 · emergency transfers & ecmo",
         "parentHeading": "",
         "body": "navigation cue: use this section for cct, auto launch, emergency transfers, and ecmo escalation. return to start here.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "transfers-rescue"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Auto Launch & the CCT Process",
@@ -1796,7 +2239,8 @@
         "year": 2026,
         "sectionOrder": 32,
         "headingKey": "part-5-emergency-transfers-and-ecmo/auto-launch-and-the-cct-process",
-        "blockDigest": "0dffeb6fe61bd620"
+        "blockDigest": "0dffeb6fe61bd620",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "auto launch & the cct process",
@@ -1805,7 +2249,16 @@
         "body": "transfer line: 216-448-7000 (cleveland clinic critical care transport dispatch) at cleveland clinic, the auto launch process is an expedited emergency transfer protocol. it quickly transports patients with life-threatening conditions (such as heart attacks or strokes) from regional hospitals to definitive care.",
         "aliases": []
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/auto-launch-and-the-cct-process"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/auto-launch-and-the-cct-process",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Acute Stroke / ICH Transfer Workflow",
@@ -1864,7 +2317,8 @@
         "year": 2026,
         "sectionOrder": 33,
         "headingKey": "part-5-emergency-transfers-and-ecmo/acute-stroke-ich-transfer-workflow",
-        "blockDigest": "efdd7a7e1db99b73"
+        "blockDigest": "efdd7a7e1db99b73",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "acute stroke / ich transfer workflow",
@@ -1875,10 +2329,23 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus",
+          "LVO",
+          "large vessel occlusion"
         ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/acute-stroke-ich-transfer-workflow"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/acute-stroke-ich-transfer-workflow",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Diagnoses Eligible for Emergency Transfer (Incl. Auto Launch)",
@@ -1940,7 +2407,8 @@
         "year": 2026,
         "sectionOrder": 34,
         "headingKey": "part-5-emergency-transfers-and-ecmo/diagnoses-eligible-for-emergency-transfer-incl-auto-launch",
-        "blockDigest": "99e1aa3827bc50a7"
+        "blockDigest": "99e1aa3827bc50a7",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "diagnoses eligible for emergency transfer (incl. auto launch)",
@@ -1951,10 +2419,21 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/diagnoses-eligible-for-emergency-transfer-incl-auto-launch"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/diagnoses-eligible-for-emergency-transfer-incl-auto-launch",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "ECMO Activation Pathway - Akron General",
@@ -1975,7 +2454,8 @@
         "year": 2026,
         "sectionOrder": 35,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general",
-        "blockDigest": "4f53cda18c2baa0c"
+        "blockDigest": "4f53cda18c2baa0c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "ecmo activation pathway - akron general",
@@ -1984,7 +2464,16 @@
         "body": "",
         "aliases": []
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "1. Trigger: Suspected Need for ECMO",
@@ -2010,16 +2499,29 @@
         "year": 2026,
         "sectionOrder": 36,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/1-trigger-suspected-need-for-ecmo",
-        "blockDigest": "4841417a568daacb"
+        "blockDigest": "4841417a568daacb",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "1. trigger: suspected need for ecmo",
         "heading": "1. trigger: suspected need for ecmo",
         "parentHeading": "ecmo activation pathway - akron general",
         "body": "consider ecmo activation in patients with severe cardiopulmonary failure, including: cardiac arrest, refractory shock, ards, massive pulmonary embolism (pe), cardiogenic shock, or severe shock unresponsive to standard therapy.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/1-trigger-suspected-need-for-ecmo"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/1-trigger-suspected-need-for-ecmo",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "2. Immediate Actions",
@@ -2053,16 +2555,29 @@
         "year": 2026,
         "sectionOrder": 37,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/2-immediate-actions",
-        "blockDigest": "c5523547c32ab4e1"
+        "blockDigest": "c5523547c32ab4e1",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "2. immediate actions",
         "heading": "2. immediate actions",
         "parentHeading": "ecmo activation pathway - akron general",
         "body": "stat consults: medical icu (330-250-1634) and cardiothoracic surgery (per qgenda on-call schedule). early physician-to-physician communication may be required to determine candidacy and coordinate care. resuscitation: continue aggressive resuscitation as clinically indicated. initial workup: abg, serum lactate, stat bedside echocardiogram (micu), consider pa catheter if indicated, portable ct brain if clinically appropriate.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/2-immediate-actions"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/2-immediate-actions",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "ECMO Candidacy Assessment",
@@ -2100,16 +2615,29 @@
         "year": 2026,
         "sectionOrder": 38,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/ecmo-candidacy-assessment",
-        "blockDigest": "75e0a65b13cad424"
+        "blockDigest": "75e0a65b13cad424",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "ecmo candidacy assessment",
         "heading": "ecmo candidacy assessment",
         "parentHeading": "ecmo activation pathway - akron general",
         "body": "multidisciplinary evaluation by micu, ct surgery, and the primary team to assess inclusion and exclusion criteria. nsicu involvement for assessment of neurologic status and anticoagulation contraindications as needed. coordination with neurosurgery and/or vascular neurology when anticoagulation risk is present. clear documentation of risk-benefit discussion in patients with high bleeding risk.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/ecmo-candidacy-assessment"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/ecmo-candidacy-assessment",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Pulmonary Embolism Pathway",
@@ -2135,7 +2663,8 @@
         "year": 2026,
         "sectionOrder": 39,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/pulmonary-embolism-pathway",
-        "blockDigest": "5d47e47a39844288"
+        "blockDigest": "5d47e47a39844288",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "pulmonary embolism pathway",
@@ -2144,7 +2673,16 @@
         "body": "stat micu consultation for consideration of systemic thrombolysis, catheter-directed thrombectomy, or ecmo support when indicated.",
         "aliases": []
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/pulmonary-embolism-pathway"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/pulmonary-embolism-pathway",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "3. ECMO Team Activation",
@@ -2174,7 +2712,8 @@
         "year": 2026,
         "sectionOrder": 40,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/3-ecmo-team-activation",
-        "blockDigest": "8a8f9ab9dd7c9830"
+        "blockDigest": "8a8f9ab9dd7c9830",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "3. ecmo team activation",
@@ -2183,7 +2722,16 @@
         "body": "notify the on-call micu attending (akron) immediately. call the transfer center (216-448-7000) and request activation of: 2shock team, j31 ecmo fellow, and critical care transport (cct).",
         "aliases": []
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/3-ecmo-team-activation"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/3-ecmo-team-activation",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "4. Decision Point: On-Site ECMO Deployment",
@@ -2213,16 +2761,29 @@
         "year": 2026,
         "sectionOrder": 41,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/4-decision-point-on-site-ecmo-deployment",
-        "blockDigest": "40ca5653f957847f"
+        "blockDigest": "40ca5653f957847f",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "4. decision point: on-site ecmo deployment",
         "heading": "4. decision point: on-site ecmo deployment",
         "parentHeading": "ecmo activation pathway - akron general",
         "body": "if ecmo is initiated on-site: cardiothoracic surgery proceeds with cannulation (bedside or cath lab depending on hemodynamic stability). coordinate with cct/transfer center to ensure perfusion support for transport. determine cannulation location based on clinical stability and urgency. if ecmo is not initiated on-site: stabilize the patient and arrange transfer to a higher level of care facility as appropriate.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/4-decision-point-on-site-ecmo-deployment"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/4-decision-point-on-site-ecmo-deployment",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "5. Escalation Contact",
@@ -2256,16 +2817,29 @@
         "year": 2026,
         "sectionOrder": 42,
         "headingKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/5-escalation-contact",
-        "blockDigest": "084d94468850f5b3"
+        "blockDigest": "084d94468850f5b3",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "5. escalation contact",
         "heading": "5. escalation contact",
         "parentHeading": "ecmo activation pathway - akron general",
         "body": "ecmo lead: dr. lokesh venkat - 216-212-6977 key principle · early recognition of ecmo candidacy and rapid multidisciplinary activation are critical to improving outcomes in severe cardiopulmonary failure.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/5-escalation-contact"
+      "sourceKey": "part-5-emergency-transfers-and-ecmo/ecmo-activation-pathway-akron-general/5-escalation-contact",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 6 · Documentation & Quality",
@@ -2299,7 +2873,8 @@
         "year": 2026,
         "sectionOrder": 43,
         "headingKey": "part-6-documentation-quality",
-        "blockDigest": "4cc93fe843086c27"
+        "blockDigest": "4cc93fe843086c27",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 6 · documentation & quality",
@@ -2310,10 +2885,29 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "part-6-documentation-quality"
+      "sourceKey": "part-6-documentation-quality",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "documentation-quality"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "part-6-documentation-and-quality",
+        "path": "/akron/part-6-documentation-and-quality",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Required Clinical Documentation (Every Eligible Patient)",
@@ -2380,7 +2974,8 @@
         "year": 2026,
         "sectionOrder": 44,
         "headingKey": "part-6-documentation-and-quality/required-clinical-documentation-every-eligible-patient",
-        "blockDigest": "7c90251ecaa54341"
+        "blockDigest": "7c90251ecaa54341",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "required clinical documentation (every eligible patient)",
@@ -2391,10 +2986,23 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus",
+          "LVO",
+          "large vessel occlusion"
         ]
       },
-      "sourceKey": "part-6-documentation-and-quality/required-clinical-documentation-every-eligible-patient"
+      "sourceKey": "part-6-documentation-and-quality/required-clinical-documentation-every-eligible-patient",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Hemorrhagic Stroke Severity Scores",
@@ -2437,7 +3045,8 @@
         "year": 2026,
         "sectionOrder": 45,
         "headingKey": "part-6-documentation-and-quality/hemorrhagic-stroke-severity-scores",
-        "blockDigest": "d9babd6c1e7c65ed"
+        "blockDigest": "d9babd6c1e7c65ed",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "hemorrhagic stroke severity scores",
@@ -2448,10 +3057,21 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "part-6-documentation-and-quality/hemorrhagic-stroke-severity-scores"
+      "sourceKey": "part-6-documentation-and-quality/hemorrhagic-stroke-severity-scores",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Stroke Care Pathway in Epic",
@@ -2508,16 +3128,31 @@
         "year": 2026,
         "sectionOrder": 46,
         "headingKey": "part-6-documentation-and-quality/stroke-care-pathway-in-epic",
-        "blockDigest": "d7b6f169d1658d83"
+        "blockDigest": "d7b6f169d1658d83",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "stroke care pathway in epic",
         "heading": "stroke care pathway in epic",
         "parentHeading": "part 6 · documentation & quality",
         "body": "complete the stroke care pathway immediately after patient stabilization and after all initial admission orders have been entered. ensure the time documented for the nihss matches the time recorded in the key metrics section. the stroke care pathway tab in epic stroke care pathway navigator key metrics section - complete all required fields",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-6-documentation-and-quality/stroke-care-pathway-in-epic"
+      "sourceKey": "part-6-documentation-and-quality/stroke-care-pathway-in-epic",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Epic Order Set Favorites",
@@ -2587,7 +3222,8 @@
         "year": 2026,
         "sectionOrder": 47,
         "headingKey": "part-6-documentation-and-quality/epic-order-set-favorites",
-        "blockDigest": "9e9168d63eaa2d86"
+        "blockDigest": "9e9168d63eaa2d86",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "epic order set favorites",
@@ -2598,10 +3234,23 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus",
+          "TTM",
+          "targeted temperature management"
         ]
       },
-      "sourceKey": "part-6-documentation-and-quality/epic-order-set-favorites"
+      "sourceKey": "part-6-documentation-and-quality/epic-order-set-favorites",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Consent & Code Status (ICU Admission)",
@@ -2675,16 +3324,31 @@
         "year": 2026,
         "sectionOrder": 48,
         "headingKey": "part-6-documentation-and-quality/consent-and-code-status-icu-admission",
-        "blockDigest": "f0f46c0bc526d3d7"
+        "blockDigest": "f0f46c0bc526d3d7",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "consent & code status (icu admission)",
         "heading": "consent & code status (icu admission)",
         "parentHeading": "part 6 · documentation & quality",
         "body": "consent and code status for all icu-level procedures should be confirmed and documented immediately upon patient arrival. code status at admission · code status must be clearly recorded in the medical record at the time of admission - it is a critical determinant of outcomes and quality metrics. patients documented as dnr on admission, based on prior expressed wishes or advance directives, should be classified as present on admission (poa). accurate, timely documentation is vital for patient safety, alignment with goals of care, and institutional mortality and quality reporting. icu consent (smartphrase: .nicuconsent) the app is not credentialed for independent airway management; therefore, informed consent for icu-level procedures should be obtained upon admission whenever feasible. icu consent includes authorization for routine critical care interventions, including but not limited to: endotracheal intubation and mechanical ventilation central venous catheter placement arterial line placement blood product transfusion pulmonary artery catheter insertion bronchoscopy and related diagnostic/therapeutic procedures lumbar puncture (lp) these procedures are considered part of standard icu care and may be performed as clinically indicated.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-6-documentation-and-quality/consent-and-code-status-icu-admission"
+      "sourceKey": "part-6-documentation-and-quality/consent-and-code-status-icu-admission",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Procedure-Specific Consent Requirements",
@@ -2730,16 +3394,31 @@
         "year": 2026,
         "sectionOrder": 49,
         "headingKey": "part-6-documentation-and-quality/consent-and-code-status-icu-admission/procedure-specific-consent-requirements",
-        "blockDigest": "f01aa3a243360880"
+        "blockDigest": "f01aa3a243360880",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "procedure-specific consent requirements",
         "heading": "procedure-specific consent requirements",
         "parentHeading": "consent & code status (icu admission)",
         "body": "in addition to standard icu consent, separate informed consent must be obtained for non-routine or procedure-specific interventions. these are not covered under general icu admission consent and require individual documentation: paracentesis thoracentesis chest tube insertion any other invasive or procedural intervention not explicitly included under routine icu care each procedure must have its own dedicated consent form or documentation prior to performance, unless an emergency exception applies where delay would pose immediate risk to life or limb.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-6-documentation-and-quality/consent-and-code-status-icu-admission/procedure-specific-consent-requirements"
+      "sourceKey": "part-6-documentation-and-quality/consent-and-code-status-icu-admission/procedure-specific-consent-requirements",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Progress Notes & H&P",
@@ -2773,16 +3452,29 @@
         "year": 2026,
         "sectionOrder": 50,
         "headingKey": "part-6-documentation-and-quality/progress-notes-and-h-and-p",
-        "blockDigest": "db67071a5c741294"
+        "blockDigest": "db67071a5c741294",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "progress notes & h&p",
         "heading": "progress notes & h&p",
         "parentHeading": "part 6 · documentation & quality",
         "body": "most clinical documentation is completed by the apps and residents. in rare circumstances, attending physicians may need to assist by completing one or two notes during periods of high clinical workload. during emergencies or periods of exceptionally high patient volume, the expectation is not to produce perfect documentation. the priority is always timely patient care and completion of essential emergency documentation; notes can be updated or refined later as clinically appropriate.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-6-documentation-and-quality/progress-notes-and-h-and-p"
+      "sourceKey": "part-6-documentation-and-quality/progress-notes-and-h-and-p",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Note Templates",
@@ -2829,16 +3521,29 @@
         "year": 2026,
         "sectionOrder": 51,
         "headingKey": "part-6-documentation-and-quality/progress-notes-and-h-and-p/note-templates",
-        "blockDigest": "f0a41f519684fd22"
+        "blockDigest": "f0a41f519684fd22",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "note templates",
         "heading": "note templates",
         "parentHeading": "progress notes & h&p",
         "body": "use for template h&p neuro icu h&p regular s/o problem oriented charting cchs · · neuro icu h&p stroke care path s/o problem oriented charting cchs progress notes neuro icu progress note s/o problem oriented charting cchs · · neuro icu stroke hemorrhagic progress note care path ip main · used for stroke patients so the stroke care path incorporates into the note. for ischemic stroke, change 'hemorrhagic' to 'ischemic' at the top - there is no separate ischemic template. transfer notes .aktransfernote problem-oriented a&p .diagpocpoa · diagnoses can be added, removed, and grouped into a shared plan. for problems present on admission, check poa present.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-6-documentation-and-quality/progress-notes-and-h-and-p/note-templates"
+      "sourceKey": "part-6-documentation-and-quality/progress-notes-and-h-and-p/note-templates",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Vizient POA Variables",
@@ -2925,7 +3630,8 @@
         "year": 2026,
         "sectionOrder": 52,
         "headingKey": "part-6-documentation-and-quality/vizient-poa-variables",
-        "blockDigest": "5aefa42a70c919d8"
+        "blockDigest": "5aefa42a70c919d8",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "vizient poa variables",
@@ -2936,10 +3642,21 @@
           "ICH",
           "intracerebral hemorrhage",
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "part-6-documentation-and-quality/vizient-poa-variables"
+      "sourceKey": "part-6-documentation-and-quality/vizient-poa-variables",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Billing",
@@ -2969,16 +3686,31 @@
         "year": 2026,
         "sectionOrder": 53,
         "headingKey": "part-6-documentation-and-quality/billing",
-        "blockDigest": "125a95c4a0aaeabf"
+        "blockDigest": "125a95c4a0aaeabf",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "billing",
         "heading": "billing",
         "parentHeading": "part 6 · documentation & quality",
         "body": "staff physicians should not submit billing attestation for notes authored by apps. critical care (cc) encounters and resident note attestations must be billed separately when appropriate.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-6-documentation-and-quality/billing"
+      "sourceKey": "part-6-documentation-and-quality/billing",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "CDI Queries",
@@ -3004,16 +3736,29 @@
         "year": 2026,
         "sectionOrder": 54,
         "headingKey": "part-6-documentation-and-quality/cdi-queries",
-        "blockDigest": "abd79d66cf38ef6b"
+        "blockDigest": "abd79d66cf38ef6b",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "cdi queries",
         "heading": "cdi queries",
         "parentHeading": "part 6 · documentation & quality",
         "body": "for documentation clarification, the cdi team may send an epic documentation query to the attending physician and care team via the epic in basket. respond promptly.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-6-documentation-and-quality/cdi-queries"
+      "sourceKey": "part-6-documentation-and-quality/cdi-queries",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 7 · Transitions of Care",
@@ -3043,16 +3788,37 @@
         "year": 2026,
         "sectionOrder": 55,
         "headingKey": "part-7-transitions-of-care",
-        "blockDigest": "e3c58b2c90e8dd71"
+        "blockDigest": "e3c58b2c90e8dd71",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 7 · transitions of care",
         "heading": "part 7 · transitions of care",
         "parentHeading": "",
         "body": "navigation cue: use this section when deciding pcu/floor readiness or preparing an icu transfer note. return to start here. the nsicu team is responsible for coordinating safe and appropriate transfer of patients out of the icu to the next level of care.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-7-transitions-of-care"
+      "sourceKey": "part-7-transitions-of-care",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "transitions-of-care"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "part-7-transitions-of-care",
+        "path": "/akron/part-7-transitions-of-care",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Who Transfers Whom",
@@ -3107,16 +3873,29 @@
         "year": 2026,
         "sectionOrder": 56,
         "headingKey": "part-7-transitions-of-care/who-transfers-whom",
-        "blockDigest": "e830a50994d835f2"
+        "blockDigest": "e830a50994d835f2",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "who transfers whom",
         "heading": "who transfers whom",
         "parentHeading": "part 7 · transitions of care",
         "body": "patient population disposition pathway nsicu primary patients discharged directly from the nsicu team to the appropriate destination (step-down unit, floor, long-term care, or acute rehabilitation facility). trauma patients (nsicu providing critical care) remain primarily under trauma oversight for disposition decisions. transitions to ltac or acute rehab are coordinated by the nsicu team in collaboration with trauma surgery. non-surgical tbi patients stable for the floor transition to trauma surgery or sound hospital medicine based on clinical needs and service alignment. neurosurgical (primary tbi) patients patients who undergo neurosurgical intervention are generally managed and discharged under the neurosurgery (nsgy) service. complex medical needs may require multidisciplinary discussion (trauma, nsgy, nsicu, medicine) to determine disposition. floor transfers nsicu patients requiring ongoing inpatient floor care are transferred to sound hospital medicine (pager 330-250-1576) or family medicine (for established cfm patients). if transfer barriers arise · effective physician-to-physician and team-to-team communication is essential for safe, timely transfer. if disagreements or barriers cannot be resolved through direct communication between services, escalate to the unit medical director and trauma service leadership.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-7-transitions-of-care/who-transfers-whom"
+      "sourceKey": "part-7-transitions-of-care/who-transfers-whom",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Level-of-Care Criteria",
@@ -3182,7 +3961,8 @@
         "year": 2026,
         "sectionOrder": 57,
         "headingKey": "part-7-transitions-of-care/level-of-care-criteria",
-        "blockDigest": "33c951e8e57f116c"
+        "blockDigest": "33c951e8e57f116c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "level-of-care criteria",
@@ -3191,10 +3971,27 @@
         "body": "each patient remains under the care of their primary icu service. neurocritical care and neurosurgical patients are continuously managed by the nsicu team throughout their icu admission. intensive care (icu) intermediate care (pcu) general medical floor new, unstable stroke requiring neuro checks q1h or more frequent and/or life support therapies. acute stroke receiving thrombolytics or neurovascular interventional procedures. established, stable stroke requiring frequent neuro checks q2-3h, or frequent suctioning/turning q2-3h. stable stroke requiring neuro checks, suctioning, or turning q4h or less frequent. unstable severe tbi requiring life support therapies. stable severe tbi requiring frequent positioning and q2h neuro checks; minimal respiratory issues including suction needs. stable post-severe tbi requiring neuro checks, suctioning, or turning q4h or less frequent. unstable sah requiring life support therapies. sah post-aneurysm clipping requiring observation for vasospasm or hydrocephalus. sah post-aneurysm treatment requiring observation and neurovascular checks more frequently than q4h, without major evidence of vasospasm or electrolyte disturbance. no signs of vasospasm or hydrocephalus after 7 days of observation; identified as low risk for vasospasm or hydrocephalus. unstable neurosurgical patients requiring a lumbar drain for csf leak. patients with lumbar drains must stay in the icu. stable neurosurgical post-operative patients requiring frequent neuro monitoring. stable neurological patients at 24 hours; csf monitoring q2h or less frequent. unstable or new cervical spinal cord injury. stable spinal cord injury requiring neuro checks q2-3h. neuro checks, suctioning, and turning q4h or less frequent. acute neurologic disorders requiring nursing interventions q1h or more frequently. chronic but stable neurologic disorders (e.g., neuromuscular disease) requiring nursing interventions q2-3h. post-ictal patients slowly waking, protecting airway, needing ceeg and close neuro monitoring. 24-hour observation with nursing intervention q4h or less frequent.",
         "aliases": [
           "SAH",
-          "subarachnoid hemorrhage"
+          "subarachnoid hemorrhage",
+          "SE",
+          "status epilepticus",
+          "cEEG",
+          "continuous EEG",
+          "LD",
+          "lumbar drain",
+          "VSP",
+          "vasospasm"
         ]
       },
-      "sourceKey": "part-7-transitions-of-care/level-of-care-criteria"
+      "sourceKey": "part-7-transitions-of-care/level-of-care-criteria",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Step-Down/PCU vs ICU: Admission Criteria Guide",
@@ -3220,16 +4017,29 @@
         "year": 2026,
         "sectionOrder": 58,
         "headingKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide",
-        "blockDigest": "93ec0d3ab4daaf4a"
+        "blockDigest": "93ec0d3ab4daaf4a",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "step-down/pcu vs icu: admission criteria guide",
         "heading": "step-down/pcu vs icu: admission criteria guide",
         "parentHeading": "part 7 · transitions of care",
         "body": "examples of patients appropriate for step-down (pcu) versus continued icu-level care. final disposition should be made in collaboration with the relevant co-management teams (nsgy, stroke neurology, neurointerventional lab).",
-        "aliases": []
+        "aliases": [
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide"
+      "sourceKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Appropriate for Step-Down / PCU (when clinically stable)",
@@ -3287,7 +4097,8 @@
         "year": 2026,
         "sectionOrder": 59,
         "headingKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide/appropriate-for-step-down-pcu-when-clinically-stable",
-        "blockDigest": "4e6822057d65c770"
+        "blockDigest": "4e6822057d65c770",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "appropriate for step-down / pcu (when clinically stable)",
@@ -3302,10 +4113,27 @@
           "EVD",
           "external ventricular drain",
           "TCD",
-          "transcranial doppler"
+          "transcranial doppler",
+          "SE",
+          "status epilepticus",
+          "cEEG",
+          "continuous EEG",
+          "LD",
+          "lumbar drain",
+          "VSP",
+          "vasospasm"
         ]
       },
-      "sourceKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide/appropriate-for-step-down-pcu-when-clinically-stable"
+      "sourceKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide/appropriate-for-step-down-pcu-when-clinically-stable",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "ICU-Level Care Required",
@@ -3367,7 +4195,8 @@
         "year": 2026,
         "sectionOrder": 60,
         "headingKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide/icu-level-care-required",
-        "blockDigest": "00dddc32282e84b9"
+        "blockDigest": "00dddc32282e84b9",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "icu-level care required",
@@ -3378,10 +4207,25 @@
           "ICH",
           "intracerebral hemorrhage",
           "EVD",
-          "external ventricular drain"
+          "external ventricular drain",
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain",
+          "LVO",
+          "large vessel occlusion"
         ]
       },
-      "sourceKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide/icu-level-care-required"
+      "sourceKey": "part-7-transitions-of-care/step-down-pcu-vs-icu-admission-criteria-guide/icu-level-care-required",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Transfer of Care Note",
@@ -3415,16 +4259,29 @@
         "year": 2026,
         "sectionOrder": 61,
         "headingKey": "part-7-transitions-of-care/transfer-of-care-note",
-        "blockDigest": "45a93705926e7ddf"
+        "blockDigest": "45a93705926e7ddf",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "transfer of care note",
         "heading": "transfer of care note",
         "parentHeading": "part 7 · transitions of care",
         "body": "all patients transferred from the nsicu primary service must have a completed formal transfer of care note documented at the time of disposition. use the .aktransfernote smartphrase for all nsicu transfers to ensure standardized documentation, clear communication, and continuity of care. include the clinical summary, active problems, hospital course, and pending issues. the full transfer note template is reproduced in appendix a.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-7-transitions-of-care/transfer-of-care-note"
+      "sourceKey": "part-7-transitions-of-care/transfer-of-care-note",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 8 · End-of-Life Care, Organ Donation & DNC",
@@ -3450,7 +4307,8 @@
         "year": 2026,
         "sectionOrder": 62,
         "headingKey": "part-8-end-of-life-care-organ-donation-and-dnc",
-        "blockDigest": "0518499a0d97d61d"
+        "blockDigest": "0518499a0d97d61d",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 8 · end-of-life care, organ donation & dnc",
@@ -3459,10 +4317,25 @@
         "body": "navigation cue: use this section for comfort-focused care, lifebanc, dnc, and dcd workflow. return to start here.",
         "aliases": [
           "DNC",
-          "death by neurologic criteria"
+          "death by neurologic criteria",
+          "SE",
+          "status epilepticus",
+          "LifeBanc",
+          "organ donation"
         ]
       },
-      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc"
+      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "eol-donation-dnc"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Comfort-Focused Care",
@@ -3500,16 +4373,31 @@
         "year": 2026,
         "sectionOrder": 63,
         "headingKey": "part-8-end-of-life-care-organ-donation-and-dnc/comfort-focused-care",
-        "blockDigest": "04069e297fa3b83c"
+        "blockDigest": "04069e297fa3b83c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "comfort-focused care",
         "heading": "comfort-focused care",
         "parentHeading": "part 8 · end-of-life care, organ donation & dnc",
         "body": "for patients whose goals of care transition to comfort-focused management, place a palliative care and/or hospice consultation to support decision-making and symptom management. hospice services should be involved for all patients transitioning to comfort measures only (cmo) to ensure coordination of care, symptom control, and family support. palliative care consultation services are typically led by dr. scanling and her team. use the med comfort care order set in epic to standardize symptom management and ensure consistency in end-of-life care delivery.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/comfort-focused-care"
+      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/comfort-focused-care",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Organ Donation - LifeBanc",
@@ -3551,16 +4439,31 @@
         "year": 2026,
         "sectionOrder": 64,
         "headingKey": "part-8-end-of-life-care-organ-donation-and-dnc/organ-donation-lifebanc",
-        "blockDigest": "64b3975eb603b51c"
+        "blockDigest": "64b3975eb603b51c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "organ donation - lifebanc",
         "heading": "organ donation - lifebanc",
         "parentHeading": "part 8 · end-of-life care, organ donation & dnc",
         "body": "lifebanc is the designated organ procurement organization (opo) for northeast ohio and partners with cleveland clinic health system. patients meeting established referral criteria are automatically referred to lifebanc. before withdrawal of life-sustaining treatment or initiation of brain death evaluation, ensure lifebanc has been notified. the bedside rn may contact the opo if needed. cms requirement · only lifebanc/opo personnel may discuss organ and tissue donation with the patient's family. the treating clinical team must not initiate donation discussions before opo involvement.",
-        "aliases": []
+        "aliases": [
+          "brain death",
+          "death by neurologic criteria",
+          "LifeBanc",
+          "organ donation"
+        ]
       },
-      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/organ-donation-lifebanc"
+      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/organ-donation-lifebanc",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Death by Neurologic Criteria (DNC)",
@@ -3598,7 +4501,8 @@
         "year": 2026,
         "sectionOrder": 65,
         "headingKey": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc",
-        "blockDigest": "c02c1c4febafc48f"
+        "blockDigest": "c02c1c4febafc48f",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "death by neurologic criteria (dnc)",
@@ -3607,10 +4511,20 @@
         "body": "all intensivists performing dnc evaluations must follow the cleveland clinic health system (cchs) dnc policy. providers must have approved dnc privileges before independently performing dnc evaluations. the cchs dnc policy and procedure (determination of death by neurological criteria in adults, v.5) is available on the cchs intranet under policies & procedures. mylearning requirement: all intensivists must complete the dnc mylearning module every 2 years. completion is required to obtain and maintain dnc privileges.",
         "aliases": [
           "DNC",
-          "death by neurologic criteria"
+          "death by neurologic criteria",
+          "brain death"
         ]
       },
-      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc"
+      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "DNC Documentation Workflow (Epic)",
@@ -3682,7 +4596,8 @@
         "year": 2026,
         "sectionOrder": 66,
         "headingKey": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc/dnc-documentation-workflow-epic",
-        "blockDigest": "b246615629100f36"
+        "blockDigest": "b246615629100f36",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "dnc documentation workflow (epic)",
@@ -3691,10 +4606,22 @@
         "body": "step action 1 confirm the patient meets prerequisites 2 open the deceased navigator in epic (via the discharge tab) 3 complete brain death exam #1 4 enter the time of brain death 5 generate and sign the exam #1 progress note 6 complete brain death exam #2 7 generate and sign the exam #2 progress note 8 brain death documentation complete deceased navigator in epic (discharge tab)",
         "aliases": [
           "DNC",
-          "death by neurologic criteria"
+          "death by neurologic criteria",
+          "brain death",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc/dnc-documentation-workflow-epic"
+      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/death-by-neurologic-criteria-dnc/dnc-documentation-workflow-epic",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Donation after Circulatory Death (DCD)",
@@ -3729,16 +4656,29 @@
         "year": 2026,
         "sectionOrder": 67,
         "headingKey": "part-8-end-of-life-care-organ-donation-and-dnc/donation-after-circulatory-death-dcd",
-        "blockDigest": "fba3cb1c3aa69507"
+        "blockDigest": "fba3cb1c3aa69507",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "donation after circulatory death (dcd)",
         "heading": "donation after circulatory death (dcd)",
         "parentHeading": "part 8 · end-of-life care, organ donation & dnc",
         "body": "patients undergoing dcd follow a separate dcd policy, available through mylearning. dcd workflow overview",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/donation-after-circulatory-death-dcd"
+      "sourceKey": "part-8-end-of-life-care-organ-donation-and-dnc/donation-after-circulatory-death-dcd",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "PART 9 · Neurotrauma Admission & ICU Management",
@@ -3809,16 +4749,33 @@
         "year": 2026,
         "sectionOrder": 68,
         "headingKey": "part-9-neurotrauma-admission-and-icu-management",
-        "blockDigest": "cb5d7a6229cfc0f9"
+        "blockDigest": "cb5d7a6229cfc0f9",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "part 9 · neurotrauma admission & icu management",
         "heading": "part 9 · neurotrauma admission & icu management",
         "parentHeading": "",
         "body": "navigation cue: use this section for tbi, spine trauma, polytrauma, neuromonitoring, and service ownership. return to start here. tbi guide for akron - full details available on the teams channel. scenario admitting service critical care key points isolated mild-moderate tbi trauma service sicu neurosurgery consulted for neurosurgical management. isolated severe tbi trauma service (initial 24 h) neuroicu from admission sicu involvement not required. after 24 h, transfer to neurosurgery or neuroicu primary service; trauma signs off. spine trauma trauma service sicu consult neurosurgery or orthopedic spine surgery as appropriate. acute spinal cord injury trauma service (default) sicu workflow may evolve as advanced spinal cord monitoring is implemented; staff-to-staff discussion needed in such cases. polytrauma + severe tbi trauma service sicu + neuroicu co-manage severe tbi with significant extracranial injuries (thoracic, abdominal, pelvic, long-bone). nicu manages the tbi portion of critical care; neurosurgery consultation required. clear staff communication is essential.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-9-neurotrauma-admission-and-icu-management"
+      "sourceKey": "part-9-neurotrauma-admission-and-icu-management",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Neuromonitoring",
@@ -3848,16 +4805,39 @@
         "year": 2026,
         "sectionOrder": 69,
         "headingKey": "part-9-neurotrauma-admission-and-icu-management/neuromonitoring",
-        "blockDigest": "2ddfd5368af8b6b7"
+        "blockDigest": "2ddfd5368af8b6b7",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "neuromonitoring",
         "heading": "neuromonitoring",
         "parentHeading": "part 9 · neurotrauma admission & icu management",
         "body": "patients requiring invasive neuromonitoring should, whenever possible, be admitted to the neuroicu (3200). if no neuroicu bed is available, or in selected high-injury-severity polytrauma cases, patients may be managed in one of the two neuromonitoring-capable beds on the 4th floor icu, at the discretion of the trauma team.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain"
+        ]
       },
-      "sourceKey": "part-9-neurotrauma-admission-and-icu-management/neuromonitoring"
+      "sourceKey": "part-9-neurotrauma-admission-and-icu-management/neuromonitoring",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "neurotrauma-neuromonitoring"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "neuromonitoring",
+        "path": "/akron/neuromonitoring",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Communication & Escalation",
@@ -3887,16 +4867,29 @@
         "year": 2026,
         "sectionOrder": 70,
         "headingKey": "part-9-neurotrauma-admission-and-icu-management/communication-and-escalation",
-        "blockDigest": "eba943869544ebb4"
+        "blockDigest": "eba943869544ebb4",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "communication & escalation",
         "heading": "communication & escalation",
         "parentHeading": "part 9 · neurotrauma admission & icu management",
         "body": "attending physicians are encouraged to communicate directly with one another regarding complex cases, changes in management, or any concerns requiring multidisciplinary coordination. for trauma patients requiring advanced critical care support (e.g., ards or other complex icu issues), consult sicu first, unless they are already participating in the patient's care.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-9-neurotrauma-admission-and-icu-management/communication-and-escalation"
+      "sourceKey": "part-9-neurotrauma-admission-and-icu-management/communication-and-escalation",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "On-Call Directory: QGenda",
@@ -3949,16 +4942,31 @@
         "year": 2026,
         "sectionOrder": 71,
         "headingKey": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda",
-        "blockDigest": "bae7b079185909ba"
+        "blockDigest": "bae7b079185909ba",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "on-call directory: qgenda",
         "heading": "on-call directory: qgenda",
         "parentHeading": "part 9 · neurotrauma admission & icu management",
         "body": "qgenda is the primary on-call resource for all services. qgenda scheduling system locating the on-call provider on-call listing view",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda"
+      "sourceKey": "part-9-neurotrauma-admission-and-icu-management/on-call-directory-qgenda",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "APPENDIX A · SmartPhrase Library",
@@ -3988,16 +4996,31 @@
         "year": 2026,
         "sectionOrder": 72,
         "headingKey": "appendix-a-smartphrase-library",
-        "blockDigest": "a0b15736f8b28532"
+        "blockDigest": "a0b15736f8b28532",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "appendix a · smartphrase library",
         "heading": "appendix a · smartphrase library",
         "parentHeading": "",
         "body": "navigation cue: use this appendix as the copy/reference library for epic smartphrases. return to start here. the most commonly used dot phrases, reproduced verbatim for reference. type the phrase name in any epic note to insert.",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "appendix-a-smartphrase-library"
+      "sourceKey": "appendix-a-smartphrase-library",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [
+        "epic-smartphrases"
+      ],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Stroke Assessment & Plan Skeletons",
@@ -4018,16 +5041,29 @@
         "year": 2026,
         "sectionOrder": 73,
         "headingKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons",
-        "blockDigest": "4f53cda18c2baa0c"
+        "blockDigest": "4f53cda18c2baa0c",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "stroke assessment & plan skeletons",
         "heading": "stroke assessment & plan skeletons",
         "parentHeading": "appendix a · smartphrase library",
         "body": "",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons"
+      "sourceKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Ischemic Stroke",
@@ -4065,16 +5101,33 @@
         "year": 2026,
         "sectionOrder": 74,
         "headingKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons/ischemic-stroke",
-        "blockDigest": "822d8e9754f604a8"
+        "blockDigest": "822d8e9754f604a8",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "ischemic stroke",
         "heading": "ischemic stroke",
         "parentHeading": "stroke assessment & plan skeletons",
         "body": ".strokeicuplan · p/w: · - lkw · - inihss · - cth · - cta h/n · - tnk · - evt · · plan: · - comprehensive neuro checks q1h · - asa · - lipitor *** (pta), ldl *** goal <70 · - glucose 140-180; a1c*** · - tele · - tte · - mri brain · - bp goal: · - activity: · - pt/ot/st · - consult stroke neurology · - stroke education · - daily labs: bmp, cbc, mag, phos · - bowel regimen: senna s · - dvt ppx: scds for now .strokeposttnk · p/w: · - lkw · - inihss · - cth · - cta h/n · - s/p tnk @ · - evt · · plan: · - comprehensive neuro checks per post tnk protocol then q1h · - hold ap/ac x24h post tnk · - obtain ct head 24 hours after tnk to assess for hemorrhagic conversion · - start asa for secondary prevention 24 hours post-tenecteplase if ct head negative for hemorrhage · - lipitor *** (pta), ldl *** goal <70 · - glucose 140-180; a1c*** · - tele · - tte · - mri brain · - goal sbp < 180/105 to prevent hemorrhagic conversion x 24 hours · - activity: bedrest x24h post tnk, then mobilize with assistance · - pt/ot/st · - consult stroke neurology · - stroke education · - daily labs: bmp, cbc, mag, phos · - bowel regimen: senna s · - dvt ppx: scds for now",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain",
+          "EVT",
+          "endovascular thrombectomy"
+        ]
       },
-      "sourceKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons/ischemic-stroke"
+      "sourceKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons/ischemic-stroke",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Hemorrhagic Strokes",
@@ -4112,7 +5165,8 @@
         "year": 2026,
         "sectionOrder": 75,
         "headingKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons/hemorrhagic-strokes",
-        "blockDigest": "8087b2cb306c1e59"
+        "blockDigest": "8087b2cb306c1e59",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "hemorrhagic strokes",
@@ -4125,10 +5179,25 @@
           "SAH",
           "subarachnoid hemorrhage",
           "TCD",
-          "transcranial doppler"
+          "transcranial doppler",
+          "SE",
+          "status epilepticus",
+          "LD",
+          "lumbar drain",
+          "VSP",
+          "vasospasm"
         ]
       },
-      "sourceKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons/hemorrhagic-strokes"
+      "sourceKey": "appendix-a-smartphrase-library/stroke-assessment-and-plan-skeletons/hemorrhagic-strokes",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Supportive Care Phrases",
@@ -4190,16 +5259,29 @@
         "year": 2026,
         "sectionOrder": 76,
         "headingKey": "appendix-a-smartphrase-library/supportive-care-phrases",
-        "blockDigest": "f2bdc3ee35950922"
+        "blockDigest": "f2bdc3ee35950922",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "supportive care phrases",
         "heading": "supportive care phrases",
         "parentHeading": "appendix a · smartphrase library",
         "body": ".bowelregimen · in the setting of: · - critical illness · - decreased mobility · - medication effects · · last bm: pta · · bowel regimen: · - senna s · - miralax · - dulcolax suppository prn · · mobilize as able .dysphagiapoc · - speech therapy · - aspiration precautions · - maintain hob 30 degrees at rest · - good oral hygiene · - suction prn · - diet per st · - elevate hob at least 60 degrees during meal times .ventmanagement · 2/2 acute resp failure · · ventilator mode @flowrefresh(415247::1)@ · ventilator resp rate (bpm) @flowrefresh(415041::1)@ · tidal volume (ml) @flowrefresh(415192::1)@ · peep (cm h2o) @flowrefresh(415051::1)@ · fio2 (%) @flowrefresh(400310::1)@ · pressure support (cm h2o) @flowrefresh(415054::1)@ · · - wte as above · - vap bundle · - hob 30-45 degrees · - sedation vacation · - wte · - good oral hygiene · - suction prn · - encourage early mobilization as able · - protonix 40mg daily · - duonebs prn · - og to liws vs tf .ventpoc · - vap bundle · - hob 30-45 degrees · - sedation vacation · - wte · - good oral hygiene · - suction prn · - encourage early mobilization as able · - protonix 40mg daily · - duonebs prn .lowlab · in the setting of critical illness +/- malnutrition · · - daily labs · - bmp, cbc, mag, phos · - electrolyte replacement protocol",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "appendix-a-smartphrase-library/supportive-care-phrases"
+      "sourceKey": "appendix-a-smartphrase-library/supportive-care-phrases",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Transfer Note Template (.AKtransfernote)",
@@ -4229,16 +5311,29 @@
         "year": 2026,
         "sectionOrder": 77,
         "headingKey": "appendix-a-smartphrase-library/transfer-note-template-aktransfernote",
-        "blockDigest": "e35f900409e3ad53"
+        "blockDigest": "e35f900409e3ad53",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "transfer note template (.aktransfernote)",
         "heading": "transfer note template (.aktransfernote)",
         "parentHeading": "appendix a · smartphrase library",
         "body": ".aktransfernote · neurological intensive care unit - transfer note · · service date: · service time: *** · sign out communication: i have discussed the transfer of the patient with *. · transferred to: rnf · new physician attending: *** · reason admitted: *** · date admitted: · icu course complications: · procedures: · surgery: · intubated: · extubated: · consults: · · physical exam prior to transfer · neuro: *** cv: *** pulm: *** gi/gu: *** · skin/extremities: edema { } / peripheral pulses { } / wounds/drsgs { } / breakdown { } · · problem list · future appointments · · outstanding issues to be addressed: · code status (do not transfer unless addressed): *** · respiratory needs: { } · continue cardiac monitoring / order telemetry upon unit transfer: {yes/no} · pending testing/procedures: { } · anti-platelet recs: *** · ac recs and timing: *** · antibiotics/indication/stop date: *** · vte prophylaxis: { } · if not on currently > date it can be started: *** · discharge planning: { } · outpatient follow-up needed? { } · any inpatient problems without a plan at time of transfer: *** · · central line infection prevention · - can central venous catheter(s) be removed? {yes/no} · - if not, why? *** · · ca-uti prevention · - can the foley be removed? {yes/no} · - if not, why? ***",
-        "aliases": []
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
       },
-      "sourceKey": "appendix-a-smartphrase-library/transfer-note-template-aktransfernote"
+      "sourceKey": "appendix-a-smartphrase-library/transfer-note-template-aktransfernote",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
     },
     {
       "title": "Staff Attestation (.NICUATTEST)",
@@ -4268,7 +5363,8 @@
         "year": 2026,
         "sectionOrder": 78,
         "headingKey": "appendix-a-smartphrase-library/staff-attestation-nicuattest",
-        "blockDigest": "e7ae5317c45f3846"
+        "blockDigest": "e7ae5317c45f3846",
+        "contentOrigin": "handbook"
       },
       "search": {
         "title": "staff attestation (.nicuattest)",
@@ -4277,10 +5373,284 @@
         "body": ".nicuattest · neuro icu progress note (staff attestation) · · @hndsummary@ · · i have reviewed the { } obtained and documented by the {micustaff supervision}. · i have discussed the case and management of the patient's care. the following · comments revise or confirm relevant key components of the note. · · we made the following changes during rounds: · @hndrounding@ · · actions/plans: · @hndtodo@ · · dispo: *** · · brief exam findings: · @hndexam@ · @hndstaffaddendum@ · ==== · the patient currently has the following hospital problems: · @hprobavs@ · ==== · this patient has a high probability of sudden, clinically significant · deterioration, which requires the highest level of physician preparedness to · intervene urgently. i managed/supervised life or organ supporting interventions · that required frequent physician assessment. i devoted my full attention to the · direct care of this patient for the amount of time indicated below. time spent · with family or surrogate(s) is included only if the patient was incapable of · providing the necessary information or participating in medical decision making. · time devoted to teaching is not included. plan of care rounds were performed and · the icu checklist was reviewed and completed. · · time spent providing critical care services: { } minutes excluding procedures. · · for admission notes only: · diagnosis present on admission to nicu: {poaprbs} · (.poaprbs adds problems present on admission - important for admission h&p attestation) · · signature: @me@ · neurological institute - cerebrovascular center · date: @td@ time: @now@",
         "aliases": [
           "ICH",
-          "intracerebral hemorrhage"
+          "intracerebral hemorrhage",
+          "SE",
+          "status epilepticus"
         ]
       },
-      "sourceKey": "appendix-a-smartphrase-library/staff-attestation-nicuattest"
+      "sourceKey": "appendix-a-smartphrase-library/staff-attestation-nicuattest",
+      "contentOrigin": "handbook",
+      "taxonomyIds": [],
+      "equivalent": null,
+      "review": {
+        "reviewStatus": "Quarantined: Main Campus operational language still requires named human review",
+        "reviewedOn": "2026-07-16",
+        "reviewedBy": null,
+        "approvalState": "quarantined"
+      }
+    },
+    {
+      "title": "Clinical Domains",
+      "level": 2,
+      "parent": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Expansion home for disease- and protocol-oriented neuro ICU topics. Articles added here must keep campus scope explicit and require named clinical review before approval."
+        },
+        {
+          "type": "list-item",
+          "text": "Use this hub for shared primers and campus overlays that do not yet fit Parts 1 through 9."
+        },
+        {
+          "type": "list-item",
+          "text": "Existing handbook pathways remain authoritative until a reviewed topic replaces or extends them."
+        }
+      ],
+      "slug": "clinical-domains",
+      "campus": "main-campus",
+      "contentOrigin": "curated",
+      "contentType": "chapter",
+      "taxonomyIds": [
+        "clinical-domains"
+      ],
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "order": 79,
+      "sourceKey": "curated/clinical-domains",
+      "id": "main-campus-section-f5f7d2b99fa5",
+      "parentId": null,
+      "path": "/main-campus/clinical-domains",
+      "equivalent": {
+        "campus": "akron",
+        "slug": "clinical-domains",
+        "path": "/akron/clinical-domains",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "source": {
+        "handbook": "MC NICU Faculty Orientation Document (2026)",
+        "file": "curated/articles.json",
+        "year": 2026,
+        "sectionOrder": 79,
+        "headingKey": "curated/clinical-domains",
+        "blockDigest": "950dc40e5da1291b",
+        "contentOrigin": "curated"
+      },
+      "search": {
+        "title": "clinical domains",
+        "heading": "clinical domains",
+        "parentHeading": "",
+        "body": "expansion home for disease- and protocol-oriented neuro icu topics. articles added here must keep campus scope explicit and require named clinical review before approval. use this hub for shared primers and campus overlays that do not yet fit parts 1 through 9. existing handbook pathways remain authoritative until a reviewed topic replaces or extends them.",
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
+      },
+      "searchText": "clinical domains expansion home for disease- and protocol-oriented neuro icu topics. articles added here must keep campus scope explicit and require named clinical review before approval. use this hub for shared primers and campus overlays that do not yet fit parts 1 through 9. existing handbook pathways remain authoritative until a reviewed topic replaces or extends them."
+    },
+    {
+      "title": "Neuromonitoring topic map",
+      "level": 3,
+      "parent": "clinical-domains",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Navigational index only. Open the handbook neuromonitoring section for source language; do not treat this page as a new protocol."
+        },
+        {
+          "type": "list-item",
+          "text": "Primary source: Part 9 Neurotrauma Admission and ICU Management → Neuromonitoring."
+        },
+        {
+          "type": "list-item",
+          "text": "Related campus operations: Communication and Escalation, On-Call Directory QGenda."
+        }
+      ],
+      "slug": "neuromonitoring-topic-map",
+      "campus": "main-campus",
+      "contentOrigin": "curated",
+      "contentType": "article",
+      "taxonomyIds": [
+        "clinical-domains",
+        "neurotrauma-neuromonitoring"
+      ],
+      "review": {
+        "reviewStatus": "Draft navigational index linking existing handbook sections",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "order": 80,
+      "sourceKey": "curated/neuromonitoring-topic-map",
+      "id": "main-campus-section-5ffa317079bb",
+      "parentId": "main-campus-section-f5f7d2b99fa5",
+      "path": "/main-campus/neuromonitoring-topic-map",
+      "equivalent": {
+        "campus": "akron",
+        "slug": "neuromonitoring-topic-map",
+        "path": "/akron/neuromonitoring-topic-map",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "source": {
+        "handbook": "MC NICU Faculty Orientation Document (2026)",
+        "file": "curated/articles.json",
+        "year": 2026,
+        "sectionOrder": 80,
+        "headingKey": "curated/neuromonitoring-topic-map",
+        "blockDigest": "1006f6635cafaca8",
+        "contentOrigin": "curated"
+      },
+      "search": {
+        "title": "neuromonitoring topic map",
+        "heading": "neuromonitoring topic map",
+        "parentHeading": "clinical domains",
+        "body": "navigational index only. open the handbook neuromonitoring section for source language; do not treat this page as a new protocol. primary source: part 9 neurotrauma admission and icu management → neuromonitoring. related campus operations: communication and escalation, on-call directory qgenda.",
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
+      },
+      "searchText": "neuromonitoring topic map navigational index only. open the handbook neuromonitoring section for source language; do not treat this page as a new protocol. primary source: part 9 neurotrauma admission and icu management → neuromonitoring. related campus operations: communication and escalation, on-call directory qgenda."
+    },
+    {
+      "title": "Procedures & Devices",
+      "level": 2,
+      "parent": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Expansion home for procedure and device topics such as EVD care, ICP crisis response, and airway adjuncts. Keep campus-specific order sets and contacts in campus overlays."
+        },
+        {
+          "type": "list-item",
+          "text": "Seed future EVD, lumbar drain, and ICP articles here after named review."
+        },
+        {
+          "type": "list-item",
+          "text": "Until reviewed articles land, use existing handbook sections under Neurotrauma and Documentation."
+        }
+      ],
+      "slug": "procedures-and-devices",
+      "campus": "main-campus",
+      "contentOrigin": "curated",
+      "contentType": "chapter",
+      "taxonomyIds": [
+        "procedures-and-devices"
+      ],
+      "review": {
+        "reviewStatus": "Draft navigational hub; not clinical protocol approval",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "order": 81,
+      "sourceKey": "curated/procedures-and-devices",
+      "id": "main-campus-section-a6b6719c4714",
+      "parentId": null,
+      "path": "/main-campus/procedures-and-devices",
+      "equivalent": {
+        "campus": "akron",
+        "slug": "procedures-and-devices",
+        "path": "/akron/procedures-and-devices",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "source": {
+        "handbook": "MC NICU Faculty Orientation Document (2026)",
+        "file": "curated/articles.json",
+        "year": 2026,
+        "sectionOrder": 81,
+        "headingKey": "curated/procedures-and-devices",
+        "blockDigest": "489ec153fae4ec0a",
+        "contentOrigin": "curated"
+      },
+      "search": {
+        "title": "procedures & devices",
+        "heading": "procedures & devices",
+        "parentHeading": "",
+        "body": "expansion home for procedure and device topics such as evd care, icp crisis response, and airway adjuncts. keep campus-specific order sets and contacts in campus overlays. seed future evd, lumbar drain, and icp articles here after named review. until reviewed articles land, use existing handbook sections under neurotrauma and documentation.",
+        "aliases": [
+          "EVD",
+          "external ventricular drain",
+          "SE",
+          "status epilepticus",
+          "ICP",
+          "intracranial pressure",
+          "LD",
+          "lumbar drain"
+        ]
+      },
+      "searchText": "procedures & devices expansion home for procedure and device topics such as evd care, icp crisis response, and airway adjuncts. keep campus-specific order sets and contacts in campus overlays. seed future evd, lumbar drain, and icp articles here after named review. until reviewed articles land, use existing handbook sections under neurotrauma and documentation."
+    },
+    {
+      "title": "Campus Operations",
+      "level": 2,
+      "parent": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Campus-scoped operations index for contacts, directories, on-call tools, and handbook maintenance notes."
+        },
+        {
+          "type": "list-item",
+          "text": "Start with Critical Contacts, Day-One Essentials, and On-Call Directory QGenda in the handbook contents."
+        },
+        {
+          "type": "list-item",
+          "text": "Confirm time-sensitive numbers and schedules in current Cleveland Clinic systems before acting."
+        }
+      ],
+      "slug": "campus-operations",
+      "campus": "main-campus",
+      "contentOrigin": "curated",
+      "contentType": "chapter",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "review": {
+        "reviewStatus": "Draft navigational hub; operational contacts still require live-system confirmation",
+        "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      },
+      "order": 82,
+      "sourceKey": "curated/campus-operations",
+      "id": "main-campus-section-ab181b223d1d",
+      "parentId": null,
+      "path": "/main-campus/campus-operations",
+      "equivalent": {
+        "campus": "akron",
+        "slug": "campus-operations",
+        "path": "/akron/campus-operations",
+        "name": "Akron General",
+        "reviewedOn": "2026-07-24"
+      },
+      "source": {
+        "handbook": "MC NICU Faculty Orientation Document (2026)",
+        "file": "curated/articles.json",
+        "year": 2026,
+        "sectionOrder": 82,
+        "headingKey": "curated/campus-operations",
+        "blockDigest": "7c73a785c7687fcb",
+        "contentOrigin": "curated"
+      },
+      "search": {
+        "title": "campus operations",
+        "heading": "campus operations",
+        "parentHeading": "",
+        "body": "campus-scoped operations index for contacts, directories, on-call tools, and handbook maintenance notes. start with critical contacts, day-one essentials, and on-call directory qgenda in the handbook contents. confirm time-sensitive numbers and schedules in current cleveland clinic systems before acting.",
+        "aliases": [
+          "SE",
+          "status epilepticus"
+        ]
+      },
+      "searchText": "campus operations campus-scoped operations index for contacts, directories, on-call tools, and handbook maintenance notes. start with critical contacts, day-one essentials, and on-call directory qgenda in the handbook contents. confirm time-sensitive numbers and schedules in current cleveland clinic systems before acting."
     }
   ]
 }

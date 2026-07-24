@@ -2186,6 +2186,94 @@ a {
   background: #fffaf0;
 }
 
+.integrity-banner-quarantine {
+  border-color: #d7b4b0;
+  border-left-color: #a33b32;
+  background: #fff6f5;
+}
+
+.integrity-banner-quarantine > span {
+  background: #a33b32;
+}
+
+.integrity-banner-quarantine p {
+  color: #6d3530;
+}
+
+.provenance-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.85rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #d5dee3;
+  background: #f7fafb;
+  color: #314049;
+  font-size: 0.72rem;
+}
+
+.provenance-strip [data-approval="quarantined"] {
+  color: #8f2f28;
+  font-weight: 700;
+}
+
+.equivalent-campus-link {
+  margin: 0.85rem 0 0;
+  color: #355868;
+  font-size: 0.78rem;
+}
+
+.equivalent-campus-missing {
+  color: #667780;
+}
+
+.taxonomy-hubs {
+  margin-top: 3.5rem;
+}
+
+.taxonomy-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.taxonomy-hub-card {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 110px;
+  padding: 1rem 1.1rem;
+  border: 1px solid #d0dade;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.taxonomy-hub-card:hover {
+  border-color: #7ea0b0;
+}
+
+.taxonomy-hub-card strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.taxonomy-hub-card small {
+  color: var(--wiki-muted);
+  font-size: 0.68rem;
+}
+
+.source-warning-quarantine {
+  border-color: #d7b4b0;
+  background: #fff6f5;
+}
+
+.clinical-disclaimer-quarantine {
+  border-color: #d7b4b0;
+  background: #fff6f5;
+}
+
 .integrity-banner > span {
   display: grid;
   width: 24px;
@@ -3287,6 +3375,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .taxonomy-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .topic-index-grid {
     grid-template-columns: 1fr;
   }
@@ -3324,6 +3416,10 @@ a {
   }
 
   .topic-index-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .taxonomy-hub-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

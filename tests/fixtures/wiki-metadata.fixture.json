@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "aliases": [],
   "shortcuts": [],
   "rankingPriorities": [],
@@ -7,18 +7,22 @@
     "main-campus": {
       "handbookYear": 2026,
       "verifiedOn": "2026-07-16",
-      "reviewStatus": "Test fixture"
+      "reviewStatus": "Test fixture",
+      "approvalState": "imported"
     },
     "akron": {
       "handbookYear": 2026,
       "verifiedOn": "2026-07-16",
-      "reviewStatus": "Test fixture"
+      "reviewStatus": "Test fixture",
+      "approvalState": "imported"
     }
   },
   "sourceWarnings": {
     "main-campus": "Main Campus fixture warning",
     "akron": "Akron fixture warning"
   },
+  "taxonomy": [],
+  "equivalents": [],
   "renamedSections": [],
   "redirects": []
 }

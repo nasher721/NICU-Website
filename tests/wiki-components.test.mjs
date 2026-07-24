@@ -70,8 +70,25 @@ test("source status metadata stays campus-specific and reviewable", () => {
     assert.match(navigation.sourceStatus.verifiedOn, /^\d{4}-\d{2}-\d{2}$/);
     assert.match(navigation.sourceStatus.reviewStatus, /review/i);
     assert.ok(navigation.sourceStatus.warning.length > 40);
+    assert.ok(Array.isArray(navigation.taxonomyHubs));
+    assert.ok(navigation.taxonomyHubs.length >= 10);
   }
+  assert.equal(mainCampusNavigation.sourceStatus.approvalState, "quarantined");
+  assert.equal(mainCampusNavigation.sourceStatus.quarantine.active, true);
   assert.match(mainCampusNavigation.sourceStatus.warning, /Akron General labels and pathways/);
+});
+
+test("wiki home surfaces taxonomy hubs and provenance contracts", async () => {
+  const [homeSource, articleSource, styles] = await Promise.all([
+    readFile(new URL("../src/components/wiki/HospitalWikiHome.jsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/components/wiki/ArticlePage.jsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/styles.css", import.meta.url), "utf8"),
+  ]);
+  assert.match(homeSource, /taxonomyHubs/);
+  assert.match(homeSource, /Campus quarantine/);
+  assert.match(articleSource, /equivalent-campus-link/);
+  assert.match(styles, /\.provenance-strip/);
+  assert.match(styles, /\.taxonomy-hub-grid/);
 });
 
 test("wiki component and stylesheet contracts include accessible drawer and print behavior", async () => {

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "totals": {
-    "sections": 161,
+    "sections": 169,
     "tables": 111,
     "figures": 23
   },
   "campuses": {
     "main-campus": {
       "counts": {
-        "sections": 79,
+        "sections": 83,
         "tables": 49,
         "figures": 11
       },
@@ -40,6 +40,7 @@
         "main-campus-section-4cb62d36d283",
         "main-campus-section-56778a8c933d",
         "main-campus-section-593320a53089",
+        "main-campus-section-5ffa317079bb",
         "main-campus-section-65e7ccd09b57",
         "main-campus-section-6866ae1a6976",
         "main-campus-section-714fb6b303e4",
@@ -63,7 +64,9 @@
         "main-campus-section-9fa60c711ed3",
         "main-campus-section-a0f13ea6f485",
         "main-campus-section-a3dabada2bf9",
+        "main-campus-section-a6b6719c4714",
         "main-campus-section-a857c63af7d3",
+        "main-campus-section-ab181b223d1d",
         "main-campus-section-b1f0de6bc922",
         "main-campus-section-b2d7f4f061bb",
         "main-campus-section-b3d6728763b0",
@@ -90,6 +93,7 @@
         "main-campus-section-f02d2221de0c",
         "main-campus-section-f2c88f94fd10",
         "main-campus-section-f30735a08bb9",
+        "main-campus-section-f5f7d2b99fa5",
         "main-campus-section-f8f153f7b709",
         "main-campus-section-ff8c7cb7844b"
       ],
@@ -160,7 +164,7 @@
     },
     "akron": {
       "counts": {
-        "sections": 82,
+        "sections": 86,
         "tables": 62,
         "figures": 12
       },
@@ -169,9 +173,11 @@
         "akron-section-04df304a5ae9",
         "akron-section-05388275b449",
         "akron-section-0c068b987c7c",
+        "akron-section-0c399c9e5c9d",
         "akron-section-104dad965f75",
         "akron-section-10fd47f82fad",
         "akron-section-1b3738166fbc",
+        "akron-section-1c22e888db7a",
         "akron-section-1ccfcdcf7cf1",
         "akron-section-1ec0c1f3f6ca",
         "akron-section-20135f29867f",
@@ -186,6 +192,7 @@
         "akron-section-2e200113fbeb",
         "akron-section-30d2c47686f6",
         "akron-section-3417f4f24451",
+        "akron-section-344822a44b13",
         "akron-section-34d7b1546c8d",
         "akron-section-3580e1c2606e",
         "akron-section-372def51f708",
@@ -212,6 +219,7 @@
         "akron-section-7f0fed5709c7",
         "akron-section-80034b85753f",
         "akron-section-822237a8a523",
+        "akron-section-82e960c98302",
         "akron-section-86277e543730",
         "akron-section-8bd5f01a67fe",
         "akron-section-906860e47c8a",
@@ -327,7 +335,5 @@
         "/handbook-media/akron-e88c43885a-image12.png"
       ]
     }
-  },
-  "reviewedOn": "2026-07-16",
-  "reviewNote": "Baseline locks the validated 2026 source import; updates require named human review."
+  }
 }

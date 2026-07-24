@@ -15,12 +15,35 @@ test("both supplied handbooks are represented", () => {
 
 test("the full source structure is retained", () => {
   const [mainCampus, akron] = payload.handbooks;
-  assert.equal(mainCampus.stats.sections, 79);
+  assert.equal(mainCampus.stats.sections, 83);
   assert.equal(mainCampus.stats.tables, 49);
   assert.equal(mainCampus.stats.figures, 11);
-  assert.equal(akron.stats.sections, 82);
+  assert.equal(akron.stats.sections, 86);
   assert.equal(akron.stats.tables, 62);
   assert.equal(akron.stats.figures, 12);
+});
+
+test("main campus remains quarantined while contamination warning is active", () => {
+  const [mainCampus, akron] = payload.handbooks;
+  assert.equal(mainCampus.sourceStatus.approvalState, "quarantined");
+  assert.equal(mainCampus.sourceStatus.quarantine.active, true);
+  assert.match(mainCampus.sourceStatus.warning, /Akron General labels and pathways/);
+  assert.notEqual(akron.sourceStatus.approvalState, "quarantined");
+  assert.equal(Boolean(akron.sourceStatus.quarantine?.active), false);
+});
+
+test("curated expansion hubs ship as draft navigational content on both campuses", () => {
+  for (const handbook of payload.handbooks) {
+    const curated = handbook.sections.filter((section) => section.contentOrigin === "curated");
+    assert.equal(curated.length, 4);
+    for (const section of curated) {
+      assert.equal(section.review.approvalState, "draft");
+      assert.ok(section.equivalent?.path);
+      assert.ok(section.taxonomyIds.length > 0);
+    }
+    assert.ok(handbook.sections.some((section) => section.slug === "clinical-domains"));
+    assert.ok(handbook.sections.some((section) => section.slug === "neuromonitoring-topic-map"));
+  }
 });
 
 test("high-value clinical sections remain searchable", () => {
