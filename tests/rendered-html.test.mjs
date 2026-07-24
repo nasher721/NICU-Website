@@ -19,7 +19,7 @@ test("server renders the faculty wiki landing page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /Neurocritical Care Faculty Wiki/i);
-  assert.match(html, /NEUROCRITICAL/i);
+  assert.match(html, /Neurocritical care knowledge for the shift ahead/i);
   assert.match(html, /Open the right faculty wiki/i);
   assert.match(html, /Source figures/i);
 });

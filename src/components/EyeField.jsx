@@ -48,7 +48,7 @@ export default function EyeField() {
     let pupilScale = 1;
 
     const makeParticles = () => {
-      const count = compactQuery.matches ? 36 : 84;
+      const count = compactQuery.matches ? 22 : 48;
       const random = seededRandom(24719 + count);
       particles = Array.from({ length: count }, () => ({
         x: random(),
@@ -87,13 +87,13 @@ export default function EyeField() {
       context.rotate(rot1);
       context.beginPath();
       context.ellipse(0, 0, radiusX * 1.22, radiusY * 1.22, 0, 0, Math.PI * 2);
-      context.strokeStyle = "rgba(42, 145, 255, 0.16)";
+      context.strokeStyle = "rgba(0, 106, 77, 0.14)";
       context.lineWidth = 1;
       context.setLineDash([4, 12]);
       context.stroke();
 
       // Tick marks on Outer HUD ring
-      const ticks = 16;
+      const ticks = 12;
       for (let i = 0; i < ticks; i += 1) {
         const a = (i / ticks) * Math.PI * 2;
         const tx1 = Math.cos(a) * (radiusX * 1.2);
@@ -103,8 +103,8 @@ export default function EyeField() {
         context.beginPath();
         context.moveTo(tx1, ty1);
         context.lineTo(tx2, ty2);
-        context.strokeStyle = i % 4 === 0 ? "rgba(80, 224, 210, 0.45)" : "rgba(64, 160, 255, 0.2)";
-        context.lineWidth = i % 4 === 0 ? 1.5 : 0.8;
+        context.strokeStyle = i % 4 === 0 ? "rgba(126, 184, 154, 0.35)" : "rgba(0, 106, 77, 0.16)";
+        context.lineWidth = i % 4 === 0 ? 1.2 : 0.7;
         context.stroke();
       }
       context.restore();
@@ -115,8 +115,8 @@ export default function EyeField() {
       context.rotate(rot2);
       context.beginPath();
       context.ellipse(0, 0, radiusX * 0.88, radiusY * 0.88, 0, 0, Math.PI * 2);
-      context.strokeStyle = "rgba(80, 224, 210, 0.18)";
-      context.lineWidth = 0.85;
+      context.strokeStyle = "rgba(126, 184, 154, 0.14)";
+      context.lineWidth = 0.8;
       context.setLineDash([8, 16]);
       context.stroke();
       context.restore();
@@ -138,10 +138,10 @@ export default function EyeField() {
         specY,
         radius * 0.55
       );
-      specGrad.addColorStop(0, "rgba(225, 248, 255, 0.72)");
-      specGrad.addColorStop(0.25, "rgba(110, 200, 255, 0.28)");
-      specGrad.addColorStop(0.65, "rgba(40, 130, 240, 0.08)");
-      specGrad.addColorStop(1, "rgba(40, 130, 240, 0)");
+      specGrad.addColorStop(0, "rgba(230, 245, 238, 0.45)");
+      specGrad.addColorStop(0.25, "rgba(126, 184, 154, 0.18)");
+      specGrad.addColorStop(0.65, "rgba(0, 106, 77, 0.06)");
+      specGrad.addColorStop(1, "rgba(0, 106, 77, 0)");
 
       context.beginPath();
       context.ellipse(cx, cy, radius * 1.05, radius * 0.85, 0, 0, Math.PI * 2);
@@ -159,9 +159,9 @@ export default function EyeField() {
         rimY,
         radius * 0.95
       );
-      rimGrad.addColorStop(0, "rgba(64, 230, 215, 0)");
-      rimGrad.addColorStop(0.7, "rgba(64, 230, 215, 0.06)");
-      rimGrad.addColorStop(1, "rgba(64, 230, 215, 0.18)");
+      rimGrad.addColorStop(0, "rgba(126, 184, 154, 0)");
+      rimGrad.addColorStop(0.7, "rgba(0, 106, 77, 0.05)");
+      rimGrad.addColorStop(1, "rgba(0, 106, 77, 0.14)");
 
       context.beginPath();
       context.ellipse(cx, cy, radius * 0.98, radius * 0.8, 0, 0, Math.PI * 2);
@@ -192,7 +192,7 @@ export default function EyeField() {
         endX,
         endY
       );
-      context.strokeStyle = `rgba(${index % 5 === 0 ? "84, 231, 223" : "40, 132, 255"}, ${0.055 + lane * 0.045})`;
+      context.strokeStyle = `rgba(${index % 5 === 0 ? "126, 184, 154" : "0, 106, 77"}, ${0.04 + lane * 0.035})`;
       context.lineWidth = index % 4 === 0 ? 1.4 : 0.55;
       context.stroke();
     };
@@ -271,9 +271,9 @@ export default function EyeField() {
 
         context.beginPath();
         context.arc(x, y, particle.radius * particle.z, 0, Math.PI * 2);
-        context.fillStyle = blueGreen ? `rgba(80, 224, 210, ${alpha})` : `rgba(125, 188, 255, ${alpha})`;
-        context.shadowBlur = particle.radius * 4 * particle.z;
-        context.shadowColor = blueGreen ? "#38c8b8" : "#2a8dff";
+        context.fillStyle = blueGreen ? `rgba(126, 184, 154, ${alpha * 0.7})` : `rgba(0, 106, 77, ${alpha * 0.55})`;
+        context.shadowBlur = particle.radius * 2 * particle.z;
+        context.shadowColor = blueGreen ? "#5fa887" : "#006a4d";
         context.fill();
         context.shadowBlur = 0;
       });
@@ -387,27 +387,27 @@ export default function EyeField() {
       <svg className="eye-svg" viewBox="0 0 1200 620" role="presentation">
         <defs>
           <linearGradient id="electric-blue" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stopColor="#0b4fa8" stopOpacity="0" />
-            <stop offset="0.22" stopColor="#1688ff" stopOpacity="0.68" />
-            <stop offset="0.55" stopColor="#9bdcff" stopOpacity="0.96" />
-            <stop offset="0.82" stopColor="#247fe8" stopOpacity="0.62" />
-            <stop offset="1" stopColor="#0b4fa8" stopOpacity="0" />
+            <stop offset="0" stopColor="#004d38" stopOpacity="0" />
+            <stop offset="0.22" stopColor="#006a4d" stopOpacity="0.55" />
+            <stop offset="0.55" stopColor="#7eb89a" stopOpacity="0.85" />
+            <stop offset="0.82" stopColor="#2a7a5c" stopOpacity="0.5" />
+            <stop offset="1" stopColor="#004d38" stopOpacity="0" />
           </linearGradient>
           <radialGradient id="iris-wash">
-            <stop offset="0" stopColor="#030c19" stopOpacity="0.96" />
-            <stop offset="0.38" stopColor="#061f35" stopOpacity="0.9" />
-            <stop offset="0.72" stopColor="#0b4780" stopOpacity="0.34" />
-            <stop offset="1" stopColor="#0b62bd" stopOpacity="0" />
+            <stop offset="0" stopColor="#081612" stopOpacity="0.94" />
+            <stop offset="0.38" stopColor="#0c1f1a" stopOpacity="0.88" />
+            <stop offset="0.72" stopColor="#006a4d" stopOpacity="0.28" />
+            <stop offset="1" stopColor="#2a7a5c" stopOpacity="0" />
           </radialGradient>
           <filter id="soft-glow" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="7" result="blur" />
+            <feGaussianBlur stdDeviation="4" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
           <filter id="wide-glow" x="-40%" y="-60%" width="180%" height="220%">
-            <feGaussianBlur stdDeviation="18" />
+            <feGaussianBlur stdDeviation="10" />
           </filter>
         </defs>
 

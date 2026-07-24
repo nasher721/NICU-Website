@@ -33,6 +33,22 @@ function campusUrl(campus, slug = "") {
   return articlePath(campus, slug);
 }
 
+function WikiSkeleton({ label = "Loading…" }) {
+  return (
+    <main className="wiki-main" id="wiki-content" aria-busy="true" aria-live="polite">
+      <p className="sr-only">{label}</p>
+      <div className="wiki-skeleton" aria-hidden="true">
+        <span className="wiki-skeleton-line title" />
+        <span className="wiki-skeleton-line lede" />
+        <span className="wiki-skeleton-line" />
+        <span className="wiki-skeleton-line short" />
+        <span className="wiki-skeleton-line" />
+        <span className="wiki-skeleton-line lede" />
+      </div>
+    </main>
+  );
+}
+
 function WikiHeader({ handbooks, activeCampus, onCampusChange, searchState }) {
   return (
     <header className="wiki-header">
@@ -163,11 +179,11 @@ function DeferredFigurePreview({ handbook }) {
   }, [handbook.id]);
 
   if (figures === null) {
-    return <section className="figures-preview" aria-live="polite"><p>Loading source figures…</p></section>;
+    return <section className="figures-preview" aria-live="polite"><div className="wiki-skeleton"><span className="wiki-skeleton-line title" /><span className="wiki-skeleton-line" /><span className="wiki-skeleton-line short" /></div></section>;
   }
 
   return (
-    <Suspense fallback={<section className="figures-preview" aria-live="polite"><p>Loading source figures…</p></section>}>
+    <Suspense fallback={<section className="figures-preview" aria-live="polite"><div className="wiki-skeleton"><span className="wiki-skeleton-line title" /><span className="wiki-skeleton-line" /></div></section>}>
       <FigurePreview handbook={handbook} figures={figures} />
     </Suspense>
   );
@@ -281,18 +297,18 @@ function WikiApp({ route, handbook, navigation, figureIndexes = [] }) {
         />
         {route.kind === "sources" ? <SourcesPage handbooks={handbooks} />
           : route.kind === "figures" ? (
-            <Suspense fallback={<main className="wiki-main" id="wiki-content"><p>Loading source figures…</p></main>}>
+            <Suspense fallback={<WikiSkeleton label="Loading source figures…" />}>
               <FiguresPage handbooks={handbooks} figureIndexes={figureIndexes} />
             </Suspense>
           )
               : route.kind === "search" ? (
-                <Suspense fallback={<main className="wiki-main" id="wiki-content"><p>Loading search results…</p></main>}>
+                <Suspense fallback={<WikiSkeleton label="Loading search results…" />}>
                   <SearchResults activeCampus={activeCampus} search={route.search} />
                 </Suspense>
               )
               : route.kind === "not-found" ? <HospitalNotFound handbook={handbook} navigation={navigation} />
                 : selected ? (
-                  <Suspense fallback={<main className="wiki-main" id="wiki-content"><p>Loading source article…</p></main>}>
+                  <Suspense fallback={<WikiSkeleton label="Loading source article…" />}>
                     <ArticlePage handbook={handbook} navigation={navigation} section={selected} />
                   </Suspense>
                 )
