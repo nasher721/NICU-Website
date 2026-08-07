@@ -49,7 +49,7 @@
       "order": 4,
       "hubSlug": "part-4-consultation-and-stroke-alerts",
       "path": "/main-campus/part-4-consultation-and-stroke-alerts",
-      "memberCount": 1,
+      "memberCount": 2,
       "available": true
     },
     {
@@ -67,7 +67,7 @@
       "order": 6,
       "hubSlug": "part-6-documentation-and-quality",
       "path": "/main-campus/part-6-documentation-and-quality",
-      "memberCount": 1,
+      "memberCount": 2,
       "available": true
     },
     {
@@ -85,7 +85,7 @@
       "order": 8,
       "hubSlug": "part-8-end-of-life-care-organ-donation-and-dnc",
       "path": "/main-campus/part-8-end-of-life-care-organ-donation-and-dnc",
-      "memberCount": 1,
+      "memberCount": 5,
       "available": true
     },
     {
@@ -103,7 +103,7 @@
       "order": 10,
       "hubSlug": "clinical-domains",
       "path": "/main-campus/clinical-domains",
-      "memberCount": 2,
+      "memberCount": 4,
       "available": true
     },
     {
@@ -112,7 +112,7 @@
       "order": 11,
       "hubSlug": "procedures-and-devices",
       "path": "/main-campus/procedures-and-devices",
-      "memberCount": 1,
+      "memberCount": 5,
       "available": true
     },
     {
@@ -130,7 +130,25 @@
       "order": 13,
       "hubSlug": "campus-operations",
       "path": "/main-campus/campus-operations",
-      "memberCount": 3,
+      "memberCount": 4,
+      "available": true
+    },
+    {
+      "id": "nicu-staff-playbook",
+      "label": "NICU Staff Playbook",
+      "order": 14,
+      "hubSlug": "nicu-staff-playbook",
+      "path": "/main-campus/nicu-staff-playbook",
+      "memberCount": 6,
+      "available": true
+    },
+    {
+      "id": "documentation-epic-updates",
+      "label": "Documentation & Epic Updates",
+      "order": 15,
+      "hubSlug": "documentation-and-epic-updates",
+      "path": "/main-campus/documentation-and-epic-updates",
+      "memberCount": 4,
       "available": true
     }
   ],
@@ -1936,6 +1954,543 @@
       "review": {
         "reviewStatus": "Draft navigational hub; operational contacts still require live-system confirmation",
         "reviewedOn": "2026-07-24",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-b5ce5688a514",
+      "title": "NICU Staff Playbook",
+      "slug": "nicu-staff-playbook",
+      "path": "/main-campus/nicu-staff-playbook",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 83,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "nicu-staff-playbook"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "nicu-staff-playbook",
+        "path": "/akron/nicu-staff-playbook",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft navigational summary of the 2026 NICU Staff Playbook; not clinical or HR policy approval",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-398a0687e61e",
+      "title": "Quick reference: key times, deadlines, and contacts",
+      "slug": "nicu-playbook-quick-reference",
+      "path": "/main-campus/nicu-playbook-quick-reference",
+      "level": 3,
+      "parent": "nicu-staff-playbook",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "order": 84,
+      "contentType": "reference-table",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "nicu-staff-playbook"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "nicu-playbook-quick-reference",
+        "path": "/akron/nicu-playbook-quick-reference",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary from the 2026 NICU Staff Playbook; confirm times and contacts in QGenda and Outlook",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-5ee35bec2f04",
+      "title": "The clinical day and staff schedule",
+      "slug": "nicu-clinical-day-and-schedule",
+      "path": "/main-campus/nicu-clinical-day-and-schedule",
+      "level": 3,
+      "parent": "nicu-staff-playbook",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "order": 85,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "nicu-staff-playbook"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "nicu-clinical-day-and-schedule",
+        "path": "/akron/nicu-clinical-day-and-schedule",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary from the 2026 NICU Staff Playbook; QGenda is the source of truth for the schedule",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-b2b80da01c37",
+      "title": "Staff responsibilities",
+      "slug": "nicu-staff-responsibilities",
+      "path": "/main-campus/nicu-staff-responsibilities",
+      "level": 3,
+      "parent": "nicu-staff-playbook",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "order": 86,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "nicu-staff-playbook"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "nicu-staff-responsibilities",
+        "path": "/akron/nicu-staff-responsibilities",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary from the 2026 NICU Staff Playbook; roles may change with unit expansion",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-73484d75502c",
+      "title": "Meetings, resources, and key contacts",
+      "slug": "nicu-meetings-resources-contacts",
+      "path": "/main-campus/nicu-meetings-resources-contacts",
+      "level": 3,
+      "parent": "nicu-staff-playbook",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "order": 87,
+      "contentType": "reference-table",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "nicu-staff-playbook"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "nicu-meetings-resources-contacts",
+        "path": "/akron/nicu-meetings-resources-contacts",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft directory from the 2026 NICU Staff Playbook; confirm contacts and links before acting",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-d0c2edd55364",
+      "title": "Career development and Annual Professional Review",
+      "slug": "nicu-career-development",
+      "path": "/main-campus/nicu-career-development",
+      "level": 3,
+      "parent": "nicu-staff-playbook",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "order": 88,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "nicu-staff-playbook"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "nicu-career-development",
+        "path": "/akron/nicu-career-development",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary from the 2026 NICU Staff Playbook; see OPSA resources for current APR process",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-317647e54a90",
+      "title": "Documentation & Epic Updates",
+      "slug": "documentation-and-epic-updates",
+      "path": "/main-campus/documentation-and-epic-updates",
+      "level": 2,
+      "parent": null,
+      "parentId": null,
+      "order": 89,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "documentation-epic-updates"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "documentation-and-epic-updates",
+        "path": "/akron/documentation-and-epic-updates",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft hub for enterprise documentation and Epic change notices; confirm effective dates in live systems",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-0f36d48e293d",
+      "title": "Present on Admission (POA) documentation updates",
+      "slug": "poa-documentation-updates",
+      "path": "/main-campus/poa-documentation-updates",
+      "level": 3,
+      "parent": "documentation-and-epic-updates",
+      "parentId": "main-campus-section-317647e54a90",
+      "order": 90,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "documentation-epic-updates",
+        "documentation-quality"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "poa-documentation-updates",
+        "path": "/akron/poa-documentation-updates",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of the September 2025 POA / standardized H&P update; verify current templates in Epic",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-ac03ee0c79f2",
+      "title": "OVRS death registration module go-live (Ohio)",
+      "slug": "ovrs-death-registration-module",
+      "path": "/main-campus/ovrs-death-registration-module",
+      "level": 3,
+      "parent": "documentation-and-epic-updates",
+      "parentId": "main-campus-section-317647e54a90",
+      "order": 91,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "documentation-epic-updates",
+        "eol-donation-dnc"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "ovrs-death-registration-module",
+        "path": "/akron/ovrs-death-registration-module",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of an Ohio Department of Health notice; verify current workflow with the Ohio Department of Health",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-a56d8fcc7925",
+      "title": "Stroke discharge follow-up appointment order (Epic)",
+      "slug": "stroke-discharge-follow-up-order",
+      "path": "/main-campus/stroke-discharge-follow-up-order",
+      "level": 3,
+      "parent": "documentation-and-epic-updates",
+      "parentId": "main-campus-section-317647e54a90",
+      "order": 92,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "documentation-epic-updates",
+        "stroke-consultation",
+        "transitions-of-care"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "stroke-discharge-follow-up-order",
+        "path": "/akron/stroke-discharge-follow-up-order",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of an Epic order change (effective May 2026); verify current order behavior in Epic",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-9ef335410aaf",
+      "title": "Bleeding CVAD: insertion to maintenance",
+      "slug": "cvad-bleeding-management",
+      "path": "/main-campus/cvad-bleeding-management",
+      "level": 2,
+      "parent": "procedures-and-devices",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "order": 93,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "procedures-and-devices"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "cvad-bleeding-management",
+        "path": "/akron/cvad-bleeding-management",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of the adult inpatient bleeding CVAD best-practice deck; follow product MIFU and the CLABSI resource site",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-2ef2020e89d4",
+      "title": "Foley catheter order panel (Epic)",
+      "slug": "foley-catheter-order-panel",
+      "path": "/main-campus/foley-catheter-order-panel",
+      "level": 2,
+      "parent": "procedures-and-devices",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "order": 94,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "procedures-and-devices"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "foley-catheter-order-panel",
+        "path": "/akron/foley-catheter-order-panel",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of an Epic order-panel change (effective May 19, 2026); verify current panel in Epic",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-b3e657c7e61b",
+      "title": "Multidisciplinary Device Surveillance Rounding (MDSR)",
+      "slug": "mdsr-device-surveillance-rounding",
+      "path": "/main-campus/mdsr-device-surveillance-rounding",
+      "level": 2,
+      "parent": "procedures-and-devices",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "order": 95,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "procedures-and-devices"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "mdsr-device-surveillance-rounding",
+        "path": "/akron/mdsr-device-surveillance-rounding",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of the enterprise MDSR Playbook (HAI Governance v1.0, 01.30.2026); follow the current playbook and REDCap tools",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-07ef648db3b8",
+      "title": "Urinary retention in the acute care setting",
+      "slug": "urinary-retention-acute-care",
+      "path": "/main-campus/urinary-retention-acute-care",
+      "level": 2,
+      "parent": "procedures-and-devices",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "order": 96,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "procedures-and-devices",
+        "clinical-domains"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "urinary-retention-acute-care",
+        "path": "/akron/urinary-retention-acute-care",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of an enterprise LIP guidance document (final 5-13-2026); not a clinical protocol approval",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-d47398fe8476",
+      "title": "Heparin anti-Xa nomogram updates",
+      "slug": "heparin-anti-xa-nomogram-updates",
+      "path": "/main-campus/heparin-anti-xa-nomogram-updates",
+      "level": 2,
+      "parent": "clinical-domains",
+      "parentId": "main-campus-section-f5f7d2b99fa5",
+      "order": 97,
+      "contentType": "reference-table",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "clinical-domains"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "heparin-anti-xa-nomogram-updates",
+        "path": "/akron/heparin-anti-xa-nomogram-updates",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft summary of the July 2026 heparin nomogram update; verify current order sets and ranges in Epic",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-a06d5dd65151",
+      "title": "Donation after Circulatory Death (DCD) workflow",
+      "slug": "dcd-donation-after-circulatory-death-workflow",
+      "path": "/main-campus/dcd-donation-after-circulatory-death-workflow",
+      "level": 2,
+      "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "parentId": "main-campus-section-8c74611e7b68",
+      "order": 98,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "eol-donation-dnc"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "dcd-donation-after-circulatory-death-workflow",
+        "path": "/akron/dcd-donation-after-circulatory-death-workflow",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft workflow summary; organ donation is coordinated by Lifebanc and requires named clinical review before use",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-45ed6ca180fe",
+      "title": "Determination of Death by Neurologic Criteria (DNC) in adults",
+      "slug": "dnc-determination-procedure",
+      "path": "/main-campus/dnc-determination-procedure",
+      "level": 2,
+      "parent": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "parentId": "main-campus-section-8c74611e7b68",
+      "order": 99,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "eol-donation-dnc"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "dnc-determination-procedure",
+        "path": "/akron/dnc-determination-procedure",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft procedure summary; DNC/brain death determination requires MyLearning training and named clinical review before use",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-60708335683a",
+      "title": "Apnea testing procedure (ventilated and ECMO)",
+      "slug": "apnea-testing-procedure",
+      "path": "/main-campus/apnea-testing-procedure",
+      "level": 3,
+      "parent": "dnc-determination-procedure",
+      "parentId": "main-campus-section-45ed6ca180fe",
+      "order": 100,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "eol-donation-dnc"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "apnea-testing-procedure",
+        "path": "/akron/apnea-testing-procedure",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft procedure summary; requires DNC training and named clinical review before use",
+        "reviewedOn": "2026-08-07",
+        "reviewedBy": "platform-steward",
+        "approvalState": "draft"
+      }
+    },
+    {
+      "id": "main-campus-section-60c619304c25",
+      "title": "Research coordinator on-call schedule (QGenda)",
+      "slug": "research-coordinator-on-call",
+      "path": "/main-campus/research-coordinator-on-call",
+      "level": 2,
+      "parent": "campus-operations",
+      "parentId": "main-campus-section-ab181b223d1d",
+      "order": 101,
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "taxonomyIds": [
+        "campus-operations"
+      ],
+      "equivalent": {
+        "campus": "akron",
+        "slug": "research-coordinator-on-call",
+        "path": "/akron/research-coordinator-on-call",
+        "name": "Akron General",
+        "reviewedOn": "2026-08-07"
+      },
+      "review": {
+        "reviewStatus": "Draft operational note; confirm the current on-call coordinator in QGenda",
+        "reviewedOn": "2026-08-07",
         "reviewedBy": "platform-steward",
         "approvalState": "draft"
       }

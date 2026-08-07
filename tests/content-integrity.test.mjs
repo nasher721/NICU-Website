@@ -15,11 +15,11 @@ test("both supplied handbooks are represented", () => {
 
 test("the full source structure is retained", () => {
   const [mainCampus, akron] = payload.handbooks;
-  assert.equal(mainCampus.stats.sections, 83);
-  assert.equal(mainCampus.stats.tables, 49);
+  assert.equal(mainCampus.stats.sections, 102);
+  assert.equal(mainCampus.stats.tables, 60);
   assert.equal(mainCampus.stats.figures, 11);
-  assert.equal(akron.stats.sections, 86);
-  assert.equal(akron.stats.tables, 62);
+  assert.equal(akron.stats.sections, 105);
+  assert.equal(akron.stats.tables, 73);
   assert.equal(akron.stats.figures, 12);
 });
 
@@ -35,7 +35,7 @@ test("main campus remains quarantined while contamination warning is active", ()
 test("curated expansion hubs ship as draft navigational content on both campuses", () => {
   for (const handbook of payload.handbooks) {
     const curated = handbook.sections.filter((section) => section.contentOrigin === "curated");
-    assert.equal(curated.length, 4);
+    assert.equal(curated.length, 23);
     for (const section of curated) {
       assert.equal(section.review.approvalState, "draft");
       assert.ok(section.equivalent?.path);

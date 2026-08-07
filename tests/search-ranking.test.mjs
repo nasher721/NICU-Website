@@ -58,7 +58,7 @@ test("campus indexes normalize without mutating source records and derive root c
   assert.equal(JSON.stringify(raw), before);
   assert.ok(Object.isFrozen(normalized));
   assert.ok(Object.isFrozen(normalized.records));
-  assert.equal(normalized.records.length, 83);
+  assert.equal(normalized.records.length, 102);
   for (const item of normalized.records) {
     assert.equal(item.campus, "main-campus");
     assert.equal(item.campusLabel, "Main Campus");
@@ -81,7 +81,7 @@ test("the default loader fetches the packaged campus index URL independently", a
   try {
     const index = await loadCampusSearchIndex("main-campus", { retry: true });
     assert.equal(index.campus, "main-campus");
-    assert.equal(index.records.length, 83);
+    assert.equal(index.records.length, 102);
     assert.deepEqual(requests, [SEARCH_INDEX_URLS["main-campus"]]);
   } finally {
     globalThis.fetch = originalFetch;
@@ -110,7 +110,7 @@ test("Both campuses loads the second index only after scope expansion and reuses
   const campusOnly = await loader.loadScope({ activeCampus: "main-campus" });
   assert.equal(campusOnly.scope, "main-campus");
   assert.deepEqual(calls, ["main-campus"]);
-  assert.equal(campusOnly.records.length, 83);
+  assert.equal(campusOnly.records.length, 102);
 
   const both = await loader.loadScope({
     scope: BOTH_CAMPUSES,
@@ -120,7 +120,7 @@ test("Both campuses loads the second index only after scope expansion and reuses
   assert.deepEqual(calls, ["main-campus", "akron"]);
   assert.equal(both.status, "ready");
   assert.deepEqual(both.campuses, ["main-campus", "akron"]);
-  assert.equal(both.records.length, 169);
+  assert.equal(both.records.length, 207);
   assert.ok(both.records.every((item) => item.campusLabel));
 
   loader.clear();
@@ -128,7 +128,7 @@ test("Both campuses loads the second index only after scope expansion and reuses
   const preferredOnly = await loader.loadScope({ preferredCampus: "akron" });
   assert.equal(preferredOnly.scope, "akron");
   assert.deepEqual(calls, ["akron"]);
-  assert.equal(preferredOnly.records.length, 86);
+  assert.equal(preferredOnly.records.length, 105);
 });
 
 test("index failures are retryable and preserve the campus that loaded", async () => {
@@ -153,12 +153,12 @@ test("index failures are retryable and preserve the campus that loaded", async (
   const partial = await loader.loadScope({ scope: BOTH_CAMPUSES, preferredCampus: "main-campus" });
   assert.equal(partial.status, "partial");
   assert.equal(partial.retryable, true);
-  assert.equal(partial.records.length, 83);
+  assert.equal(partial.records.length, 102);
   assert.deepEqual(partial.errors, [{ campus: "akron", message: "Akron index unavailable" }]);
 
   const recovered = await loader.loadScope({ scope: BOTH_CAMPUSES, preferredCampus: "main-campus" });
   assert.equal(recovered.status, "ready");
-  assert.equal(recovered.records.length, 169);
+  assert.equal(recovered.records.length, 207);
   assert.equal(mainAttempts, 1);
   assert.equal(akronAttempts, 2);
 });

@@ -90,7 +90,18 @@
       "term": "LifeBanc",
       "expansion": "organ donation",
       "campuses": ["main-campus", "akron"]
-    }
+    },
+    { "term": "CVAD", "expansion": "central venous access device", "campuses": ["main-campus", "akron"] },
+    { "term": "CLABSI", "expansion": "central line associated bloodstream infection", "campuses": ["main-campus", "akron"] },
+    { "term": "CAUTI", "expansion": "catheter associated urinary tract infection", "campuses": ["main-campus", "akron"] },
+    { "term": "POA", "expansion": "present on admission", "campuses": ["main-campus", "akron"] },
+    { "term": "DCD", "expansion": "donation after circulatory death", "campuses": ["main-campus", "akron"] },
+    { "term": "MDSR", "expansion": "multidisciplinary device surveillance rounding", "campuses": ["main-campus", "akron"] },
+    { "term": "TOV", "expansion": "trial of void", "campuses": ["main-campus", "akron"] },
+    { "term": "PVR", "expansion": "post-void residual", "campuses": ["main-campus", "akron"] },
+    { "term": "IUC", "expansion": "indwelling urinary catheter", "campuses": ["main-campus", "akron"] },
+    { "term": "aPTT", "expansion": "activated partial thromboplastin time", "campuses": ["main-campus", "akron"] },
+    { "term": "PM&R", "expansion": "physical medicine and rehabilitation", "campuses": ["main-campus", "akron"] }
   ],
   "shortcuts": [
     {
@@ -277,7 +288,7 @@
       "order": 4,
       "hubSlug": "part-4-consultation-and-stroke-alerts",
       "memberSlugs": {
-        "*": ["part-4-consultation-and-stroke-alerts"]
+        "*": ["part-4-consultation-and-stroke-alerts", "stroke-discharge-follow-up-order"]
       }
     },
     {
@@ -295,7 +306,7 @@
       "order": 6,
       "hubSlug": "part-6-documentation-and-quality",
       "memberSlugs": {
-        "*": ["part-6-documentation-and-quality"]
+        "*": ["part-6-documentation-and-quality", "poa-documentation-updates"]
       }
     },
     {
@@ -313,7 +324,7 @@
       "order": 8,
       "hubSlug": "part-8-end-of-life-care-organ-donation-and-dnc",
       "memberSlugs": {
-        "*": ["part-8-end-of-life-care-organ-donation-and-dnc"]
+        "*": ["part-8-end-of-life-care-organ-donation-and-dnc", "dcd-donation-after-circulatory-death-workflow", "dnc-determination-procedure", "apnea-testing-procedure", "ovrs-death-registration-module"]
       }
     },
     {
@@ -331,7 +342,7 @@
       "order": 10,
       "hubSlug": "clinical-domains",
       "memberSlugs": {
-        "*": ["clinical-domains", "neuromonitoring-topic-map"]
+        "*": ["clinical-domains", "neuromonitoring-topic-map", "heparin-anti-xa-nomogram-updates", "urinary-retention-acute-care"]
       }
     },
     {
@@ -340,7 +351,7 @@
       "order": 11,
       "hubSlug": "procedures-and-devices",
       "memberSlugs": {
-        "*": ["procedures-and-devices"]
+        "*": ["procedures-and-devices", "cvad-bleeding-management", "foley-catheter-order-panel", "mdsr-device-surveillance-rounding", "urinary-retention-acute-care"]
       }
     },
     {
@@ -358,7 +369,37 @@
       "order": 13,
       "hubSlug": "campus-operations",
       "memberSlugs": {
-        "*": ["campus-operations", "critical-contacts", "on-call-directory-qgenda"]
+        "*": ["campus-operations", "critical-contacts", "on-call-directory-qgenda", "research-coordinator-on-call"]
+      }
+    },
+    {
+      "id": "nicu-staff-playbook",
+      "label": "NICU Staff Playbook",
+      "order": 14,
+      "hubSlug": "nicu-staff-playbook",
+      "memberSlugs": {
+        "*": [
+          "nicu-staff-playbook",
+          "nicu-playbook-quick-reference",
+          "nicu-clinical-day-and-schedule",
+          "nicu-staff-responsibilities",
+          "nicu-meetings-resources-contacts",
+          "nicu-career-development"
+        ]
+      }
+    },
+    {
+      "id": "documentation-epic-updates",
+      "label": "Documentation & Epic Updates",
+      "order": 15,
+      "hubSlug": "documentation-and-epic-updates",
+      "memberSlugs": {
+        "*": [
+          "documentation-and-epic-updates",
+          "poa-documentation-updates",
+          "ovrs-death-registration-module",
+          "stroke-discharge-follow-up-order"
+        ]
       }
     }
   ],
@@ -426,7 +467,26 @@
         "akron": "part-7-transitions-of-care"
       },
       "reviewedOn": "2026-07-24"
-    }
+    },
+    { "slug": "nicu-staff-playbook", "campuses": { "main-campus": "nicu-staff-playbook", "akron": "nicu-staff-playbook" }, "reviewedOn": "2026-08-07" },
+    { "slug": "nicu-playbook-quick-reference", "campuses": { "main-campus": "nicu-playbook-quick-reference", "akron": "nicu-playbook-quick-reference" }, "reviewedOn": "2026-08-07" },
+    { "slug": "nicu-clinical-day-and-schedule", "campuses": { "main-campus": "nicu-clinical-day-and-schedule", "akron": "nicu-clinical-day-and-schedule" }, "reviewedOn": "2026-08-07" },
+    { "slug": "nicu-staff-responsibilities", "campuses": { "main-campus": "nicu-staff-responsibilities", "akron": "nicu-staff-responsibilities" }, "reviewedOn": "2026-08-07" },
+    { "slug": "nicu-meetings-resources-contacts", "campuses": { "main-campus": "nicu-meetings-resources-contacts", "akron": "nicu-meetings-resources-contacts" }, "reviewedOn": "2026-08-07" },
+    { "slug": "nicu-career-development", "campuses": { "main-campus": "nicu-career-development", "akron": "nicu-career-development" }, "reviewedOn": "2026-08-07" },
+    { "slug": "documentation-and-epic-updates", "campuses": { "main-campus": "documentation-and-epic-updates", "akron": "documentation-and-epic-updates" }, "reviewedOn": "2026-08-07" },
+    { "slug": "poa-documentation-updates", "campuses": { "main-campus": "poa-documentation-updates", "akron": "poa-documentation-updates" }, "reviewedOn": "2026-08-07" },
+    { "slug": "ovrs-death-registration-module", "campuses": { "main-campus": "ovrs-death-registration-module", "akron": "ovrs-death-registration-module" }, "reviewedOn": "2026-08-07" },
+    { "slug": "stroke-discharge-follow-up-order", "campuses": { "main-campus": "stroke-discharge-follow-up-order", "akron": "stroke-discharge-follow-up-order" }, "reviewedOn": "2026-08-07" },
+    { "slug": "cvad-bleeding-management", "campuses": { "main-campus": "cvad-bleeding-management", "akron": "cvad-bleeding-management" }, "reviewedOn": "2026-08-07" },
+    { "slug": "foley-catheter-order-panel", "campuses": { "main-campus": "foley-catheter-order-panel", "akron": "foley-catheter-order-panel" }, "reviewedOn": "2026-08-07" },
+    { "slug": "mdsr-device-surveillance-rounding", "campuses": { "main-campus": "mdsr-device-surveillance-rounding", "akron": "mdsr-device-surveillance-rounding" }, "reviewedOn": "2026-08-07" },
+    { "slug": "urinary-retention-acute-care", "campuses": { "main-campus": "urinary-retention-acute-care", "akron": "urinary-retention-acute-care" }, "reviewedOn": "2026-08-07" },
+    { "slug": "heparin-anti-xa-nomogram-updates", "campuses": { "main-campus": "heparin-anti-xa-nomogram-updates", "akron": "heparin-anti-xa-nomogram-updates" }, "reviewedOn": "2026-08-07" },
+    { "slug": "dcd-donation-after-circulatory-death-workflow", "campuses": { "main-campus": "dcd-donation-after-circulatory-death-workflow", "akron": "dcd-donation-after-circulatory-death-workflow" }, "reviewedOn": "2026-08-07" },
+    { "slug": "dnc-determination-procedure", "campuses": { "main-campus": "dnc-determination-procedure", "akron": "dnc-determination-procedure" }, "reviewedOn": "2026-08-07" },
+    { "slug": "apnea-testing-procedure", "campuses": { "main-campus": "apnea-testing-procedure", "akron": "apnea-testing-procedure" }, "reviewedOn": "2026-08-07" },
+    { "slug": "research-coordinator-on-call", "campuses": { "main-campus": "research-coordinator-on-call", "akron": "research-coordinator-on-call" }, "reviewedOn": "2026-08-07" }
   ],
   "curatedArticles": "curated/articles.json",
   "renamedSections": [

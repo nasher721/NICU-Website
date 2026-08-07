@@ -209,7 +209,9 @@
         "SE",
         "status epilepticus",
         "LD",
-        "lumbar drain"
+        "lumbar drain",
+        "DCD",
+        "donation after circulatory death"
       ]
     },
     {
@@ -867,7 +869,9 @@
         "SAH",
         "subarachnoid hemorrhage",
         "SE",
-        "status epilepticus"
+        "status epilepticus",
+        "POA",
+        "present on admission"
       ]
     },
     {
@@ -982,7 +986,9 @@
         "SE",
         "status epilepticus",
         "LD",
-        "lumbar drain"
+        "lumbar drain",
+        "POA",
+        "present on admission"
       ]
     },
     {
@@ -1041,7 +1047,9 @@
       "body": "use for template h&p neuro icu h&p regular s/o problem oriented charting cchs · · neuro icu h&p stroke care path s/o problem oriented charting cchs progress notes neuro icu progress note s/o problem oriented charting cchs · · neuro icu stroke hemorrhagic progress note care path ip main · used for stroke patients so the stroke care path incorporates into the note. for ischemic stroke, change 'hemorrhagic' to 'ischemic' at the top - there is no separate ischemic template. transfer notes .aktransfernote problem-oriented a&p .diagpocpoa · diagnoses can be added, removed, and grouped into a shared plan. for problems present on admission, check poa present.",
       "aliases": [
         "SE",
-        "status epilepticus"
+        "status epilepticus",
+        "POA",
+        "present on admission"
       ]
     },
     {
@@ -1064,7 +1072,9 @@
         "SAH",
         "subarachnoid hemorrhage",
         "SE",
-        "status epilepticus"
+        "status epilepticus",
+        "POA",
+        "present on admission"
       ]
     },
     {
@@ -1290,7 +1300,9 @@
         "SE",
         "status epilepticus",
         "LifeBanc",
-        "organ donation"
+        "organ donation",
+        "DCD",
+        "donation after circulatory death"
       ]
     },
     {
@@ -1393,7 +1405,9 @@
       "body": "patients undergoing dcd follow a separate dcd policy, available through mylearning. dcd workflow overview",
       "aliases": [
         "SE",
-        "status epilepticus"
+        "status epilepticus",
+        "DCD",
+        "donation after circulatory death"
       ]
     },
     {
@@ -1582,7 +1596,9 @@
       "body": ".bowelregimen · in the setting of: · - critical illness · - decreased mobility · - medication effects · · last bm: pta · · bowel regimen: · - senna s · - miralax · - dulcolax suppository prn · · mobilize as able .dysphagiapoc · - speech therapy · - aspiration precautions · - maintain hob 30 degrees at rest · - good oral hygiene · - suction prn · - diet per st · - elevate hob at least 60 degrees during meal times .ventmanagement · 2/2 acute resp failure · · ventilator mode @flowrefresh(415247::1)@ · ventilator resp rate (bpm) @flowrefresh(415041::1)@ · tidal volume (ml) @flowrefresh(415192::1)@ · peep (cm h2o) @flowrefresh(415051::1)@ · fio2 (%) @flowrefresh(400310::1)@ · pressure support (cm h2o) @flowrefresh(415054::1)@ · · - wte as above · - vap bundle · - hob 30-45 degrees · - sedation vacation · - wte · - good oral hygiene · - suction prn · - encourage early mobilization as able · - protonix 40mg daily · - duonebs prn · - og to liws vs tf .ventpoc · - vap bundle · - hob 30-45 degrees · - sedation vacation · - wte · - good oral hygiene · - suction prn · - encourage early mobilization as able · - protonix 40mg daily · - duonebs prn .lowlab · in the setting of critical illness +/- malnutrition · · - daily labs · - bmp, cbc, mag, phos · - electrolyte replacement protocol",
       "aliases": [
         "SE",
-        "status epilepticus"
+        "status epilepticus",
+        "CAUTI",
+        "catheter associated urinary tract infection"
       ]
     },
     {
@@ -1622,7 +1638,9 @@
         "ICH",
         "intracerebral hemorrhage",
         "SE",
-        "status epilepticus"
+        "status epilepticus",
+        "POA",
+        "present on admission"
       ]
     },
     {
@@ -1702,6 +1720,421 @@
       "heading": "campus operations",
       "parentHeading": "",
       "body": "campus-scoped operations index for contacts, directories, on-call tools, and handbook maintenance notes. start with critical contacts, day-one essentials, and on-call directory qgenda in the handbook contents. confirm time-sensitive numbers and schedules in current cleveland clinic systems before acting.",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-b5ce5688a514",
+      "campus": "main-campus",
+      "title": "nicu staff playbook",
+      "slug": "nicu-staff-playbook",
+      "path": "/main-campus/nicu-staff-playbook",
+      "parentId": null,
+      "parentSlug": null,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "nicu staff playbook",
+      "parentHeading": "",
+      "body": "source: nicu staff playbook, 2026 edition (neurological institute, cerebrovascular center). draft navigational summary of neurocritical care staff expectations, schedules, responsibilities, resources, and career development. this is not a clinical protocol or an hr policy of record; confirm current details with nicu leadership and qgenda. the cleveland clinic neurocritical care unit is a multidisciplinary team caring for patients with neurocritical illness across main campus and ccf-akron general. the neuroicu is one of four sections in the cerebrovascular center of the neurological institute, alongside stroke neurology, neuroendovascular, and vascular neurosurgery, reporting to center director dr. shazam hussain and ni chair dr. andre machado. quick reference: key times, deadlines, and who to contact. the clinical day and staff schedule: sign-in/out, rounds, shifts, and time away. staff responsibilities across main campus (g20, h22, consult), nmet, and ccf-akron general. meetings, resources, and key contacts. career development: professional staff tracks and the annual professional review (apr). qgenda is the single source of truth for the group schedule; spreadsheets are for viewing only. the playbook is a living document and processes may change at any time.",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-398a0687e61e",
+      "campus": "main-campus",
+      "title": "quick reference: key times, deadlines, and contacts",
+      "slug": "nicu-playbook-quick-reference",
+      "path": "/main-campus/nicu-playbook-quick-reference",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "parentSlug": "nicu-staff-playbook",
+      "contentType": "reference-table",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "quick reference: key times, deadlines, and contacts",
+      "parentHeading": "nicu staff playbook",
+      "body": "source: nicu staff playbook 2026, quick reference. essentials at a glance; full detail lives in the sections that follow. confirm time-sensitive details in current cleveland clinic systems. key times - main campus time what 6:30 am / 6:30 pm day / night sign-in and sign-out, nicu conference room 8:30 am dispo rounds (g20) - anms, case management, nsgy, stroke 9:00 am bedside team rounds (nurse-led, systems-based); aim to finish by noon end of rounds icu checklist - verbal + epic, every patient 1:00 pm line/device huddle with anms and team 4:30 pm short call departs (if long/short model in use) key times - ccf-akron general time what 7 am - 5 pm in-house coverage (on site - airway responsibility); home call otherwise 8:45 am dispo rounds on the icu 7 pm friday weekend staff coverage begins key deadlines deadline what sep 1 off-service requests due (jan-jun schedule) plus top-3 meeting rankings for next year mar 1 off-service requests due (jul-dec schedule) 90 days notice required for vacation requests; less requires cv center director approval after release vacation requests open (admin / off-service days only); call switch first if clinical who to contact need contact schedule changes / switches unit director plus schedule lead (kathy leestma, leestmk@ccf.org, 216-678-5411) emergency coverage phone/email unit director plus schedule lead as soon as possible unit leadership dr. dani (danid@ccf.org) - unit; dr. barron (barrona3@ccf.org) - operations cv center director dr. shazam hussain (hussais4@ccf.org) admin assistant kedasia robinson (robinsk31@ccf.org) it 216-444-help (4357) or patti morris (216-444-8375)",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-5ee35bec2f04",
+      "campus": "main-campus",
+      "title": "the clinical day and staff schedule",
+      "slug": "nicu-clinical-day-and-schedule",
+      "path": "/main-campus/nicu-clinical-day-and-schedule",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "parentSlug": "nicu-staff-playbook",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "the clinical day and staff schedule",
+      "parentHeading": "nicu staff playbook",
+      "body": "source: nicu staff playbook 2026, sections 3-4. draft summary for orientation; confirm current expectations with nicu leadership. the clinical day (main campus). early daytime staff arrive at 6:30 am for sign-out in the nicu conference room per the long/short call delineation; night staff arrive at 6:30 pm. structured handoffs support early planning for extubations and step-down transfers. 8:30 am dispo rounds - multidisciplinary rounds in g20 with assistant nurse managers, case management, neurosurgery, and stroke to discuss dispositions, expedite transfers, and prepare planned admissions. 9:00 am bedside team rounds - systems-based and nurse-led; the responsible resident, fellow, and lip add assessment and plan. bedside teaching encouraged; aim to finish by noon. icu checklist - completed verbally and in epic at the end of rounds for every patient. 1:00 pm line/device huddle - review indwelling devices and ongoing necessity with anms and the team. a long call / short call model may be used, with short call leaving at 4:30 pm and the remaining staff member cross-covering both icus and consults. staff schedule. the goal is fair, equitable distribution of clinical coverage. qgenda is the official schedule and only up-to-date source of truth; spreadsheets are for viewing only. shift definitions: weekday am (mon-fri), weekend am (sat-sun), weekday pm (mon-wed), weekend pm (thu-sun). rest days are post-call days fully exempt from clinical and administrative duties. full-time ncc clinical commitment is 28 five-day weeks; partial fte is proportioned. scheduling is done in 6-month blocks (jan-jun, jul-dec) released at least 3 months in advance. recovery: one recovery day (monday) after a weekend shift; two recovery days (monday and tuesday) after a 7-day shift. night (pm) rotation: full-fte cv center providers complete two 6-week night rotations per year (2 weeks and 2 weekends each); adjusted for shared fte; opt-out available after age 55 in exchange for extra weekend shifts. holidays are distributed equally on a rotating basis (mid-year: memorial day, independence day, labor day; end-of-year: thanksgiving, christmas, new year's day). time away. off-service requests: up to two full weeks per semester, emailed to the unit director and schedule lead strictly before september 1 (jan-jun) and march 1 (jul-dec). holiday weeks and popular meeting weeks (ncs, sccm, aan) are excluded. vacation: requested only after the schedule is released, during non-clinical days; a call switch must be arranged first if during a clinical week. maximum contiguous vacation is 10 weekdays (14 days total); longer needs cv center director approval. 90 days' notice required. each provider has one well-being day and one floating holiday, requestable any time that does not interfere with clinical duties. meetings: ni funds one meeting per year; rank top 3 for the next calendar year by september 1. officers, committee members, and presenters get priority for their meeting. post-release changes: providers arrange their own call switches (except emergencies); changes are tracked but not counted toward fte. emergencies are escalated by phone/email to the unit director and schedule lead. the coordinator updates qgenda.",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-b2b80da01c37",
+      "campus": "main-campus",
+      "title": "staff responsibilities",
+      "slug": "nicu-staff-responsibilities",
+      "path": "/main-campus/nicu-staff-responsibilities",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "parentSlug": "nicu-staff-playbook",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "staff responsibilities",
+      "parentHeading": "nicu staff playbook",
+      "body": "source: nicu staff playbook 2026, section 5. draft summary; roles evolve with the new ni building and unit expansion. main campus clinical commitments. main campus nicu staff lead the clinical teams (fellows, residents, and apps) in the neurological icus. g20 staff supervise a 14-bed unit and team, generally with nicu fellow coverage, and complete death certificates during the week of service. h22 staff supervise a 10-bed unit and team, share pager triage with the on-service fellow, and (absent a consult attending) cover boarding patients in other icus and icu consults. future state: in the new ni building, coverage expands to three service attendings, each with 12-bed coverage and teams of fellows, apps, and residents. education, supervision, and documentation. attendings provide daily bedside education for residents, fellows, and apps, and discuss autonomy, expectations, and feedback with nicu fellows each week. procedural supervision is the attending's responsibility. all airway-related procedures require bedside, direct supervision by a nicu attending; rotating residents require direct supervision for any procedure. the attending is responsible for cosignature and billing of every patient in their icu (except app-covered patients on weekends and at ccf-akron general) and for verbal sign-out to the next physician. see the nicu staff orientation onboarding document for note and billing dot phrases. consult commitments. 8:30 am arrival for dispo rounds; coverage until 5 pm. the consult attending manages nicu boarders in other icus and icu consults (post-arrest neuroprognostication, cerebral edema, and status epilepticus), communicating with primary services and families. ccf-akron general nsicu commitments. in-house coverage 7 am - 5 pm (staff on site given airway responsibilities); home call during service weeks otherwise. dispo rounds at 8:45 am. weekend coverage begins 7 pm friday. see the separate akg nsicu playbook for details. nmet commitments: process pending; details to be added when finalized. administrative, research, and non-nicu responsibilities (didactics, committee participation, qi/ci, mortality review) are assigned by the section head and center director; productivity expectations are discussed individually.",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "LD",
+        "lumbar drain"
+      ]
+    },
+    {
+      "id": "main-campus-section-73484d75502c",
+      "campus": "main-campus",
+      "title": "meetings, resources, and key contacts",
+      "slug": "nicu-meetings-resources-contacts",
+      "path": "/main-campus/nicu-meetings-resources-contacts",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "parentSlug": "nicu-staff-playbook",
+      "contentType": "reference-table",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "meetings, resources, and key contacts",
+      "parentHeading": "nicu staff playbook",
+      "body": "source: nicu staff playbook 2026, sections 6-9. draft directory; meeting invites and links are distributed via the outlook calendar. confirm contacts before acting. meetings and conferences meeting cadence description cv center patient management conference weekly (fri ~7 am) stroke, critical care, and endovascular/neurosurgical topics; multidisciplinary with vascular neurology, neurosurgery, inr, and ncc. cme available. cv center quality & m&m conference monthly quality initiatives and metrics; m&m cases with learning points and multidisciplinary discussion. nicu staff meetings weekly-biweekly run by nicu leadership (dr. dani): staffing, schedules, initiatives, and nicu okrs. nicu ops meetings monthly run by nicu operations (dr. barron): nursing, pharmacy, apps, fellowship, and mortality/acuity metrics. cv center monthly meetings monthly run by the cv center director (dr. hussain): financials, cv center okrs, teamwork and patient care. ni quarterly meetings quarterly run by the ni chair (dr. machado): institute-wide strategy and goals. neurology grand rounds weekly department of neurology grand rounds (webex via outlook). critical care grand rounds monthly multidisciplinary grand rounds from the critical care center (micu, sicu, cicu, cvicu, nicu). resources and tools resource description qgenda (app.qgenda.com/landingpage/cc-oncall) official schedule; app available on ccf phones with personal schedule and nicu coverage. mylearning (mylearning.ccf.org) aha courses (acls, bls, pals) and annual training; acls required every two years at no cost. my cme (cce.ccf.org/ccecme) claim and track cme; stroke-related cme reporting required by the joint commission. uptodate; lexicomp; mdcalc; openevidence clinical references, drug information, calculators, and ai-assisted question answering. connect today; wpsa; nicu teams channel caregiver engagement, women's professional staff association, and nicu staff updates. key contacts role contact email / phone cv center director dr. shazam hussain hussais4@ccf.org; c 216-825-3413 nicu lead (unit) dr. dani danid@ccf.org; 216-704-1610 nicu lead (operations) dr. barron barrona3@ccf.org; 216-445-5658 administrative assistant kedasia robinson robinsk31@ccf.org scheduler kathy leestma leestmk@ccf.org; 216-678-5411 research program manager emily fisher fishere3@ccf.org; 216-316-5682 cv center it lead help desk / patti morris 216-444-help (4357); 216-444-8375 licensure, certification, and society links item link acls renewal mylearning.ccf.org dea renewal deadiversion.usdoj.gov - forms & applications ohio medical license med.ohio.gov - physician (md, do, dpm) boards and societies abpn (abpn.com), ucns (ucns.org), ncs (neurocriticalcare.org), sccm (sccm.org), aan (aan.com), abim, abem, chest",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-d0c2edd55364",
+      "campus": "main-campus",
+      "title": "career development and annual professional review",
+      "slug": "nicu-career-development",
+      "path": "/main-campus/nicu-career-development",
+      "parentId": "main-campus-section-b5ce5688a514",
+      "parentSlug": "nicu-staff-playbook",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "career development and annual professional review",
+      "parentHeading": "nicu staff playbook",
+      "body": "source: nicu staff playbook 2026, section 10. draft summary; see opsa resources for the current process. cleveland clinic offers four professional staff career tracks; see consult qd (career tracks for professional staff) for details. the annual professional review (apr) is a structured opportunity to reflect on contributions, set goals, and receive support for growth. see the opsa apr resources and the coach approach to the apr. qi weeks: each staff member currently devotes a qi week roughly once every 10+ weeks (5-10 hours) toward common qi efforts identified by leadership.",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-317647e54a90",
+      "campus": "main-campus",
+      "title": "documentation & epic updates",
+      "slug": "documentation-and-epic-updates",
+      "path": "/main-campus/documentation-and-epic-updates",
+      "parentId": null,
+      "parentSlug": null,
+      "contentType": "chapter",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "documentation & epic updates",
+      "parentHeading": "",
+      "body": "expansion hub for enterprise documentation standards and epic change notices that affect neuro icu faculty. each topic preserves its source and effective date; confirm current behavior in the live epic environment before acting. present on admission (poa) documentation and the standardized h&p. ohio vital records system (ovrs) death registration module go-live. stroke discharge follow-up appointment order (epic, ohio locations).",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "POA",
+        "present on admission"
+      ]
+    },
+    {
+      "id": "main-campus-section-0f36d48e293d",
+      "campus": "main-campus",
+      "title": "present on admission (poa) documentation updates",
+      "slug": "poa-documentation-updates",
+      "path": "/main-campus/poa-documentation-updates",
+      "parentId": "main-campus-section-317647e54a90",
+      "parentSlug": "documentation-and-epic-updates",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "present on admission (poa) documentation updates",
+      "parentHeading": "documentation & epic updates",
+      "body": "source: resource slide deck for the september 8 poa updates (ihi sqpe quality update, 2025-09-06). draft summary for documentation awareness; verify current templates and groupers in epic. what changed. starting monday, september 8, all critical care center providers at all sites use the standard h&p templates (in micu, the micu h&p ip cchs) and the standard progress note, rather than personalized templates. attendings are accountable for fellows, residents, and apps using the correct template and addressing poa. problem list use is an enterprise expectation; active problems auto-populate the h&p smartlist. review and update selections, and add any new poa condition to the problem list. use the .poacomorbidity smartphrase and the comorbidity checklist (available as a pdf and iphone app) to capture conditions that are easy to miss. documentation is patient care on paper: complete poa comorbidity capture supports accurate severity, risk adjustment, and mortality-index performance. top vizient poa mortality variables emphasized (2024 opportunity analysis): acute renal failure; admit source = transfer from acute; chf; cachexia; cardiac arrhythmia. coagulation defects; encephalopathy (retire the term ams in favor of a specific encephalopathy); fluid and electrolyte disorders. malnutrition; metastatic cancer; respiratory failure; shock.",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "POA",
+        "present on admission"
+      ]
+    },
+    {
+      "id": "main-campus-section-ac03ee0c79f2",
+      "campus": "main-campus",
+      "title": "ovrs death registration module go-live (ohio)",
+      "slug": "ovrs-death-registration-module",
+      "path": "/main-campus/ovrs-death-registration-module",
+      "parentId": "main-campus-section-317647e54a90",
+      "parentSlug": "documentation-and-epic-updates",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "ovrs death registration module go-live (ohio)",
+      "parentHeading": "documentation & epic updates",
+      "body": "source: article - death registration module in the new ohio vital records system set for go-live (ohio department of health, bureau of vital statistics). draft summary for awareness; verify the current workflow directly with the ohio department of health. ohio's electronic death registration system (edrs) is being replaced by the death registration module in the new ohio vital records system (ovrs), launching in phases in october-december 2025. e-physicians who certify deaths in edrs must migrate to the ovrs module after their phase go-live. phase i go-live wednesday, oct. 22 - coroners, e-physicians, and funeral home directors in 10 counties. phases ii-iv (nov. 19, dec. 1, dec. 15) - funeral home directors in additional counties. on the transition date, new death certificates cannot be started in edrs for counties going live; certificates already started in edrs continue there until completed and registered, then convert to ovrs. access to ovrs is only through ohio's secure ohid platform; create an ohid account at the ohid webpage. the new system adds enhanced security, mobile access, electronic submission, and integrated payment/ordering. questions: ovrs@odh.ohio.gov.",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-a56d8fcc7925",
+      "campus": "main-campus",
+      "title": "stroke discharge follow-up appointment order (epic)",
+      "slug": "stroke-discharge-follow-up-order",
+      "path": "/main-campus/stroke-discharge-follow-up-order",
+      "parentId": "main-campus-section-317647e54a90",
+      "parentSlug": "documentation-and-epic-updates",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "stroke discharge follow-up appointment order (epic)",
+      "parentHeading": "documentation & epic updates",
+      "body": "source: epic change notice - hospital follow up appointment - neuro stroke (effective may 2026, all ohio locations only). draft summary; verify current order behavior in epic. what changed. the pm&r (physical medicine and rehabilitation) follow up appointment order is now preselected for all stroke patients when the neuro stroke follow up appointment order is used. previously, the pm&r order was preselected only if the patient was recommended for rehab services. open the neuro stroke follow-up appointment panel in the discharge follow up appointment orders. both the hospital follow up appointment - neuro stroke and hospital follow up appointment - physical medicine and rehabilitation orders populate (each 1 visit, qty-1, routine). the neuro stroke order schedules the follow-up within 7 days (home-going), 3-5 weeks (acute rehab), or 6-8 weeks (snf), with the cerebrovascular neuro center and readmission-risk prompts. the pm&r order captures the specific rehab service (e.g., stroke rehab, tbi, amputee, spasticity, cancer rehab, general rehab) and readmission-risk follow-up needs. florida locations will not have the pm&r follow up appointment order preselected with the neuro stroke order.",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "PM&R",
+        "physical medicine and rehabilitation"
+      ]
+    },
+    {
+      "id": "main-campus-section-9ef335410aaf",
+      "campus": "main-campus",
+      "title": "bleeding cvad: insertion to maintenance",
+      "slug": "cvad-bleeding-management",
+      "path": "/main-campus/cvad-bleeding-management",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "parentSlug": "procedures-and-devices",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "bleeding cvad: insertion to maintenance",
+      "parentHeading": "procedures & devices",
+      "body": "source: 2026 adult inpatient bleeding cvad from insertion to maintenance algorithm (best practice; monica cummins, msn, aprn, accns-ag, pccn, clinical nurse specialist; algorithm march 2026). draft summary; follow product manufacturer instructions for use (mifu) and the clabsi resource site. a standardized approach to bleeding central venous access devices (cvad) reduces variation, misused products, and clabsi risk from frequent dressing changes, and improves cross-discipline collaboration. manual pressure is first, prior to any products. insertion: the procedure is not complete if the patient requires a pressure dressing for hemostasis or if bleeding persists. maintenance: apply products only as indicated and escalate for assistance if needed. use only products consistent with mifu. do not use surgicel on cvads. document products and interventions in the ehr. complex/coagulopathic bleeding: quikclot topical hemostatic 3.8 cm x 3.8 cm pre-slit (manufacturer number 188) may be used; do not put the slit under the catheter - place it on top to absorb bleeding. reference: adult inpatient cvad dressing troubleshooting guide and the clabsi line maintenance and handling resource. share with nursing, ip, physicians/lips, and sqpe.",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "CVAD",
+        "central venous access device",
+        "CLABSI",
+        "central line associated bloodstream infection"
+      ]
+    },
+    {
+      "id": "main-campus-section-2ef2020e89d4",
+      "campus": "main-campus",
+      "title": "foley catheter order panel (epic)",
+      "slug": "foley-catheter-order-panel",
+      "path": "/main-campus/foley-catheter-order-panel",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "parentSlug": "procedures-and-devices",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "foley catheter order panel (epic)",
+      "parentHeading": "procedures & devices",
+      "body": "source: new foley catheter order panel (inpatient providers, adult / enterprise; effective may 19, 2026; chg0362833). draft summary; verify current panel behavior in epic. questions: kayla little, littlek@ccf.org. to reduce unnecessary catheter use, the new foley catheter panel guides providers to assess the underlying cause of urinary retention and consider appropriate alternative treatments. initial assessment steps display when 'patient has urinary retention' is selected, with a link to the urinary retention in acute illness algorithm. the provider indicates the suspected cause of acute urinary retention. alternative treatment options display based on the suspected-cause selection before an indwelling catheter is ordered.",
+      "aliases": [
+        "SE",
+        "status epilepticus"
+      ]
+    },
+    {
+      "id": "main-campus-section-b3e657c7e61b",
+      "campus": "main-campus",
+      "title": "multidisciplinary device surveillance rounding (mdsr)",
+      "slug": "mdsr-device-surveillance-rounding",
+      "path": "/main-campus/mdsr-device-surveillance-rounding",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "parentSlug": "procedures-and-devices",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "multidisciplinary device surveillance rounding (mdsr)",
+      "parentHeading": "procedures & devices",
+      "body": "source: standardized multidisciplinary device surveillance rounding (mdsr) playbook (hai governance, version 1.0, 01.30.2026). draft summary; follow the current playbook and redcap tools on the infection prevention landing page. mdsr is a required, standardized, multidisciplinary rounding process for central lines and indwelling urinary catheters across cleveland clinic hospitals. rounds occur at least weekly to confirm insertion and maintenance bundle compliance, evaluate necessity, consider alternatives, and reduce cauti and clabsi. mdsr replaces prior collaborative rounds. team: provider/lip (physician or app), nursing leadership/quality, clinical nurse specialists, infection preventionists, and nursing quality representatives. central line assessment includes labeled/current tubing, blood-free connectors and lumens, correctly placed chg/algidex disc, clean/dry/dated dressing that is not overdue, a clear insertion site, and curos caps where appropriate. urinary catheter assessment includes documented peri/catheter care, intact seal and securement, no dependent loops, bag below bladder level and off the floor, and a bag that is not overfilled. lip review covers insertion checklist use, indication, line type/location, foley order and nurse driven foley removal (ndfr) order, duration, and keep/remove/replace decisions. number of devices to review weekly (by inpatient device volume): number of inpatient devices minimum required devices reviewed weekly 255 or more 20% of patients with devices 51 - 254 51 fewer than 51 no sampling: 100% of devices required data (cla, uca, and mdsr summaries) is entered in redcap the day rounds are completed for enterprise tracking. if an opportunity is found in more than 10% of rounds (goal 90% or higher compliance), implement targeted insertion, maintenance, or necessity interventions. removal considerations: remove central lines not used for more than 24 hours for central-access meds (48 hours for dialysis/apheresis), avoid lines for lab draws only, and remove urinary catheters when the original need is gone (external catheters can often measure output; consider bladder scans).",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "CLABSI",
+        "central line associated bloodstream infection",
+        "CAUTI",
+        "catheter associated urinary tract infection",
+        "MDSR",
+        "multidisciplinary device surveillance rounding",
+        "IUC",
+        "indwelling urinary catheter"
+      ]
+    },
+    {
+      "id": "main-campus-section-07ef648db3b8",
+      "campus": "main-campus",
+      "title": "urinary retention in the acute care setting",
+      "slug": "urinary-retention-acute-care",
+      "path": "/main-campus/urinary-retention-acute-care",
+      "parentId": "main-campus-section-a6b6719c4714",
+      "parentSlug": "procedures-and-devices",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "urinary retention in the acute care setting",
+      "parentHeading": "procedures & devices",
+      "body": "source: urinary retention in the acute care setting / acute illness (physician/lip guidance, final 5-13-2026). draft summary for orientation; this is not a clinical protocol approval. confirm current guidance and consult urology as indicated. acute urinary retention is the sudden inability to voluntarily pass urine (possibly with suprapubic pain, bloating, or urgency). chronic retention is a post-void residual (pvr) greater than 300 ml persisting at least 6 months on two separate occasions. initial assessment considerations. evaluate precipitating medications (anticholinergics, alpha-adrenergic agonists, calcium channel blockers, opioids, benzodiazepines, muscle relaxants) and consider holding contributors. assess comorbidities (bph, spinal cord injury, fecal impaction, chronic constipation, diabetic neuropathy, neurologic illness, deconditioning), perform a focused exam, and review labs (glucose, hgba1c, urinalysis with reflex culture) and imaging. consider a urology consult to facilitate the plan of care. determine etiology: obstructive, infectious, post-operative, or neurologic/medical. neurologic/medical: intermittent catheterization (ic) is first-line; evaluate glucose/hgba1c for neurogenic bladder; bladder scan to monitor pvr. if ic volume is under 500 ml, next ic in 6 hours; if not, next ic in 4 hours. obstructive (bph, fecal impaction/constipation, urethral stricture, or post-operative): treat the cause; for bph start/resume an alpha-blocker at insertion and maintain the indwelling catheter at least 3 days before a trial of void (tov). infectious: obtain diagnostic imaging and urinalysis with reflex culture; consider urology consult. a tov is successful when the patient voids with pvr 150-400 ml and no retention symptoms; if unsuccessful, resume catheterization and arrange urology follow-up. key terms: iuc (indwelling urinary catheter), ic (intermittent catheterization), tov (trial of void), pvr (post-void residual). interpret bladder scans cautiously with ascites, obesity, or anasarca, and defer catheter placement to urology for special cases (e.g., artificial urinary sphincter, recent urethroplasty/prostatectomy).",
+      "aliases": [
+        "ICH",
+        "intracerebral hemorrhage",
+        "SE",
+        "status epilepticus",
+        "LD",
+        "lumbar drain",
+        "CAUTI",
+        "catheter associated urinary tract infection",
+        "TOV",
+        "trial of void",
+        "PVR",
+        "post-void residual",
+        "IUC",
+        "indwelling urinary catheter"
+      ]
+    },
+    {
+      "id": "main-campus-section-d47398fe8476",
+      "campus": "main-campus",
+      "title": "heparin anti-xa nomogram updates",
+      "slug": "heparin-anti-xa-nomogram-updates",
+      "path": "/main-campus/heparin-anti-xa-nomogram-updates",
+      "parentId": "main-campus-section-f5f7d2b99fa5",
+      "parentSlug": "clinical-domains",
+      "contentType": "reference-table",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "heparin anti-xa nomogram updates",
+      "parentHeading": "clinical domains",
+      "body": "source: lip heparin nomogram updates presentation (july 2026; enterprise anticoagulation committee and pharmacy & therapeutics). draft summary; verify current order sets, ranges, and eligibility in epic. questions: anticoagstewardship@ccf.org. heparin anti-xa nomograms became available july 7, 2026 as the standard of practice for iv heparin monitoring. excluded locations: ohio region (ashtabula regional medical center, union hospital, and all freestanding eds) and florida region (indian river and the martin health system). rationale: faster time to therapeutic, more consistent levels unaffected by acute-phase reactants, lupus anticoagulant, or factor deficiencies, and fewer lab draws. standard target is 0.3-0.7 units/ml for most indications. limitations: the assay is affected by oral factor xa inhibitors (apixaban, edoxaban, rivaroxaban), low-molecular-weight heparin, and fondaparinux. patients exposed to doacs or parenteral xa inhibitors within 5 days are monitored by aptt. the order set prompts anti-xa eligibility screening (outpatient factor xa inhibitor history in the past 180 days; inpatient administrations in the past 5 days) and standardized baseline labs and monitoring; there is no change to nomogram order structure or dosing. updated nomenclature: current updated med heparin standard (dvt/pe) - nomogram standard intensity nomogram med heparin low dose/acs - nomogram lower intensity nomogram med heparin stroke nomogram no bolus lower intensity nomogram therapeutic range changes: nomogram parameter old range new range standard intensity aptt 53-78 seconds no change standard intensity heparin anti-xa level 0.3-0.7 units/ml no change lower intensity / no bolus lower intensity aptt 49-67 seconds 53-67 seconds lower intensity / no bolus lower intensity heparin anti-xa level 0.2-0.5 units/ml 0.3-0.5 units/ml ancillary alignment: calculators display when the next aptt and anti-xa labs are due; notify-physician conditions and nursing instructions were standardized (e.g., no im injections retained; gastroccult-all-emesis and emar rate logging removed).",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "LD",
+        "lumbar drain",
+        "aPTT",
+        "activated partial thromboplastin time"
+      ]
+    },
+    {
+      "id": "main-campus-section-a06d5dd65151",
+      "campus": "main-campus",
+      "title": "donation after circulatory death (dcd) workflow",
+      "slug": "dcd-donation-after-circulatory-death-workflow",
+      "path": "/main-campus/dcd-donation-after-circulatory-death-workflow",
+      "parentId": "main-campus-section-8c74611e7b68",
+      "parentSlug": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "donation after circulatory death (dcd) workflow",
+      "parentHeading": "part 8 · end-of-life care, organ donation & dnc",
+      "body": "source: dcd (donation after circulatory determination of death) workflow. draft summary for orientation; organ donation is coordinated by lifebanc and this page requires named clinical review before operational use. references include the hrsa dcd directives (january 2026) and the ast-asts joint statement on dcd (2025 update). referral and independence. lifebanc is notified prior to dnr-cc withdrawal of life-sustaining support; the primary team confirms the withdrawal decision independent of donation. hospital management (before or). confirm withdrawal remains clinically appropriate (reassess q12h and within 2h of withdrawal); obtain and scan legal authorization for dcd into the emr; consult palliative/hospice if needed. the primary team maintains medical management until death; lifebanc does not write pre-pronouncement orders. code status (dnr-cca vs organ-preservation) and consent for procedures/anticoagulants and nrp use are clarified with the family and lifebanc. a multidisciplinary pre-or huddle (lifebanc, icu nurse, staff physician, and the independent accompanying physician who will pronounce) is completed; an arterial line is working (upper-extremity if nrp thoracic recovery), and a reintubation plan and disposition plan (if death does not occur) are established. operating room management. or huddle confirms code status and comfort measures; the surgical team exits prior to withdrawal of life-sustaining therapy (wlst); heparin is administered per consent; extubation and discontinuation of mechanical/pharmacologic support are performed. after zero pulse pressure on the arterial line (or absent doppler flow) and cessation of respiration, a 5-minute observation with continuous zero pulse pressure and strict no-touch conditions is maintained; the period restarts if any cardiac impulse or doppler activity is detected. death is pronounced and documented by the accompanying physician; the organ recovery team enters only after pronouncement. late autoresuscitation during procurement requires stopping, repeating the 5-minute asystole confirmation with no-touch, and communicating with the opo and surgical team before restarting. if death does not occur, the patient is transferred to an appropriate bed and comfort measures continue.",
+      "aliases": [
+        "SE",
+        "status epilepticus",
+        "LifeBanc",
+        "organ donation",
+        "DCD",
+        "donation after circulatory death"
+      ]
+    },
+    {
+      "id": "main-campus-section-45ed6ca180fe",
+      "campus": "main-campus",
+      "title": "determination of death by neurologic criteria (dnc) in adults",
+      "slug": "dnc-determination-procedure",
+      "path": "/main-campus/dnc-determination-procedure",
+      "parentId": "main-campus-section-8c74611e7b68",
+      "parentSlug": "part-8-end-of-life-care-organ-donation-and-dnc",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "determination of death by neurologic criteria (dnc) in adults",
+      "parentHeading": "part 8 · end-of-life care, organ donation & dnc",
+      "body": "source: dnc flow chart procedure (v2). draft summary for orientation; determination of death by neurologic criteria (dnc / brain death) requires dnc mylearning course completion and named clinical review before operational use. references include the world brain death project (jama 2020) and the aan 2023 consensus guideline. prerequisites (all must be met). dnc mylearning course completed; printed dnc procedure at the bedside. coma is irreversible and the cause is known, with neuroimaging compatible with the clinical findings (catastrophic supratentorial injury; posterior fossa injury must show a compatible catastrophic picture). cns depressant drug effect absent (e.g., pentobarbital serum level under 5 mcg/ml, ethanol under 80 mg/dl; wait 5 or more elimination half-lives when levels cannot be measured); no residual paralytics; no severe acid-base, electrolyte, or endocrine abnormality. normothermia (core temperature above 36 c for more than 24 hours); sbp at least 100 mmhg and map above 75 mmhg (vasopressors permitted); no spontaneous respirations. contact lifebanc and the end-of-life care team as needed. clinical examination (exam 1 and exam 2; all findings must be present on each exam). pupils mid-size to dilated (3 mm or larger), non-reactive to bright light; corneal reflex absent; oculocephalic reflex absent (only if c-spine integrity ensured) and oculovestibular reflex absent. no facial movement to noxious stimuli at the supraorbital nerve or temporomandibular joint; gag reflex absent; cough reflex absent to tracheal suctioning; no motor response to noxious stimuli in all four limbs (spinally mediated reflexes are permissible). if the oculocephalic reflex cannot be assessed due to cervical spine or skull-base concerns, dnc can still be determined without ancillary testing if oculovestibular reflexes are absent bilaterally. apnea testing and ancillary testing. apnea testing follows once prerequisites are met (see the apnea testing procedure page). a positive test is an arterial ph under 7.30 with paco2 of 60 mmhg or higher and at least 20 mmhg above baseline. ancillary testing (tcd, cerebral angiogram, or nuclear scintigraphy cerebral blood-flow study) is required when the clinical exam or apnea test cannot be completed or interpreted with certainty, or when confounders cannot be resolved; for ventricular assist devices or aortic balloon pump, consider cerebral angiogram or nuclear scintigraphy. ancillary testing is not a substitute for a complete clinical brain death examination. time of death is the time arterial ph and paco2 reached the target value reported in the record; when apnea or the clinical exam cannot be fully performed, it is when the ancillary test is officially reported.",
+      "aliases": [
+        "DNC",
+        "death by neurologic criteria",
+        "brain death",
+        "TCD",
+        "transcranial doppler",
+        "SE",
+        "status epilepticus",
+        "LD",
+        "lumbar drain",
+        "LifeBanc",
+        "organ donation"
+      ]
+    },
+    {
+      "id": "main-campus-section-60708335683a",
+      "campus": "main-campus",
+      "title": "apnea testing procedure (ventilated and ecmo)",
+      "slug": "apnea-testing-procedure",
+      "path": "/main-campus/apnea-testing-procedure",
+      "parentId": "main-campus-section-45ed6ca180fe",
+      "parentSlug": "dnc-determination-procedure",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "apnea testing procedure (ventilated and ecmo)",
+      "parentHeading": "determination of death by neurologic criteria (dnc) in adults",
+      "body": "source: dnc flow chart procedure (v2), apnea testing. draft summary; requires dnc training and named clinical review before use. reference: bein & citerio, intensive care med 2019 (brain death under extracorporeal life support). apnea test in ventilated patients. patient is hemodynamically stable (vasopressors may keep sbp above 100 mmhg and map above 75) with no major electrolyte, acid-base, or metabolic derangement. adjust the ventilator to normocarbia (paco2 35-45 mmhg) and ph 7.35-7.45 (unless a co2 retainer); pre-oxygenate with 100% fio2 for more than 10 minutes. disconnect the ventilator and provide oxygen via extension tubing near the carina at 6 l/min; spontaneous respirations should be absent. draw arterial blood gas at 5-7 minutes and every 5 minutes until the goal paco2 is reached, then reconnect the ventilator. a positive test is ph under 7.30 with paco2 of 60 mmhg or higher and at least 20 mmhg above baseline, with absent respiration. abort for sbp under 100 or map under 75 despite support, oxygen saturation below 85%, or a cardiac arrhythmia with hemodynamic instability. if normal ph/paco2 cannot be maintained, ancillary testing is mandatory in addition to apnea testing. apnea test on ecmo. coordinate with the primary icu team. adjust the ecmo sweep and/or ventilator to physiologic ph and eucapnia (paco2 35-45 mmhg); for va or hybrid ecmo use right upper-extremity arterial and post-oxygenator gases, and for vv ecmo any arterial line is sufficient. keep the oxygenator fdo2 at 100%; disconnect the ventilator and oxygenate via a cannula at the carina at 6-9 l/min; gradually reduce the gas sweep to as low as 0.5 l/min as tolerated; watch for any respiratory movement including a brief gasp. repeat abgs after 5-10 minutes and every 5 minutes until the goal paco2 is reached while the patient remains stable; the same positive-test threshold and abort criteria apply, reinitiating ecmo on the prior settings if aborted.",
+      "aliases": [
+        "DNC",
+        "death by neurologic criteria",
+        "brain death",
+        "SE",
+        "status epilepticus",
+        "LD",
+        "lumbar drain"
+      ]
+    },
+    {
+      "id": "main-campus-section-60c619304c25",
+      "campus": "main-campus",
+      "title": "research coordinator on-call schedule (qgenda)",
+      "slug": "research-coordinator-on-call",
+      "path": "/main-campus/research-coordinator-on-call",
+      "parentId": "main-campus-section-ab181b223d1d",
+      "parentSlug": "campus-operations",
+      "contentType": "article",
+      "contentOrigin": "curated",
+      "priority": 0,
+      "heading": "research coordinator on-call schedule (qgenda)",
+      "parentHeading": "campus operations",
+      "body": "source: coordinator call schedule - qgenda notice (research program manager emily fisher, ni - neurological institute). draft operational note; confirm the current on-call coordinator in qgenda before contacting. a research coordinator is on call monday-friday 5pm-11pm and saturday-sunday 7am-11pm for on-call studies (currently step and, upcoming, select-late). navigate to the cv toolkit and select schedules (portals.ccf.org/m/cv-toolkit), then open qgenda. select 'call' under stroke schedules, then scroll to 'cv research coordinator' to see who is on call. questions or access issues: emily fisher, mph, research program manager (fishere3@ccf.org, 216-316-5682).",
       "aliases": [
         "SE",
         "status epilepticus"
