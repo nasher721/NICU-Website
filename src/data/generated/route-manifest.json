@@ -12,8 +12,8 @@
       "sourceLabel": "MC NICU Faculty Orientation Document (2026)",
       "sourceFile": "MC NICU Faculty Orientation Document (2026).docx",
       "stats": {
-        "sections": 83,
-        "tables": 49,
+        "sections": 102,
+        "tables": 60,
         "figures": 11
       },
       "sourceStatus": {
@@ -692,6 +692,158 @@
           "title": "Campus Operations",
           "contentType": "chapter",
           "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-b5ce5688a514",
+          "path": "/main-campus/nicu-staff-playbook",
+          "slug": "nicu-staff-playbook",
+          "title": "NICU Staff Playbook",
+          "contentType": "chapter",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-398a0687e61e",
+          "path": "/main-campus/nicu-playbook-quick-reference",
+          "slug": "nicu-playbook-quick-reference",
+          "title": "Quick reference: key times, deadlines, and contacts",
+          "contentType": "reference-table",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-5ee35bec2f04",
+          "path": "/main-campus/nicu-clinical-day-and-schedule",
+          "slug": "nicu-clinical-day-and-schedule",
+          "title": "The clinical day and staff schedule",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-b2b80da01c37",
+          "path": "/main-campus/nicu-staff-responsibilities",
+          "slug": "nicu-staff-responsibilities",
+          "title": "Staff responsibilities",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-73484d75502c",
+          "path": "/main-campus/nicu-meetings-resources-contacts",
+          "slug": "nicu-meetings-resources-contacts",
+          "title": "Meetings, resources, and key contacts",
+          "contentType": "reference-table",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-d0c2edd55364",
+          "path": "/main-campus/nicu-career-development",
+          "slug": "nicu-career-development",
+          "title": "Career development and Annual Professional Review",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-317647e54a90",
+          "path": "/main-campus/documentation-and-epic-updates",
+          "slug": "documentation-and-epic-updates",
+          "title": "Documentation & Epic Updates",
+          "contentType": "chapter",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-0f36d48e293d",
+          "path": "/main-campus/poa-documentation-updates",
+          "slug": "poa-documentation-updates",
+          "title": "Present on Admission (POA) documentation updates",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-ac03ee0c79f2",
+          "path": "/main-campus/ovrs-death-registration-module",
+          "slug": "ovrs-death-registration-module",
+          "title": "OVRS death registration module go-live (Ohio)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-a56d8fcc7925",
+          "path": "/main-campus/stroke-discharge-follow-up-order",
+          "slug": "stroke-discharge-follow-up-order",
+          "title": "Stroke discharge follow-up appointment order (Epic)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-9ef335410aaf",
+          "path": "/main-campus/cvad-bleeding-management",
+          "slug": "cvad-bleeding-management",
+          "title": "Bleeding CVAD: insertion to maintenance",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-2ef2020e89d4",
+          "path": "/main-campus/foley-catheter-order-panel",
+          "slug": "foley-catheter-order-panel",
+          "title": "Foley catheter order panel (Epic)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-b3e657c7e61b",
+          "path": "/main-campus/mdsr-device-surveillance-rounding",
+          "slug": "mdsr-device-surveillance-rounding",
+          "title": "Multidisciplinary Device Surveillance Rounding (MDSR)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-07ef648db3b8",
+          "path": "/main-campus/urinary-retention-acute-care",
+          "slug": "urinary-retention-acute-care",
+          "title": "Urinary retention in the acute care setting",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-d47398fe8476",
+          "path": "/main-campus/heparin-anti-xa-nomogram-updates",
+          "slug": "heparin-anti-xa-nomogram-updates",
+          "title": "Heparin anti-Xa nomogram updates",
+          "contentType": "reference-table",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-a06d5dd65151",
+          "path": "/main-campus/dcd-donation-after-circulatory-death-workflow",
+          "slug": "dcd-donation-after-circulatory-death-workflow",
+          "title": "Donation after Circulatory Death (DCD) workflow",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-45ed6ca180fe",
+          "path": "/main-campus/dnc-determination-procedure",
+          "slug": "dnc-determination-procedure",
+          "title": "Determination of Death by Neurologic Criteria (DNC) in adults",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-60708335683a",
+          "path": "/main-campus/apnea-testing-procedure",
+          "slug": "apnea-testing-procedure",
+          "title": "Apnea testing procedure (ventilated and ECMO)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "main-campus-section-60c619304c25",
+          "path": "/main-campus/research-coordinator-on-call",
+          "slug": "research-coordinator-on-call",
+          "title": "Research coordinator on-call schedule (QGenda)",
+          "contentType": "article",
+          "contentOrigin": "curated"
         }
       ]
     },
@@ -706,8 +858,8 @@
       "sourceLabel": "NSICU Faculty Orientation Handbook — Akron (2026)",
       "sourceFile": "NSICU_Faculty_Orientation_Handbook_Akron (2026).docx",
       "stats": {
-        "sections": 86,
-        "tables": 62,
+        "sections": 105,
+        "tables": 73,
         "figures": 12
       },
       "sourceStatus": {
@@ -1404,6 +1556,158 @@
           "slug": "campus-operations",
           "title": "Campus Operations",
           "contentType": "chapter",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-a5653dec09ec",
+          "path": "/akron/nicu-staff-playbook",
+          "slug": "nicu-staff-playbook",
+          "title": "NICU Staff Playbook",
+          "contentType": "chapter",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-35c0dd6e1cd2",
+          "path": "/akron/nicu-playbook-quick-reference",
+          "slug": "nicu-playbook-quick-reference",
+          "title": "Quick reference: key times, deadlines, and contacts",
+          "contentType": "reference-table",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-ebd3156af3a9",
+          "path": "/akron/nicu-clinical-day-and-schedule",
+          "slug": "nicu-clinical-day-and-schedule",
+          "title": "The clinical day and staff schedule",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-61ea02b7350b",
+          "path": "/akron/nicu-staff-responsibilities",
+          "slug": "nicu-staff-responsibilities",
+          "title": "Staff responsibilities",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-7d92f94a96a3",
+          "path": "/akron/nicu-meetings-resources-contacts",
+          "slug": "nicu-meetings-resources-contacts",
+          "title": "Meetings, resources, and key contacts",
+          "contentType": "reference-table",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-625b5a85022e",
+          "path": "/akron/nicu-career-development",
+          "slug": "nicu-career-development",
+          "title": "Career development and Annual Professional Review",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-1b1bf1e68657",
+          "path": "/akron/documentation-and-epic-updates",
+          "slug": "documentation-and-epic-updates",
+          "title": "Documentation & Epic Updates",
+          "contentType": "chapter",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-9e779a9a505b",
+          "path": "/akron/poa-documentation-updates",
+          "slug": "poa-documentation-updates",
+          "title": "Present on Admission (POA) documentation updates",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-a91e1226dfc5",
+          "path": "/akron/ovrs-death-registration-module",
+          "slug": "ovrs-death-registration-module",
+          "title": "OVRS death registration module go-live (Ohio)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-1b74d4daf64c",
+          "path": "/akron/stroke-discharge-follow-up-order",
+          "slug": "stroke-discharge-follow-up-order",
+          "title": "Stroke discharge follow-up appointment order (Epic)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-ae8aa27a0b62",
+          "path": "/akron/cvad-bleeding-management",
+          "slug": "cvad-bleeding-management",
+          "title": "Bleeding CVAD: insertion to maintenance",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-2ed4c41eaab9",
+          "path": "/akron/foley-catheter-order-panel",
+          "slug": "foley-catheter-order-panel",
+          "title": "Foley catheter order panel (Epic)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-845e8fc4ad07",
+          "path": "/akron/mdsr-device-surveillance-rounding",
+          "slug": "mdsr-device-surveillance-rounding",
+          "title": "Multidisciplinary Device Surveillance Rounding (MDSR)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-00babda9051e",
+          "path": "/akron/urinary-retention-acute-care",
+          "slug": "urinary-retention-acute-care",
+          "title": "Urinary retention in the acute care setting",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-cfd3422b435c",
+          "path": "/akron/heparin-anti-xa-nomogram-updates",
+          "slug": "heparin-anti-xa-nomogram-updates",
+          "title": "Heparin anti-Xa nomogram updates",
+          "contentType": "reference-table",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-79faca9ac59a",
+          "path": "/akron/dcd-donation-after-circulatory-death-workflow",
+          "slug": "dcd-donation-after-circulatory-death-workflow",
+          "title": "Donation after Circulatory Death (DCD) workflow",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-6eb9c84594f9",
+          "path": "/akron/dnc-determination-procedure",
+          "slug": "dnc-determination-procedure",
+          "title": "Determination of Death by Neurologic Criteria (DNC) in adults",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-5db499d1f491",
+          "path": "/akron/apnea-testing-procedure",
+          "slug": "apnea-testing-procedure",
+          "title": "Apnea testing procedure (ventilated and ECMO)",
+          "contentType": "article",
+          "contentOrigin": "curated"
+        },
+        {
+          "id": "akron-section-79ccb41bbfce",
+          "path": "/akron/research-coordinator-on-call",
+          "slug": "research-coordinator-on-call",
+          "title": "Research coordinator on-call schedule (QGenda)",
+          "contentType": "article",
           "contentOrigin": "curated"
         }
       ]
